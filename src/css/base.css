@@ -1,3 +1,5 @@
+@import './fonts';
+
 @import 'basscss-base-reset';
 @import 'basscss-base-typography';
 @import 'basscss-base-forms';
@@ -28,7 +30,6 @@
 @import 'basscss-defaults';
 
 @import './colors';
-@import './fonts';
 @import './typography';
 @import './layout';
 @import './white-space';
@@ -56,9 +57,9 @@
   --h6: .75rem;
 
   --light-font-weight: 300;
-  --normal-font-weight: normal;
+  --normal-font-weight: 400;
   --bold-font-weight: 700;
-  --bolder-font-weight: 900;
+  --heavy-font-weight: 900;
 
   --space-half: .25rem;
   --space-1: .5rem;
@@ -80,6 +81,7 @@
 
   --container-width: 64em; /* 1024px / 16px */
 
+  --black: #1F252A;
   --blue: #2B88D9;
   --dark-blue: #276092;
   --red: #DB4C3F;

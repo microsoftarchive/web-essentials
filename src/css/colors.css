@@ -2,6 +2,10 @@ body {
   color: var(--mid-gray);
 }
 
+.faded {
+  opacity: .5;
+}
+
 .wunderlist-gray {
   color: var(--wunderlist-gray);
 }
@@ -18,12 +22,28 @@ body {
   background-color: var(--lightest-gray);
 }
 
+.black {
+  color: var(--black);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
 .off-white {
   color: var(--off-white);
 }
 
 .bg-off-white {
   background-color: var(--off-white);
+}
+
+.true-white {
+  color: white;
+}
+
+.bg-true-white {
+  background-color: white;
 }
 
 .dark-blue {

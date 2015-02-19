@@ -2,22 +2,24 @@ body {
   font-weight: var(--normal-font-weight);
 }
 
-h1, .h1,
-h2, .h2 {
+h1, h2 {
   font-weight: var(--light-font-weight);
 }
 
-h3, .h3,
-h4, .h4,
-h5 .h5 {
+h3, h4 {
   font-weight: var(--bold-font-weight);
 }
 
-h5, .h5 {
+h5 {
+  font-weight: var(--bold-font-weight);
   text-transform: uppercase;
 }
 
-h6, .h6 {
+.uppercase {
+  text-transform: uppercase;
+}
+
+h6 {
   font-weight: var(--normal-font-weight);
 }
 
@@ -33,3 +35,14 @@ code, pre {
   background-color: var(--light-blue);
 }
 
+.lighter {
+  font-weight: var(--light-font-weight);
+}
+
+.heavier {
+  font-weight: var(--heavy-font-weight);
+}
+
+.wundercon {
+  font-family: 'Wundercon';
+}
