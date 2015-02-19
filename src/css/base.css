@@ -1,13 +1,3 @@
-/*
- * Basscss Base
- *
- * Remove or comment out unneeded modules and import your own files.
- * Adjust global media queries and variables below.
- *
- */
-
-
-/* Basscss Modules */
 @import 'basscss-base-reset';
 @import 'basscss-base-typography';
 @import 'basscss-base-forms';
@@ -37,8 +27,7 @@
 
 @import 'basscss-defaults';
 
-/* Example custom file import */
-@import './color/borders';
+@import './colors';
 
 
 /* Custom media queries */
