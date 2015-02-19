@@ -1,0 +1,42 @@
+/* TODO: upload fonts to the assets S3 */
+
+@font-face {
+  font-family: 'Wundercon-Pictograms';
+  font-weight: normal;
+  font-style: normal;
+  src: url("Wundercon-Pictograms.woff") format('woff'),
+       url("Wundercon-Pictograms.ttf") format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url("Lato-300-default.woff") format('woff'),
+       url("Lato-300-default.ttf") format('ttf');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  src: url("Lato-400-default.woff") format('woff'),
+       url("Lato-400-default.ttf") format('ttf');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url("Lato-700-default.woff") format('woff'),
+       url("Lato-700-default.ttf") format('ttf');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: url("Lato-900-default.woff") format('woff'),
+       url("Lato-900-default.ttf") format('ttf');
+}

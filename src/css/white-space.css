@@ -1,0 +1,24 @@
+.mhalf  { margin:        var(--space-half) }
+.mthalf { margin-top:    var(--space-half) }
+.mrhalf { margin-right:  var(--space-half) }
+.mbhalf { margin-bottom: var(--space-half) }
+.mlhalf { margin-left:   var(--space-half) }
+
+.mxnhalf {
+  margin-left: -var(--space-half);
+  margin-right: -var(--space-half);
+}
+
+.phalf {
+  padding: var(--space-half)
+}
+
+.pyhalf {
+  padding-top: var(--space-half);
+  padding-bottom: var(--space-half);
+}
+
+.pxhalf {
+  padding-left: var(--space-half);
+  padding-right: var(--space-half);
+}

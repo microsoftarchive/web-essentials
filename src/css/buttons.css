@@ -1,0 +1,28 @@
+.button-white {
+  color: var(--mid-gray);
+  background-color: white;
+  border-color: var(--lighter-gray);
+  border-radius: var(--border-radius);
+  transition-duration: .1s;
+  transition-timing-function: ease-out;
+  transition-property: box-shadow, background-color;
+}
+
+.button-white:hover {
+  opacity: .875;
+}
+
+.button-white:active,
+.button-white:is-active {
+  box-shadow: inset 0 0 0 32px rgba(#000,.125), inset 0 2px 3px 0 rgba(#000,.25);
+}
+
+.button-white:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px white, 0 0 1px 4px rgba(var(--blue), .5);
+}
+
+.button-white:disabled,
+.button-white.is-disabled {
+  opacity: .5;
+}

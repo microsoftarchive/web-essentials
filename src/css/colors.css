@@ -1,4 +1,50 @@
-.border-green {
-  border-color: var(--green);
+body {
+  color: var(--mid-gray);
+}
+
+.wunderlist-gray {
+  color: var(--wunderlist-gray);
+}
+
+.bg-wunderlist-gray {
+  background-color: var(--wunderlist-gray);
+}
+
+.lightest-gray {
+  color: var(--lightest-gray);
+}
+
+.bg-lightest-gray {
+  background-color: var(--lightest-gray);
+}
+
+.off-white {
+  color: var(--off-white);
+}
+
+.bg-off-white {
+  background-color: var(--off-white);
+}
+
+.dark-blue {
+  color: var(--dark-blue);
+}
+
+.bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.light-blue {
+  color: var(--light-blue);
+}
+
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+
+
+
+.border-light-blue {
+  border-color: var(--light-blue-border);
 }
 

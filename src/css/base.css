@@ -28,33 +28,39 @@
 @import 'basscss-defaults';
 
 @import './colors';
+@import './fonts';
+@import './typography';
+@import './layout';
+@import './white-space';
+@import './forms';
+@import './buttons';
 
-
-/* Custom media queries */
 @custom-media --breakpoint-sm (min-width: 40em);
 @custom-media --breakpoint-md (min-width: 52em);
 @custom-media --breakpoint-lg (min-width: 64em);
 
-
-/* Variables */
 :root {
-
-  --font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  --font-family: Lato, Helvetica Neue, sans-serif;
   --line-height: 1.5;
   --heading-font-family: var(--font-family);
-  --heading-font-weight: bold;
+  --heading-font-weight: var(--bold-font-weight);
   --heading-line-height: 1.25;
   --monospace-font-family: 'Source Code Pro', Consolas, monospace;
 
-  --h1: 2rem;
-  --h2: 1.5rem;
-  --h3: 1.25rem;
-  --h4: 1rem;
-  --h5: .875rem;
+
+  --h1: 3.125rem; /* 50px / 16px */
+  --h2: 2.1875rem; /* 35px / 16px */
+  --h3: 1.75rem; /* 28px / 16px */
+  --h4: 1.125rem; /* 18px / 16px */
+  --h5: .75rem; /* 12px / 16px */
   --h6: .75rem;
 
-  --bold-font-weight: bold;
+  --light-font-weight: 300;
+  --normal-font-weight: normal;
+  --bold-font-weight: 700;
+  --bolder-font-weight: 900;
 
+  --space-half: .25rem;
   --space-1: .5rem;
   --space-2: 1rem;
   --space-3: 2rem;
@@ -64,37 +70,46 @@
   --form-field-height: 2.25rem;
   --form-field-padding-y: .5rem;
   --form-field-padding-x: .5rem;
+  --form-field-border-color: var(--lighter-gray);
 
-  --button-font-size: inherit;
-  --button-font-weight: bold;
-  --button-line-height: 1.125rem;
+  --button-font-size: 1rem;
+  --button-font-weight: var(--bold-font-weight);
+  --button-line-height: 1.375rem; /* 22px / 16 px (22 is what's left after the padding y of 9 and 9) */
   --button-padding-y: .5rem;
   --button-padding-x: 1rem;
 
-  /* Grid container max-width */
-  --container-width: 64em;
+  --container-width: 64em; /* 1024px / 16px */
 
-  /* Colors */
-  --blue: #0076df;
-  --red: #f95020;
-  --green: #00cf26;
-  --yellow: #efcc00;
+  --blue: #2B88D9;
+  --dark-blue: #276092;
+  --red: #DB4C3F;
+  --green: #65B01B;
+  --yellow: #E6B035;
 
-  --dark-gray: #333;
-  --mid-gray: #777;
-  --light-gray: #ccc;
-  --lighter-gray: #eee;
+  --dark-gray: #444444;
+  --wunderlist-gray: #5B5B5B;
+  --mid-gray: #737273;
+  --light-gray: #A3A3A3;
+  --lighter-gray: #DBDBDB;
+  --lightest-gray: #EDEDED;
+  --white: #FAFAFA;
+  --off-white: #F8F8F8;
+
+  --light-blue: rgba(43, 136, 217, .04);
+  --light-blue-border: rgba(43, 136, 217, .32);
 
   --darken-1: rgba(#000,.0625);
   --darken-2: rgba(#000,.125);
   --darken-3: rgba(#000,.25);
   --darken-4: rgba(#000,.5);
 
-  --border-color: var(--light-gray);
+  --border-color: var(--lightest-gray);
   --border-width: 1px;
   --border-radius: 3px;
 
   --hover-background-color: var(--darken-1);
 
+  --table-header-font-weight: var(--bold-font-weight);
+  --table-cell-padding-x: var(--space-2);
+  --table-cell-padding-y: var(--space-half);
 }
-
