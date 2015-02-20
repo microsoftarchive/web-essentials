@@ -7,3 +7,8 @@ install:
 
 start:
 	gulp
+
+clean:
+	rm -rf node_modules
+	rm -f css/*
+	touch css/.gitkeep
