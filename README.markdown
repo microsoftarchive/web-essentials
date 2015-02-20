@@ -14,6 +14,12 @@ $ make install
 $ make start
 ```
 
+## I just want to compile the css and not run a server, cool?
+
+```sh
+$ make
+```
+
 ## gulp tasks
 
 * css -> compile all the css into bass.css
