@@ -1,0 +1,6 @@
+<% pictograms.forEach(function(row) { %>
+.pictogram-icon.<%= row[0] %>:before {
+  content: '<%= row[1] %>';
+}
+
+<% }) %>

@@ -7,9 +7,28 @@ var transform = require('vinyl-transform');
 var uglify = require('gulp-uglify');
 var webserver = require('gulp-webserver');
 var template = require('gulp-template');
+var data = require('gulp-data');
+var fs = require('fs');
+var parse = require('csv-parse');
+
 
 gulp.task('css', function() {
   gulp.src('./src/css/base.css')
+    .pipe(basswork())
+    .pipe(gulp.dest('./css'))
+    .pipe(minifyCss())
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest('./css'));
+
+  gulp.src('./src/css/pictograms.css')
+    .pipe(data(function(file, cb) {
+      var csv = fs.readFileSync('./src/pictograms.csv', 'utf8');
+      parse(csv, {}, function(err, data) {
+        if (err) { return cb(err); }
+        cb(undefined, { pictograms: data });
+      });
+    }))
+    .pipe(template())
     .pipe(basswork())
     .pipe(gulp.dest('./css'))
     .pipe(minifyCss())
@@ -31,7 +50,14 @@ gulp.task('js', function() {
 
 gulp.task('html', function() {
   gulp.src('./src/index.html')
-    .pipe(template({}))
+    .pipe(data(function(file, cb) {
+      var csv = fs.readFileSync('./src/pictograms.csv', 'utf8');
+      parse(csv, {}, function(err, data) {
+        if (err) { return cb(err); }
+        cb(undefined, { pictograms: data });
+      });
+    }))
+    .pipe(template())
     .pipe(gulp.dest('.'))
 });
 
