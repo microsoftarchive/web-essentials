@@ -29,6 +29,7 @@
     "basscss-utility-typography": "latest",
     "basscss-utility-white-space": "latest",
     "browserify": "^8.0.3",
+    "gulp-template": "^3.0.0",
     "vinyl-transform": "^1.0.0"
   },
   "devDependencies": {

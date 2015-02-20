@@ -1,5 +1,5 @@
 default:
-	gulp css js
+	gulp css js html
 
 install:
 	npm install

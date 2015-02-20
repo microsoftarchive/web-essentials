@@ -1,4 +1,3 @@
-
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var basswork = require('gulp-basswork');
@@ -7,6 +6,7 @@ var browserify = require('browserify');
 var transform = require('vinyl-transform');
 var uglify = require('gulp-uglify');
 var webserver = require('gulp-webserver');
+var template = require('gulp-template');
 
 gulp.task('css', function() {
   gulp.src('./src/css/base.css')
@@ -29,12 +29,18 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./js'));
 });
 
+gulp.task('html', function() {
+  gulp.src('./src/index.html')
+    .pipe(template({}))
+    .pipe(gulp.dest('.'))
+});
+
 gulp.task('serve', function() {
   gulp.src('.')
     .pipe(webserver({}));
 });
 
-gulp.task('default', ['css', 'js', 'serve'], function() {
-  gulp.watch(['./src/**/*'], ['css', 'js']);
+gulp.task('default', ['css', 'js', 'html', 'serve'], function() {
+  gulp.watch(['./src/**/*'], ['css', 'js', 'html']);
 });
 

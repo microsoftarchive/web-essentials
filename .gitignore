@@ -1,4 +1,5 @@
 node_modules/*
 css/*
 js/*
+/index.html
 .DS_Store
