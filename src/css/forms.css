@@ -3,7 +3,7 @@
   box-shadow: 0 1px 2px rgba(var(--black),.1);
 }
 
-.field-list:focus {
+.field-light:focus {
   border-color: var(--wunderlist-gray);
 }
 
