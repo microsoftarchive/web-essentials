@@ -46,7 +46,7 @@
   --font-family: Lato, Helvetica Neue, sans-serif;
   --line-height: 1.5;
   --heading-font-family: var(--font-family);
-  --heading-font-weight: var(--bold-font-weight);
+  --heading-font-weight: var(--normal-font-weight);
   --heading-line-height: 1.25;
   --monospace-font-family: 'Source Code Pro', Consolas, monospace;
 

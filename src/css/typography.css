@@ -3,24 +3,8 @@ body {
   font-weight: var(--normal-font-weight);
 }
 
-h1, h2, .h1, .h2 {
-  font-weight: var(--light-font-weight);
-}
-
-h3, h4, .h3, .h4 {
-  font-weight: var(--normal-font-weight);
-}
-
-h5, .h5 {
-  font-weight: var(--normal-font-weight);
-}
-
 .uppercase {
   text-transform: uppercase;
-}
-
-h6, .h6 {
-  font-weight: var(--normal-font-weight);
 }
 
 p, dl, ol, ul {
