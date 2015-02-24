@@ -257,7 +257,7 @@
             <span class="h6 pictogram-key"><%= row[1] %></span>
             <span class="wundercon h1 pictogram-icon <%= row[0] %>" title="<%= row[0] %>"></span>
           </span>
-          <span class="h6 uppercase"><%= row[0].replace(/\.|-/g, ' ') %></span>
+          <span class="h6 uppercase"><%= row[0].split('-')[0] %></span>
         </li>
         <% }) %>
       </ul>
