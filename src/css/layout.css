@@ -6,3 +6,7 @@
 .full-height {
   min-height: 100%;
 }
+
+.border-box {
+  display: border-box;
+}
