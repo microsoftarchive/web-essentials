@@ -50,6 +50,10 @@ pre > code {
   font-family: 'Wundercon';
 }
 
+.letter-spacing {
+  letter-spacing: 1px;
+}
+
 .line-height-0 {
   line-height: 0;
 }
