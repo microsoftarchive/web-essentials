@@ -11,6 +11,10 @@
     <style>
       /* app specific css */
 
+      .outline-blue * {
+        box-shadow: 0 0 0 1px rgba(43, 136, 217, .75);
+      }
+
       .color-swatch {
         width: 120px;
       }
@@ -495,34 +499,70 @@
               <a href="https://nightly.wunderlist.com/discover" class="gray mr2 is-active">Public Lists</a>
               <a href="https://nightly.wunderlist.com/download" class="gray mr2">Download</a>
               <a href="https://nightly.wunderlist.com/blog" class="gray mr2">Blog</a>
-            </nav> 
+            </nav>
           </div>
         </div>
       </div>
 
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <div>
+        <h3 class="lighter">How to build the menubar</h3>
+
+        <p>
+          The basic shapes are to have one left, one right, and then one fluid
+          middle. Here is a simplified example:
+        </p>
+
+        <h4 class="bold">1. Floats</h4>
+
+        <div class="clearfix outline-blue mt2 mb2">
+          <div class="left p2">.left</div>
+          <div class="right p2">.right</div>
+          <div class="overflow-hidden p2">.overflow-hidden</div>
+        </div>
+
+        <pre><code>&lt;div class="clearfix outline-blue mt2 mb2"&gt;
+  &lt;div class="left"&gt;.left&lt;/div&gt;
+  &lt;div class="right"&gt;.right&lt;/div&gt;
+  &lt;div class="overflow-hidden"&gt;.overflow-hidden&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4 class="bold">2. More floats</h4>
+
+        <div class="clearfix outline-blue mt2 mb2">
+          <div class="left p1">
+            <div class="left p1">logo</div>
+            <div class="left p1">wordmark</div>
+          </div>
+          <div class="right p1">
+            <div class="left p1">bell</div>
+            <div class="left p1">bubble</div>
+            <div class="left p1">
+              <div class="left">avatar</div>
+              <div class="left">chevron</div>
+            </div>
+          </div>
+          <div class="overflow-hidden p2">.overflow-hidden</div>
+        </div>
+
+        <pre><code>&lt;div class="clearfix outline-blue mt2 mb2"&gt;
+  &lt;div class="left p1"&gt;
+    &lt;div class="left p1"&gt;logo&lt;/div&gt;
+    &lt;div class="left p1"&gt;wordmark&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="right p1"&gt;
+    &lt;div class="left p1"&gt;bell&lt;/div&gt;
+    &lt;div class="left p1"&gt;bubble&lt;/div&gt;
+    &lt;div class="left p1"&gt;
+      &lt;div class="left"&gt;avatar&lt;/div&gt;
+      &lt;div class="left"&gt;chevron&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="overflow-hidden"&gt;.overflow-hidden&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4 class="bold">3. ...</h4>
+
+      </div>
     </div>
 
     <script src="/js/app.min.js"></script>
