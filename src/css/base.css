@@ -1,8 +1,8 @@
 @import './fonts';
 
 @import './responsive-states';
+@import './normalize';
 
-@import 'basscss-base-reset';
 @import 'basscss-base-typography';
 @import 'basscss-base-forms';
 @import 'basscss-base-buttons';
