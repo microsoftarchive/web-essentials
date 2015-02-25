@@ -398,6 +398,13 @@
           .menubar a:hover {
             color: #2B88D9;
           }
+
+          .menubar .chevron {
+            top: 12px;
+          }
+          .menubar .drop-down-window {
+            top: 100%;
+          }
         </style>
 
         <div class="bg-true-white border-bottom clearfix px2">
@@ -428,7 +435,7 @@
                 </svg>
               </a>
             </span>
-            <span class="left mr1 md-show">
+            <span class="left mr2 md-show">
               <a href="#!">
                 <svg class="relative nudge-down" version="1.1" id="Layer_1"  width="20" height="20" style="stroke: rgb(119, 119, 119);" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.9 18.9" enable-background="new 0 0 18.9 18.9" xml:space="preserve">
                   <path display="none" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
@@ -446,9 +453,38 @@
                 </svg>
               </a>
             </span>
-            <a href="#!" class="left">
+            <div class="left relative user-settings" data-disclosure>
+              <div data-details class="fixed top-0 right-0 bottom-0 left-0 hide"></div>
               <img class="left rounded" width="28" height="28" src="http://a.wunderlist.com/api/v1/avatar?user_id=5647467">
-            </a>
+              <div class="ml1 left">
+                <svg class="chevron block relative" width="7px" height="3px" viewBox="0 0 7 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                  <g id="Developer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                      <g id="List-page-3" sketch:type="MSArtboardGroup" transform="translate(-169.000000, -144.000000)" fill="#7F7F7F">
+                          <g id="Navigation" sketch:type="MSLayerGroup" transform="translate(48.000000, 121.000000)">
+                              <polygon id="Triangle-3" sketch:type="MSShapeGroup" transform="translate(124.500000, 24.500000) scale(1, -1) translate(-124.500000, -24.500000) " points="124.5 23 128 26 121 26 "></polygon>
+                          </g>
+                      </g>
+                  </g>
+                </svg>
+              </div>
+              <div data-details class="absolute right-0 nowrap drop-down-window">
+                <ul class="h5 list-reset mb0 pr2 bg-true-white rounded black mt2 border left-align">
+                  <li class="px2 py1 mt1"><a href="#!" class="block bold body-text">Go to My Wunderlist</a></li>
+                  <li class="px2 py1"><a href="#!" class="block gray body-text">Homepage</a></li>
+                  <li class="px2 py1"><a href="#!" class="block gray body-text">Download Wunderlist</a></li>
+                  <li class="px2 py1"><a href="#!" class="block gray body-text">Discover</a></li>
+                  <li class="px2 py1"><a href="#!" class="block gray body-text">Developer</a></li>
+                  <li class="px2 py1"><a href="#!" class="block gray body-text">Support</a></li>
+                  <hr class="m0 mt1 mb1">
+                  <li class="px2 py1"><p class="m0 h5 gray wunderlist-lighter">nathan@6wunderkinder.com</p></li>
+                  <li class="px2 py1"><a href="#!" class="block gray body-text">Account Settings</a></li>
+                  <li class="px2 py1"><a href="#!" class="block gray body-text">Sign out</a></li>
+
+
+                </ul>
+              </div>
+            </div>
+
           </div>
           <div class="overflow-hidden py2">
             <nav class="nav-links m0 relative nowrap uppercase letter-spacing h5 bold">
@@ -463,6 +499,20 @@
         </div>
       </div>
 
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       <br>
       <br>
       <br>
