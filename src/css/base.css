@@ -1,5 +1,7 @@
 @import './fonts';
 
+@import './responsive-states';
+
 @import 'basscss-base-reset';
 @import 'basscss-base-typography';
 @import 'basscss-base-forms';
@@ -9,7 +11,6 @@
 @import 'basscss-utility-layout';
 @import 'basscss-utility-typography';
 @import 'basscss-utility-white-space';
-@import 'basscss-utility-responsive-states';
 @import 'basscss-positions';
 
 @import 'basscss-ui-utility-button-sizes';
@@ -38,12 +39,6 @@
 @import './position';
 @import './forms';
 @import './buttons';
-
-@custom-media --breakpoint-xsm (min-width: 30em);
-@custom-media --breakpoint-sm (min-width: 40em);
-@custom-media --breakpoint-md (min-width: 48em);
-@custom-media --breakpoint-lg (min-width: 64em);
-@custom-media --breakpoint-xlg (min-width: 81em);
 
 :root {
   --font-family: Lato, Helvetica Neue, sans-serif;

@@ -7,6 +7,10 @@ body {
   text-transform: uppercase;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 p, dl, ol, ul {
   font-size: 1rem;
 }
