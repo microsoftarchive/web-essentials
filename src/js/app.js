@@ -1,2 +1,3 @@
 // App
 
+require("disclose").all();

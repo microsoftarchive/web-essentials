@@ -24,7 +24,6 @@
     "basscss-positions": "latest",
     "basscss-table-object": "latest",
     "basscss-ui-utility-button-sizes": "latest",
-    "basscss-ui-utility-disclosure-states": "latest",
     "basscss-ui-utility-groups": "latest",
     "basscss-utility-layout": "latest",
     "basscss-utility-responsive-states": "latest",
@@ -36,7 +35,8 @@
     "csv-parse": "0.0.8",
     "gulp-data": "^1.2.0",
     "gulp-template": "^3.0.0",
-    "vinyl-transform": "^1.0.0"
+    "vinyl-transform": "^1.0.0",
+    "disclose": "git://github.com/wunderlist/disclose#master"
   },
   "devDependencies": {
     "gulp": "^3.8.10",
