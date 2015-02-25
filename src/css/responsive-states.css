@@ -78,9 +78,3 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-@custom-media --breakpoint-xsm (min-width: 30em);
-@custom-media --breakpoint-sm (min-width: 40em);
-@custom-media --breakpoint-md (min-width: 48em);
-@custom-media --breakpoint-lg (min-width: 64em);
-@custom-media --breakpoint-xlg (min-width: 81em);
-
