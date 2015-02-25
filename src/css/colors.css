@@ -1,6 +1,4 @@
-body {
-  color: var(--mid-gray);
-}
+@import 'colors.css/myth/variables';
 
 .faded {
   opacity: .5;

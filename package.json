@@ -31,6 +31,7 @@
     "basscss-utility-typography": "latest",
     "basscss-utility-white-space": "latest",
     "browserify": "^8.0.3",
+    "colors.css": "^2.2.0",
     "csv": "^0.4.1",
     "csv-parse": "0.0.8",
     "gulp-data": "^1.2.0",

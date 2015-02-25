@@ -1,31 +1,47 @@
 body {
+  font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   font-weight: var(--normal-font-weight);
+  line-height: var(--line-height);
+  font-size: 100%;
+  color: var(--mid-gray);
+  background-color: white;
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
-a:hover {
-  text-decoration: none;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
+  margin-top: 1em;
+  margin-bottom: .5em;
 }
 
 p, dl, ol, ul {
-  font-size: 1rem;
+  font-size: var(--h4);
+  margin-top: 0;
+  margin-bottom: var(--space-2);
 }
 
-.regular {
-  font-weight: var(--normal-font-weight);
+ol, ul {
+  padding-left: var(--space-3);
+}
+
+pre, code, samp {
+  border-radius: var(--border-radius);
+  font-family: var(--monospace-font-family);
+  font-size: inherit;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  overflow-x: scroll;
+  padding: .5rem;
 }
 
 code, pre {
   background-color: var(--transparent-light-blue);
   border: 1px solid var(--transparent-light-blue-border);
-}
-
-pre {
-  padding: .5rem;
 }
 
 code {
@@ -38,16 +54,64 @@ pre > code {
   background-color: transparent;
 }
 
+hr {
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-3);
+  border: 0;
+  border-bottom-style: solid;
+  border-bottom-width: var(--border-width);
+  border-bottom-color: var(--border-color);
+}
+
+blockquote {
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-3);
+  margin-left: 0;
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+}
+
+blockquote,
+blockquote p {
+  font-size: var(--h3);
+  font-style: italic;
+}
+
+h1, .h1 { font-size: var(--h1) }
+h2, .h2 { font-size: var(--h2) }
+h3, .h3 { font-size: var(--h3) }
+h4, .h4 { font-size: var(--h4) }
+h5, .h5 { font-size: var(--h5) }
+h6, .h6 { font-size: var(--h6) }
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+p, dl, ol, ul {
+  font-size: 1rem;
+}
+
 .lighter {
   font-weight: var(--light-font-weight);
+}
+
+.regular {
+  font-weight: var(--normal-font-weight);
 }
 
 .heavier {
   font-weight: var(--heavy-font-weight);
 }
 
-.wundercon {
-  font-family: 'Wundercon';
+.uppercase {
+  text-transform: uppercase;
 }
 
 .letter-spacing {
@@ -62,3 +126,6 @@ pre > code {
   line-height: 1;
 }
 
+.wundercon {
+  font-family: 'Wundercon';
+}

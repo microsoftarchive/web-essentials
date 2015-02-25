@@ -1,9 +1,5 @@
 @import './fonts';
 
-@import './responsive-states';
-@import './normalize';
-
-@import 'basscss-base-typography';
 @import 'basscss-base-forms';
 @import 'basscss-base-buttons';
 @import 'basscss-base-tables';
@@ -20,7 +16,6 @@
 @import 'basscss-grid';
 @import 'basscss-table-object';
 
-@import 'basscss-color-base';
 @import 'basscss-color-forms';
 @import 'basscss-color-forms-dark';
 @import 'basscss-color-tables';
@@ -32,8 +27,10 @@
 
 @import 'basscss-defaults';
 
-@import './colors';
+@import './responsive-states';
+@import './normalize';
 @import './typography';
+@import './colors';
 @import './layout';
 @import './white-space';
 @import './position';
@@ -43,11 +40,16 @@
 :root {
   --font-family: Lato, Helvetica Neue, sans-serif;
   --line-height: 1.5;
+
+  --light-font-weight: 300;
+  --normal-font-weight: 400;
+  --bold-font-weight: 700;
+  --heavy-font-weight: 900;
+
   --heading-font-family: var(--font-family);
   --heading-font-weight: var(--normal-font-weight);
   --heading-line-height: 1.25;
   --monospace-font-family: 'Source Code Pro', Consolas, monospace;
-
 
   --h1: 3.125rem; /* 50px / 16px */
   --h2: 2.1875rem; /* 35px / 16px */
@@ -55,11 +57,6 @@
   --h4: 1.125rem; /* 18px / 16px */
   --h5: .75rem; /* 12px / 16px */
   --h6: .75rem;
-
-  --light-font-weight: 300;
-  --normal-font-weight: 400;
-  --bold-font-weight: 700;
-  --heavy-font-weight: 900;
 
   --space-half: .25rem;
   --space-1: .5rem;
