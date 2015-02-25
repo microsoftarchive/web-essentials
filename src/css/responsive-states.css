@@ -4,6 +4,10 @@
   display: none !important
 }
 
+.xsm-show-inline, .sm-show-inline, .md-show-inline, .lg-show-inline, .xlg-show-inline {
+  display: none !important
+}
+
 @media (--breakpoint-xsm) {
   .xsm-show-inline { display: inline-block !important }
 }
