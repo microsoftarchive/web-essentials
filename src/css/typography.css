@@ -84,6 +84,8 @@ h4, .h4 { font-size: var(--h4) }
 h5, .h5 { font-size: var(--h5) }
 h6, .h6 { font-size: var(--h6) }
 
+.body-text { font-size: var(--body-text) }
+
 .list-reset {
   list-style: none;
   padding-left: 0;
