@@ -259,7 +259,7 @@
         <li class="pictogram">
           <span class="pictogram-square bg-darken-1 rounded">
             <span class="h6 pictogram-key"><%= row[1] %></span>
-            <span class="wundercon h1 pictogram-icon <%= row[0] %>" title="<%= row[0] %>"></span>
+            <span class="h1 pictogram-icon wundercon icon-<%= row[0] %>" title="<%= row[0] %>"></span>
           </span>
           <span class="h6 uppercase"><%= row[0].split('-')[0] %></span>
         </li>
@@ -267,20 +267,98 @@
       </ul>
     </div>
 
-    <div class="p4">
-      <h2 class="mt0 lighter">04. Components</h2>
+    <div class="clearfix">
+      <div class="md-col md-col-6 p4">
+        <h2 class="mt0 lighter">04. Components</h2>
 
-      <div class="md-col md-col-6">
         <p>
           Here’s an overview of the main components we use on the web. You can
           use these as a guideline but feel free to alter them to fit the
           purpose.
         </p>
 
-        <h3 class="h5 bold uppercase">Alerts</h3>
+        <h3 class="my2 h5 bold uppercase">Alerts</h3>
+
+        <div class="mb2 border border-green green bg-transparent-green rounded relative">
+          <p class="m0 p1">
+            <strong>Well done!</strong> You successfully read this important alert message.
+          </p>
+          <a href="#!"><span class="wundercon icon-x green h3 absolute top-0 right-1" title="x"></span></a>
+        </div>
+
+        <div class="mb2 border border-blue blue bg-transparent-blue rounded relative">
+          <p class="m0 p1">
+            <strong>Heads up!</strong> This alert needs your attention.
+          </p>
+          <a href="#!"><span class="wundercon icon-x blue h3 absolute top-0 right-1" title="x"></span></a>
+        </div>
+
+        <div class="mb2 border border-yellow yellow bg-transparent-yellow rounded relative">
+          <p class="m0 p1">
+            <strong>Warning!</strong> Better check yourself, you're not looking too good.
+          </p>
+          <a href="#!"><span class="wundercon icon-x yellow h3 absolute top-0 right-1" title="x"></span></a>
+        </div>
+
+        <div class="mb2 border border-red red bg-transparent-red rounded relative">
+          <p class="m0 p1">
+            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+          </p>
+          <a href="#!"><span class="wundercon icon-x red h3 absolute top-0 right-1" title="x"></span></a>
+        </div>
+
+        <h3 class="my2 h5 bold uppercase">Avatars</h3>
+
+        <div class="clearfix">
+          <p class="col col-4 mr2">
+            <img class="vm rounded mr1" width="44" height="44" src="https://a.wunderlist.com/api/v1/avatar?user_id=5647467">
+            <span class="h6 inline-block vm">Rounded rectangle</span>
+          </p>
+          <p class="col col-4">
+            <img class="vm circle mr1" width="44" height="44" src="https://a.wunderlist.com/api/v1/avatar?user_id=5647467">
+            <span class="h6 inline-block vm">Circular</span>
+          </p>
+        </div>
+
+        <h3 class="my2 h5 bold uppercase">Buttons</h3>
+
+        <div class="clearfix">
+          <p>
+            <a href="#!" class="button mb1">Primary button</a>
+            <a href="#!" class="button mb1 button-outline bg-white wunderlist-gray">Secondary button</a>
+            <a href="#!" class="button mb1 bg-red white">Danger button</a>
+            <a href="#!" class="button mb1 bg-green white">Success button</a>
+            <a href="#!" class="button mb1 button-outline blue">Outline button</a>
+          </p>
+        </div>
+
+        <h3 class="my2 h5 bold uppercase">Code blocks</h3>
+
+        <div class="clearfix">
+          <pre><code>{
+  "id": 83526310,
+  "created_at": "2013-08-30T08:29:46.203Z",
+  "title": "Read Later",
+  "list_type": "list",
+  "type": "list",
+  "revision": 10
+}</code></pre>
+
+          <p>Along with <code>inline.code("blocks");</code> as well.</p>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
       </div>
 
-      <div class="md-col md-col-6">
+      <div class="md-col md-col-6 p4">
         <h3 class="m0 h5 bold uppercase">Notices</h3>
       </div>
     </div>

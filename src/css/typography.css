@@ -16,7 +16,22 @@ p, dl, ol, ul {
 }
 
 code, pre {
-  background-color: var(--light-blue);
+  background-color: var(--transparent-light-blue);
+  border: 1px solid var(--transparent-light-blue-border);
+}
+
+pre {
+  padding: .5rem;
+}
+
+code {
+  padding: 2px;
+}
+
+pre > code {
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 .lighter {
@@ -30,3 +45,12 @@ code, pre {
 .wundercon {
   font-family: 'Wundercon';
 }
+
+.line-height-0 {
+  line-height: 0;
+}
+
+.line-height-1 {
+  line-height: 1;
+}
+

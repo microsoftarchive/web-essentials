@@ -10,3 +10,7 @@
 .border-box {
   display: border-box;
 }
+
+.vm {
+  vertical-align: middle;
+}

@@ -24,8 +24,10 @@
 @import 'basscss-color-forms-dark';
 @import 'basscss-color-tables';
 @import 'basscss-color-buttons';
-@import 'basscss-colors';
 @import 'basscss-color-borders';
+@import 'basscss-button-outline';
+@import 'basscss-button-transparent';
+@import 'basscss-colors';
 
 @import 'basscss-defaults';
 
@@ -33,6 +35,7 @@
 @import './typography';
 @import './layout';
 @import './white-space';
+@import './position';
 @import './forms';
 @import './buttons';
 
@@ -85,10 +88,14 @@
 
   --black: #1F252A;
   --blue: #2B88D9;
+  --transparent-blue: rgba(43, 136, 217, .1);
   --dark-blue: #276092;
   --red: #DB4C3F;
+  --transparent-red: rgba(214, 40, 34, .1);
   --green: #65B01B;
+  --transparent-green: rgba(101, 176, 27, .1);
   --yellow: #E6B035;
+  --transparent-yellow: rgba(255, 230, 95, .1);
 
   --dark-gray: #444444;
   --wunderlist-gray: #5B5B5B;
@@ -99,8 +106,8 @@
   --white: #FAFAFA;
   --off-white: #F8F8F8;
 
-  --light-blue: rgba(43, 136, 217, .04);
-  --light-blue-border: rgba(43, 136, 217, .32);
+  --transparent-light-blue: rgba(43, 136, 217, .04);
+  --transparent-light-blue-border: rgba(43, 136, 217, .32);
 
   --darken-1: rgba(#000,.0625);
   --darken-2: rgba(#000,.125);

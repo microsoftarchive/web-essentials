@@ -10,6 +10,8 @@
     "basscss-base-reset": "latest",
     "basscss-base-tables": "latest",
     "basscss-base-typography": "latest",
+    "basscss-button-outline": "0.0.1",
+    "basscss-button-transparent": "0.0.2",
     "basscss-color-base": "latest",
     "basscss-color-borders": "latest",
     "basscss-color-buttons": "latest",
