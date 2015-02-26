@@ -1,6 +1,5 @@
 @import './fonts';
 
-@import 'basscss-base-forms';
 @import 'basscss-base-buttons';
 @import 'basscss-base-tables';
 
@@ -18,15 +17,13 @@
 @import './responsive-states';
 @import './normalize';
 @import './typography';
-@import './colors';
 @import './layout';
 @import './white-space';
 @import './position';
 @import './forms';
 @import './buttons';
+@import './colors';
 
-@import 'basscss-color-forms';
-@import 'basscss-color-forms-dark';
 @import 'basscss-color-tables';
 @import 'basscss-color-buttons';
 @import 'basscss-color-borders';

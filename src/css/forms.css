@@ -1,9 +1,145 @@
+input,
+select,
+textarea,
+fieldset {
+  font-size: var(--form-field-font-size);
+  margin-top: 0;
+  margin-bottom: var(--space-1, .5rem);
+}
+
+input[type=text],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week] {
+  box-sizing: border-box;
+  height: var(--form-field-height);
+  padding: var(--form-field-padding-y) var(--form-field-padding-x);
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+select {
+  box-sizing: border-box;
+  line-height: 1.75;
+  padding: var(--form-field-padding-y) var(--form-field-padding-x);
+}
+
+select:not([multiple]) {
+  height: var(--form-field-height);
+  vertical-align: middle;
+}
+
+textarea {
+  box-sizing: border-box;
+  line-height: 1.75;
+  padding: var(--form-field-padding-y) var(--form-field-padding-x);
+}
+
+.fieldset-reset {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border: 0;
+}
+.fieldset-reset legend {
+  padding: 0;
+}
+
 .field-light {
-  transition: none;
+  background-color: white;
+  border-style: solid;
+  border-width: var(--border-width);
+  border-color: var(--border-color);
+  border-radius: var(--border-radius);
   box-shadow: 0 1px 2px rgba(var(--black),.1);
 }
 
 .field-light:focus {
+  outline: none;
   border-color: var(--wunderlist-gray);
+  box-shadow: 0 0 2px rgba(var(--blue),.5);
 }
 
+.field-light:disabled {
+  color: var(--mid-gray);
+  background-color: var(--darken-2);
+}
+
+.field-light:read-only:not(select) {
+  background-color: var(--darken-2);
+}
+
+.field-light:invalid {
+  border-color: var(--red);
+}
+
+.field-light.is-success {
+  border-color: var(--green);
+}
+
+.field-light.is-warning {
+  border-color: var(--yellow);
+}
+
+.field-light.is-error {
+  border-color: var(--red);
+}
+
+.radio-light,
+.checkbox-light {
+  transition: box-shadow .2s ease;
+}
+
+.radio-light {
+  border-radius: 50%;
+}
+  
+.radio-light:focus,
+.checkbox-light:focus {
+  outline: none;
+  box-shadow: 0 0 2px rgba(var(--blue),.5);
+}
+
+.field-dark {
+  color: white;
+  background-color: var(--darken-3);
+  border: 1px solid var(--darken-1);
+  border-radius: var(--border-radius);
+}
+
+.field-dark::placeholder {
+  color: rgba(#fff,.75);
+}
+
+.field-dark:focus {
+  outline: 0;
+  border: 1px solid rgba(#fff,.5);
+}
+
+.field-dark:read-only:not(select) {
+  background-color: rgba(#fff,.25);
+}
+
+.field-dark:invalid {
+  border-color: var(--red);
+}
+
+.field-dark.is-success {
+  border-color: var(--green);
+}
+
+.field-dark.is-warning {
+  border-color: var(--yellow);
+}
+
+.field-dark.is-error {
+  border-color: var(--red);
+}
