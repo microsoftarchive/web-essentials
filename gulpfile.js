@@ -13,27 +13,24 @@ var parse = require('csv-parse');
 
 
 gulp.task('css', function() {
-  gulp.src('./src/css/base.css')
-    .pipe(basswork())
-    .pipe(gulp.dest('./css'))
-    .pipe(minifyCss())
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('./css'));
-
-  gulp.src('./src/css/pictograms.css')
-    .pipe(data(function(file, cb) {
-      var csv = fs.readFileSync('./src/pictograms.csv', 'utf8');
-      parse(csv, {}, function(err, data) {
-        if (err) { return cb(err); }
-        cb(undefined, { pictograms: data });
-      });
-    }))
-    .pipe(template())
-    .pipe(basswork())
-    .pipe(gulp.dest('./css'))
-    .pipe(minifyCss())
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('./css'));
+  ["base", "pictogram"].forEach(function(name) {
+    gulp.src('./src/css/'+name+'.css')
+      .pipe(data(function(file, cb) {
+        var csv = fs.readFileSync('./src/pictograms.csv', 'utf8');
+        parse(csv, {}, function(err, data) {
+          if (err) { return cb(err); }
+          cb(undefined, { pictograms: data });
+        });
+      }))
+      .pipe(template())
+      .pipe(basswork())
+      .pipe(gulp.dest('./css'))
+      .pipe(gulp.dest('./dist'))
+      .pipe(minifyCss())
+      .pipe(rename({ extname: '.min.css' }))
+      .pipe(gulp.dest('./css'))
+      .pipe(gulp.dest('./dist'));
+  });
 });
 
 gulp.task('js', function() {
