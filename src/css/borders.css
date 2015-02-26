@@ -30,6 +30,7 @@
 
 .rounded { border-radius: var(--border-radius) }
 .circle  { border-radius: 50% }
+.pill { border-radius: 1000px }
 
 .rounded-top    { border-radius: var(--border-radius) var(--border-radius) 0 0 }
 .rounded-right  { border-radius: 0 var(--border-radius) var(--border-radius) 0 }
