@@ -13,7 +13,6 @@
 @import './position';
 @import './forms';
 @import './colors';
-@import './border';
 
 .outline-blue * {
   /* box-shadow: 0 0 0 1px rgba(43, 136, 217, .75); */
