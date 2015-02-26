@@ -77,6 +77,11 @@ blockquote p {
   font-style: italic;
 }
 
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
 h1, .h1 { font-size: var(--h1) }
 h2, .h2 { font-size: var(--h2) }
 h3, .h3 { font-size: var(--h3) }
@@ -91,10 +96,17 @@ h6, .h6 { font-size: var(--h6) }
   padding-left: 0;
 }
 
-a {
-  color: var(--blue);
-  text-decoration: none;
-}
+.bold    { font-weight: var(--bold-font-weight) }
+.regular { font-weight: normal }
+.italic  { font-style: italic }
+.caps    { text-transform: uppercase; letter-spacing: .2em; }
+
+.left-align   { text-align: left }
+.center       { text-align: center }
+.right-align  { text-align: right }
+.justify      { text-align: justify }
+
+.nowrap { white-space: nowrap }
 
 .lighter {
   font-weight: var(--light-font-weight);

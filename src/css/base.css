@@ -1,38 +1,23 @@
 @import './fonts';
 
-@import 'basscss-base-buttons';
-@import 'basscss-base-tables';
-
-@import 'basscss-utility-layout';
-@import 'basscss-utility-typography';
-@import 'basscss-utility-white-space';
-@import 'basscss-positions';
-
-@import 'basscss-ui-utility-button-sizes';
-@import 'basscss-ui-utility-groups';
-
-@import 'basscss-grid';
-@import 'basscss-table-object';
-
 @import './responsive-states';
 @import './normalize';
 @import './typography';
+@import './buttons';
+@import './borders';
+@import './grid';
 @import './layout';
 @import './white-space';
+@import './tables';
 @import './position';
 @import './forms';
-@import './buttons';
 @import './colors';
 @import './border';
 
-@import 'basscss-color-tables';
-@import 'basscss-color-buttons';
-@import 'basscss-color-borders';
-@import 'basscss-button-outline';
-@import 'basscss-button-transparent';
-@import 'basscss-colors';
-
-@import 'basscss-defaults';
+.outline-blue * {
+  /* box-shadow: 0 0 0 1px rgba(43, 136, 217, .75); */
+  box-shadow: 0 0 0 1px rgba(var(--blue), .75);
+}
 
 @custom-media --breakpoint-xsm (min-width: 30em);
 @custom-media --breakpoint-sm (min-width: 40em);
@@ -79,6 +64,10 @@
   --button-line-height: 1.375rem; /* 22px / 16 px (22 is what's left after the padding y of 9 and 9) */
   --button-padding-y: .5rem;
   --button-padding-x: 1rem;
+  --button-small-padding-y: .25rem;
+  --button-small-padding-x: .5rem;
+  --button-big-padding-y: 1rem;
+  --button-big-padding-x: 1.25rem;
 
   --container-width: 60em; /* 1024px / 16px */
 

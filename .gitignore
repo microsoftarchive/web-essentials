@@ -1,5 +1,8 @@
 node_modules/*
 css/*
 js/*
-/index.html
+src/css/grid.css
+src/css/pictograms.css
+src/index.html
+/*.html
 .DS_Store

@@ -11,17 +11,34 @@ var data = require('gulp-data');
 var fs = require('fs');
 var parse = require('csv-parse');
 
+var loadData = function(file, cb) {
+  var csv = fs.readFileSync('./src/pictograms.csv', 'utf8');
+  parse(csv, {}, function(err, csvData) {
+    if (err) { return cb(err); }
+
+    var data = {
+      pictograms: csvData
+    };
+
+    cb(undefined, data);
+  });
+};
+
+gulp.task('ejs', function() {
+  gulp.src('./src/**/*.ejs.*')
+    .pipe(data(loadData))
+    .pipe(template())
+    .pipe(rename(function(path) {
+      path.dirname = path.dirname.replace(/^src\//, '');
+      path.extname = path.extname.replace(/^\.ejs/, '');
+    }))
+    .pipe(gulp.dest('./src'))
+});
 
 gulp.task('css', function() {
   ["base", "pictograms"].forEach(function(name) {
     gulp.src('./src/css/'+name+'.css')
-      .pipe(data(function(file, cb) {
-        var csv = fs.readFileSync('./src/pictograms.csv', 'utf8');
-        parse(csv, {}, function(err, data) {
-          if (err) { return cb(err); }
-          cb(undefined, { pictograms: data });
-        });
-      }))
+      .pipe(data(loadData))
       .pipe(template())
       .pipe(basswork())
       .pipe(gulp.dest('./css'))
@@ -47,13 +64,7 @@ gulp.task('js', function() {
 
 gulp.task('html', function() {
   gulp.src('./src/index.html')
-    .pipe(data(function(file, cb) {
-      var csv = fs.readFileSync('./src/pictograms.csv', 'utf8');
-      parse(csv, {}, function(err, data) {
-        if (err) { return cb(err); }
-        cb(undefined, { pictograms: data });
-      });
-    }))
+    .pipe(data(loadData))
     .pipe(template())
     .pipe(gulp.dest('.'))
 });
