@@ -1,9 +1,6 @@
 default:
 	gulp make
 
-dist:
-	gulp dist
-
 install:
 	npm install
 	npm install gulp -g

@@ -63,11 +63,6 @@ gulp.task('html', ['ejs'], function() {
     .pipe(gulp.dest('.'))
 });
 
-gulp.task('dist', ['make'], function() {
-  gulp.src(['./css/base*css', './css/pictograms*css'])
-    .pipe(gulp.dest('./dist'))
-});
-
 gulp.task('serve', function() {
   gulp.src('.')
     .pipe(webserver({ port: (process.env.PORT || '8000') }));
