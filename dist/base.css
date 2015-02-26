@@ -557,7 +557,7 @@ td {
 /* Basscss Grid */
 
 .container {
-  max-width: 64em;
+  max-width: 60em;
   margin-left: auto;
   margin-right: auto;
 }
