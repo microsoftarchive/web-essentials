@@ -424,6 +424,16 @@
           .menubar .drop-down-window {
             top: 100%;
           }
+          .search-field:before {
+            content: 'z';
+            font-family: 'Wundercon';
+            font-weight: 300;
+            position: absolute;
+            top: 13px;
+            left: 25px;
+            font-size: 18px;
+            color: #aaa;
+          }
         </style>
 
         <div class="bg-true-white border-bottom clearfix px2">
@@ -504,8 +514,8 @@
               </div>
             </div>
           </div>
-          <div class="overflow-hidden right px2 py1">
-            <input type="text" class="mb0 right fit field-light pill" placeholder="Search">
+          <div class="overflow-hidden right px2 py1 search-field relative">
+            <input type="text" class="mb0 right fit field-light pill px3" placeholder="Search">
           </div>
           <div class="overflow-hidden py2">
             <nav class="nav-links m0 relative nowrap uppercase letter-spacing h5 bold">
