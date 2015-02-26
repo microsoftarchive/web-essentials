@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var rename = require('gulp-rename');
+var ignore = require('gulp-ignore');
 var basswork = require('gulp-basswork');
 var minifyCss = require('gulp-minify-css');
 var browserify = require('browserify');
@@ -60,6 +61,7 @@ gulp.task('js', function() {
 
 gulp.task('html', ['ejs'], function() {
   gulp.src('./src/*.html')
+    .pipe(ignore.include('*.ejs.*'))
     .pipe(gulp.dest('.'))
 });
 
