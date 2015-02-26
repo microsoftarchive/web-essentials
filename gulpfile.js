@@ -60,7 +60,7 @@ gulp.task('html', function() {
 
 gulp.task('serve', function() {
   gulp.src('.')
-    .pipe(webserver({}));
+    .pipe(webserver({ port: (process.env.PORT || '8000') }));
 });
 
 gulp.task('default', ['css', 'js', 'html', 'serve'], function() {
