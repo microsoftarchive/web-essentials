@@ -68,7 +68,6 @@ var loadData = function(file, cb) {
 
 gulp.task('ejs', function() {
   addsrc('./src/**/*.ejs.*')
-    .pipe(escapeHTMLSnippets)
     .pipe(data(loadData))
     .pipe(template())
     .pipe(rename(function(path) {
@@ -103,6 +102,7 @@ gulp.task('js', function() {
 
 gulp.task('html', ['ejs'], function() {
   addsrc('./src/*.html')
+    .pipe(escapeHTMLSnippets)
     .pipe(ignore.exclude('**/*.ejs.*'))
     .pipe(gulp.dest('.'))
 });

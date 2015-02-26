@@ -71,6 +71,7 @@
 
   --container-width: 60em; /* 1024px / 16px */
 
+  --true-black: black;
   --black: #1F252A;
   --blue: #2B88D9;
   --transparent-blue: rgba(43, 136, 217, .1);
@@ -90,6 +91,7 @@
   --lightest-gray: #EDEDED;
   --white: #FAFAFA;
   --off-white: #F8F8F8;
+  --true-white: white;
 
   --transparent-light-blue: rgba(43, 136, 217, .04);
   --transparent-light-blue-border: rgba(43, 136, 217, .32);

@@ -1,4 +1,5 @@
 default:
+	gulp ejs
 	gulp
 
 install:
