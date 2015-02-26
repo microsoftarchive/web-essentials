@@ -387,8 +387,56 @@
     </div>
 
     <div class="clearfix">
-      <div class="md-col md-col-6 p4">
-        <h2 class="mt0 lighter">05. Layout</h2>
+      <h2 class="mt4 lighter px4">05. Layout</h2>
+
+      <div class="clearfix">
+        <div class="md-col-right md-col-5 px4">
+          <h3 class="h5 bold uppercase letterspacing">Basic layout classes</h3>
+```css
+.inline       { display: inline }
+.block        { display: block }
+.inline-block { display: inline-block }
+
+.overflow-hidden { overflow: hidden }
+.overflow-auto   { overflow: auto }
+.overflow-scroll { overflow: scroll }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table
+}
+.clearfix:after { clear: both }
+
+.left  { float: left }
+.right { float: right }
+
+.fit { max-width: 100% }
+
+.half-width { width: 50% }
+.full-width { width: 100% }
+```
+        </div>
+
+        <div class="md-col md-col-7 px4">
+          <h3 class="h5 bold uppercase letterspacing">Media object</h3>
+
+          <div class="clearfix mb2 outline-blue">
+            <div class="left p2 mr1">Image</div>
+            <div class="overflow-hidden">
+              <p><b>Body</b> Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+            </div>
+          </div>
+
+```html
+<div class="clearfix mb2 outline-blue">
+  <div class="left p2 mr1">Image</div>
+  <div class="overflow-hidden">
+    <p><b>Body</b> Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+  </div>
+</div>
+```
+        </div>
       </div>
     </div>
 
