@@ -1,0 +1,55 @@
+.border-transparent-light-blue {
+  border-color: var(--transparent-light-blue-border);
+}
+
+.transparent-green {
+  color: var(--transparent-green);
+}
+
+.bg-transparent-green {
+  background-color: var(--transparent-green);
+}
+
+.border-transparent-green {
+  border-color: var(--transparent-green);
+}
+
+.transparent-blue {
+  color: var(--transparent-blue);
+}
+
+.bg-transparent-blue {
+  background-color: var(--transparent-blue);
+}
+
+.border-transparent-blue {
+  border-color: var(--transparent-blue);
+}
+
+.transparent-yellow {
+  color: var(--transparent-yellow);
+}
+
+.bg-transparent-yellow {
+  background-color: var(--transparent-yellow);
+}
+
+.border-transparent-yellow {
+  border-color: var(--transparent-yellow);
+}
+
+.transparent-red {
+  color: var(--transparent-red);
+}
+
+.bg-transparent-red {
+  background-color: var(--transparent-red);
+}
+
+.border-transparent-red {
+  border-color: var(--transparent-red);
+}
+
+.pill {
+  border-radius: 1000px
+}

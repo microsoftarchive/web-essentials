@@ -1469,6 +1469,10 @@ textarea {
   background-color: rgba(43, 136, 217, .04);
 }
 
+.drop-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+}
+
 .border-transparent-light-blue {
   border-color: rgba(43, 136, 217, .32);
 }
@@ -1521,8 +1525,8 @@ textarea {
   border-color: rgba(214, 40, 34, .1);
 }
 
-.drop-shadow {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+.pill {
+  border-radius: 1000px;
 }
 
 /* Basscss Color Tables */
@@ -2140,9 +2144,41 @@ textarea {
   opacity: .5;
 }
 
+/*
+
+   COLOR VARIABLES
+
+   - Cool
+   - Warm
+   - Gray Scale
+
+*/
+
+:root {
+  /* Cool */
+  /* Warm */
+  /* Gray scale */
+}
+
 
 
 /* Basscss Defaults */
+
+/*
+
+   COLOR VARIABLES
+
+   - Cool
+   - Warm
+   - Gray Scale
+
+*/
+
+:root {
+  /* Cool */
+  /* Warm */
+  /* Gray scale */
+}
 
 :root {
   /* Legacy support */

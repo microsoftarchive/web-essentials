@@ -23,6 +23,7 @@
 @import './forms';
 @import './buttons';
 @import './colors';
+@import './border';
 
 @import 'basscss-color-tables';
 @import 'basscss-color-buttons';
