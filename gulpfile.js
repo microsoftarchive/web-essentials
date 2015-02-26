@@ -13,7 +13,7 @@ var parse = require('csv-parse');
 
 
 gulp.task('css', function() {
-  ["base", "pictogram"].forEach(function(name) {
+  ["base", "pictograms"].forEach(function(name) {
     gulp.src('./src/css/'+name+'.css')
       .pipe(data(function(file, cb) {
         var csv = fs.readFileSync('./src/pictograms.csv', 'utf8');
