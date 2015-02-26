@@ -1,4 +1,5 @@
 default:
+	gulp ejs
 	gulp make
 
 install:
@@ -6,6 +7,7 @@ install:
 	npm install gulp -g
 
 start:
+	gulp ejs
 	gulp
 
 clean:
