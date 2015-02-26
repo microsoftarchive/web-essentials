@@ -12,9 +12,9 @@ start:
 	gulp
 
 clean:
-	rm -f index.html
-	rm -rf node_modules
-	rm -f css/*
-	rm -f js/*
+	git clean -X -d -f
+	git clean -d -f
+	mkdir css
 	touch css/.gitkeep
+	mkdir js
 	touch js/.gitkeep
