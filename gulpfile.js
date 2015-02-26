@@ -61,7 +61,7 @@ gulp.task('js', function() {
 
 gulp.task('html', ['ejs'], function() {
   gulp.src('./src/*.html')
-    .pipe(ignore.include('*.ejs.*'))
+    .pipe(ignore.exclude('**/*.ejs.*'))
     .pipe(gulp.dest('.'))
 });
 
