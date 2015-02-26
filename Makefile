@@ -1,5 +1,8 @@
 default:
-	gulp css js html
+	gulp make
+
+dist:
+	gulp dist
 
 install:
 	npm install

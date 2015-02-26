@@ -30,23 +30,19 @@ gulp.task('ejs', function() {
     .pipe(template())
     .pipe(rename(function(path) {
       path.dirname = path.dirname.replace(/^src\//, '');
-      path.extname = path.extname.replace(/^\.ejs/, '');
+      path.basename = path.basename.replace(/\.ejs$/, '');
     }))
     .pipe(gulp.dest('./src'))
 });
 
-gulp.task('css', function() {
+gulp.task('css', ['ejs'], function() {
   ["base", "pictograms"].forEach(function(name) {
     gulp.src('./src/css/'+name+'.css')
-      .pipe(data(loadData))
-      .pipe(template())
       .pipe(basswork())
       .pipe(gulp.dest('./css'))
-      .pipe(gulp.dest('./dist'))
       .pipe(minifyCss())
       .pipe(rename({ extname: '.min.css' }))
       .pipe(gulp.dest('./css'))
-      .pipe(gulp.dest('./dist'));
   });
 });
 
@@ -62,11 +58,14 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./js'));
 });
 
-gulp.task('html', function() {
-  gulp.src('./src/index.html')
-    .pipe(data(loadData))
-    .pipe(template())
+gulp.task('html', ['ejs'], function() {
+  gulp.src('./src/*.html')
     .pipe(gulp.dest('.'))
+});
+
+gulp.task('dist', ['make'], function() {
+  gulp.src(['./css/base*css', './css/pictograms*css'])
+    .pipe(gulp.dest('./dist'))
 });
 
 gulp.task('serve', function() {
@@ -74,7 +73,9 @@ gulp.task('serve', function() {
     .pipe(webserver({ port: (process.env.PORT || '8000') }));
 });
 
-gulp.task('default', ['css', 'js', 'html', 'serve'], function() {
+gulp.task('make', ['css', 'js', 'html']);
+
+gulp.task('default', ['make', 'serve'], function() {
   gulp.watch(['./src/**/*'], ['css', 'js', 'html']);
 });
 
