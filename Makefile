@@ -1,14 +1,13 @@
 default:
-	gulp ejs
-	gulp make
+	gulp
 
 install:
 	npm install
 	npm install gulp -g
+	gem install rake rake-tilde
 
 start:
-	gulp ejs
-	gulp
+	rake ~start
 
 clean:
 	git clean -X -d -f

@@ -12,7 +12,9 @@
     "browserify": "^8.0.3",
     "csv": "^0.4.1",
     "csv-parse": "0.0.8",
+    "escape-html": "^1.0.1",
     "gulp": "^3.8.10",
+    "gulp-add-src": "^0.2.0",
     "gulp-basswork": "0.0.9",
     "gulp-data": "^1.2.0",
     "gulp-ignore": "^1.2.1",
@@ -21,6 +23,7 @@
     "gulp-template": "^3.0.0",
     "gulp-uglify": "^1.0.1",
     "gulp-webserver": "^0.8.7",
+    "through2": "^0.6.3",
     "vinyl-transform": "^1.0.0"
   },
   "scripts": {
