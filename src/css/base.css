@@ -6,6 +6,7 @@
 @import './buttons';
 @import './borders';
 @import './grid';
+@import './table-object';
 @import './layout';
 @import './white-space';
 @import './tables';

@@ -3,6 +3,7 @@ css/*
 js/*
 src/css/grid.css
 src/css/pictograms.css
+src/css/table-object.css
 src/index.html
 /*.html
 .DS_Store
