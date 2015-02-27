@@ -115,7 +115,12 @@ gulp.task('html', function() {
     .pipe(gulp.dest('./build/'))
 });
 
-gulp.task('build', ['css', 'js', 'html']);
+gulp.task('build', ['css', 'js', 'html'], function() {
+  addsrc('./fonts/**/*')
+    .pipe(gulp.dest('./render/fonts'))
+  addsrc('./images/**/*')
+    .pipe(gulp.dest('./render/images'))
+});
 
 gulp.task('serve', function() {
   addsrc('./build')
