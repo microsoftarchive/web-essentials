@@ -11,7 +11,9 @@ start:
 clean:
 	git clean -X -d -f
 	git clean -d -f
+	rm -rf render
 	mkdir render
 	touch render/.gitkeep
+	rm -rf build
 	mkdir build
 	touch build/.gitkeep
