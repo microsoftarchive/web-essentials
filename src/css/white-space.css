@@ -45,6 +45,9 @@
 
 .mx-auto { margin-left: auto; margin-right: auto; }
 
+.p0  { padding:       0 }
+.py0 { padding-top:   0; padding-bottom: 0 }
+.px0 { padding-left:  0; padding-right:  0 }
 
 .phalf  { padding: var(--space-half) }
 .pyhalf { padding-top: var(--space-half);  padding-bottom: var(--space-half) }
