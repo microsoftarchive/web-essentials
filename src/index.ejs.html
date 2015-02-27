@@ -44,7 +44,7 @@
       .pictogram-icon {
         font-size: 2.75rem; /* 44px / 16px */
         position: relative;
-        top: 10px;
+        top: 20px;
       }
 
     </style>
@@ -281,7 +281,7 @@
             <span class="h6 pictogram-key"><%= row[1] %></span>
             <span class="h1 pictogram-icon wundercon icon-<%= row[0] %>" title="<%= row[0] %>"></span>
           </span>
-          <span class="h6 caps"><%= row[0].split('-')[0] %></span>
+          <span class="h6 bold caps"><%= row[0].split('-')[0] %></span>
         </li>
         <% }) %>
       </ul>
@@ -318,25 +318,27 @@
 
       <div class="lg-col lg-col-7">
         <div class="ml4 mr2">
-          <p>
-            Margin and padding utilities are based on a global white space scale
-            defined with variables. These utilities use a shorthand naming
-            convention.
-          </p>
+          <!-- outdenting to make the code examples easier -->
 
-          <h3 class="h5 bold caps">Margins</h3>
+<p>
+  Margin and padding utilities are based on a global white space scale
+  defined with variables. These utilities use a shorthand naming
+  convention.
+</p>
 
-          <p>
-            Change or reset default margins using the global white space scale.
-            Negative x-axis margins are used to offset padding. Margin auto is
-            used to horizontally center block-level elements with a set width.
-          </p>
+<h3 class="h5 bold caps">Margins</h3>
 
-          <div class="outline-blue clearfix">
-            <h1 class="m0">Good morning! <span>.m0</span></h1>
-            <p class="mb2">Hallo <span>.mb2</span></p>
-            <p class="bold">How are you? <span>.bold</span></p>
-          </div>
+<p>
+  Change or reset default margins using the global white space scale.
+  Negative x-axis margins are used to offset padding. Margin auto is
+  used to horizontally center block-level elements with a set width.
+</p>
+
+<div class="outline-blue clearfix">
+  <h1 class="m0">Good morning! <span>.m0</span></h1>
+  <p class="mb2">Hallo <span>.mb2</span></p>
+  <p class="bold">How are you? <span>.bold</span></p>
+</div>
 
 ```html
 <div class="outline-blue clearfix">
@@ -346,22 +348,22 @@
 </div>
 ```
 
-          <h3 class="h5 bold caps">Padding</h3>
+<h3 class="h5 bold caps">Padding</h3>
 
-          <p>
-            Padding utilities are only available in symmetrical orientations.
-            This is to normalize the spacing used around elements.
-          </p>
+<p>
+  Padding utilities are only available in symmetrical orientations.
+  This is to normalize the spacing used around elements.
+</p>
 
-          <div class="outline-blue clearfix">
-            <h1 class="p1">Good morning! <span>.p1</span></h1>
-            <p class="px4">Hallo <span>.px4</span></p>
-            <p class="px4"><span class="block">
-              <span class="mxn2">
-                How are you? <span>.px4 &gt; .mxn2</span>
-              </span>
-            </span></p>
-          </div>
+<div class="outline-blue clearfix">
+  <h1 class="p1">Good morning! <span>.p1</span></h1>
+  <p class="px4">Hallo <span>.px4</span></p>
+  <p class="px4"><span class="block">
+    <span class="mxn2">
+      How are you? <span>.px4 &gt; .mxn2</span>
+    </span>
+  </span></p>
+</div>
 
 ```html
 <div class="outline-blue clearfix">
@@ -375,13 +377,13 @@
 </div>
 ```
 
-          <p>
-            <span class="red">Margins and padding should never be declared
-              outside of these utilities.</span> This is meant to help create
-            consistent rhythm and avoid magic numbers. If, for some reason, the
-            default white space scale does not accomodate your design,
-            customize and extend it before implementation.
-          </p>
+<p>
+  <span class="red">Margins and padding should never be declared
+    outside of these utilities.</span> This is meant to help create
+  consistent rhythm and avoid magic numbers. If, for some reason, the
+  default white space scale does not accomodate your design,
+  customize and extend it before implementation.
+</p>
         </div>
       </div>
     </div>
@@ -434,14 +436,16 @@
         </div>
 
         <div class="lg-col lg-col-7 px4">
-          <h3 class="h5 bold caps">Media object</h3>
+          <!-- outdenting to make the code examples easier -->
 
-          <div class="clearfix mb2 outline-blue">
-            <div class="left p2 mr1">Image</div>
-            <div class="overflow-hidden">
-              <p><b>Body</b> Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
-            </div>
-          </div>
+<h3 class="h5 bold caps">Media object</h3>
+
+<div class="clearfix mb2 outline-blue">
+  <div class="left p2 mr1">Image</div>
+  <div class="overflow-hidden">
+    <p><b>Body</b> Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+  </div>
+</div>
 
 ```html
 <div class="clearfix mb2 outline-blue">
@@ -452,15 +456,15 @@
 </div>
 ```
 
-          <h3 class="h5 bold caps">Double sided media object</h3>
+<h3 class="h5 bold caps">Double sided media object</h3>
 
-          <div class="clearfix mb2 outline-blue">
-            <div class="left p2 mr1">Image</div>
-            <div class="right p2 ml1">Image</div>
-            <div class="overflow-hidden">
-              <p><b>Body</b> Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
-            </div>
-          </div>
+<div class="clearfix mb2 outline-blue">
+  <div class="left p2 mr1">Image</div>
+  <div class="right p2 ml1">Image</div>
+  <div class="overflow-hidden">
+    <p><b>Body</b> Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+  </div>
+</div>
 
 ```html
 <div class="clearfix mb2 outline-blue">
@@ -472,12 +476,12 @@
 </div>
 ```
 
-          <h3 class="h5 bold caps">Full height section</h3>
+<h3 class="h5 bold caps">Full height section</h3>
 
-          <p>
-            To make a full height section, the html and body tags must first be
-            full height. A valid example html document is:
-          </p>
+<p>
+  To make a full height section, the html and body tags must first be
+  full height. A valid example html document is:
+</p>
 
 ```html
 <!doctype html>
@@ -500,23 +504,23 @@
   </body>
 </html>
 ```
-          <p>
-            This example can be seen at
-            <a class="ml1 button button-outline blue" href="full-height-example.html">full-height-example.html</a>
-          </p>
+<p>
+  This example can be seen at
+  <a class="ml1 button button-outline blue" href="full-height-example.html">full-height-example.html</a>
+</p>
 
-          <p>
-            Also, the <a href="#begin">first section</a> of this page uses this
-            technique. It also employs a table layout for vertical centering.
-          </p>
+<p>
+  Also, the <a href="#begin">first section</a> of this page uses this
+  technique. It also employs a table layout for vertical centering.
+</p>
 
-          <h3 class="h5 bold caps">Containers</h3>
+<h3 class="h5 bold caps">Containers</h3>
 
-          <p>
-            To constrain the width to reasonable size, we have containers to
-            set a max-width. The container width is set with the
-            --container-width variable.
-          </p>
+<p>
+  To constrain the width to reasonable size, we have containers to
+  set a max-width. The container width is set with the
+  --container-width variable.
+</p>
 
 ```html
 <div class="container">
@@ -534,15 +538,33 @@
 
       <!-- outdenting to make the code examples easier -->
 
+        <div class="clearfix mxn2">
+          <div class="lg-col-right lg-col-5 px2">
+
+<h3 class="h5 bold caps mt0">Clearfix</h3>
+
 <p>
   The grid allows a lot of flexibility in creating complex layouts.
   Start by using a <code>.clearfix</code> container.
 </p>
 
+          </div>
+          <div class="lg-col lg-col-7 px2">
+
 ```html
 <div class="clearfix">
 </div>
 ```
+
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="clearfix mxn2">
+          <div class="lg-col-right lg-col-5 px2">
+
+<h3 class="h5 bold caps mt0">Simple columns</h3>
 
 <p>
   Add columns using the <code>.col</code> and grid width
@@ -552,6 +574,9 @@
   should add up to 12.
 </p>
 
+          </div>
+          <div class="lg-col lg-col-7 px2">
+
 <div class="clearfix outline-blue mb2">
   <div class="col col-6">.col.col-6</div>
   <div class="col col-6">.col.col-6</div>
@@ -564,7 +589,15 @@
 </div>
 ```
 
-<h3 class="h5 bold caps">Gutters</h3>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="clearfix mxn2">
+          <div class="lg-col-right lg-col-5 px2">
+
+<h3 class="h5 bold caps mt0">Gutters</h3>
 
 <p>
   Use padding and negative margin utilities to create gutters based on
@@ -573,6 +606,9 @@
   by using overflow hidden. Otherwise, horizontal scrolling may occur.
 </p>
 
+          </div>
+          <div class="lg-col lg-col-7 px2">
+
 <div class="clearfix outline-blue mb2">
   <div class="col col-5 px2"><div>.col .col-5 .px2</div></div>
   <div class="col col-7 px2"><div>.col .col-7 .px2</div></div>
@@ -584,13 +620,27 @@
   <div class="col col-7 px2"><div>.col .col-7 .px2</div></div>
 </div>
 ```
+
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="clearfix mxn2">
+          <div class="lg-col-right lg-col-5 px2">
+
+<h3 class="h5 bold caps mt0">Negative margins</h3>
 
 <p>
   An example using negative margin to expand the columns in an already
   padded section, which appears to have a single gutter in the center.
 </p>
 
+          </div>
+          <div class="lg-col lg-col-7 px2">
+
 <div class="px4 py2 outline-blue bg-off-white mb2">
+  <div class="mb1">I am the normal size.</div>
   <div class="clearfix mxn4">
     <div class="col col-6 px4"><div>.col .col-6 .px4</div></div>
     <div class="col col-6 px4"><div>.col .col-6 .px4</div></div>
@@ -599,6 +649,7 @@
 
 ```html
 <div class="px4 py2 outline-blue bg-off-white mb2">
+  <div class="mb1">I am the normal size.</div>
   <div class="clearfix mxn4">
     <div class="col col-6 px4"><div>.col .col-6 .px4</div></div>
     <div class="col col-6 px4"><div>.col .col-6 .px4</div></div>
@@ -606,12 +657,23 @@
 </div>
 ```
 
-<h3 class="h5 bold caps">Nested columns</h3>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="clearfix mxn2">
+          <div class="lg-col-right lg-col-5 px2">
+
+<h3 class="h5 bold caps mt0">Nested columns</h3>
 
 <p>
   Nest whole grid structures within columns to created nested grids.
 </p>
 
+          </div>
+          <div class="lg-col lg-col-7 px2">
+
 <div class="clearfix outline-blue mb2">
   <div class="sm-col sm-col-6 md-col-5 lg-col-4 px2"><div>Unnested</div></div>
   <div class="sm-col sm-col-6 md-col-7 lg-col-8 px2">
@@ -634,13 +696,24 @@
 </div>
 ```
 
-<h3 class="h5 bold caps">Reversed order</h3>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="clearfix mxn2">
+          <div class="lg-col-right lg-col-5 px2">
+
+<h3 class="h5 bold caps mt0">Reversed order</h3>
 
 <p>
   To reverse the order of columns, use the <code>.col-right</code> class
   to float right.
 </p>
 
+          </div>
+          <div class="lg-col lg-col-7 px2">
+
 <div class="clearfix outline-blue mb2">
   <div class="col-right col-6">.col-right.col-6</div>
   <div class="col col-6">.col.col-6</div>
@@ -652,6 +725,14 @@
   <div class="col col-6">.col.col-6</div>
 </div>
 ```
+
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="clearfix mxn2">
+          <div class="lg-col-right lg-col-5 px2">
 
 <h3 class="h5 bold caps">Centered columns</h3>
 
@@ -659,6 +740,9 @@
   Use the .mx-auto class to center columns within their containers.
 </p>
 
+          </div>
+          <div class="lg-col lg-col-7 px2">
+
 <div class="clearfix outline-blue mb2">
   <div class="col-8 px2 mx-auto">
     <div>Centered Column</div>
@@ -672,6 +756,9 @@
   </div>
 </div>
 ```
+
+          </div>
+        </div>
 
 <h3>Grid layout examples</h3>
 
