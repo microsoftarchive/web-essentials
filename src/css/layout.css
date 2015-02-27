@@ -1,6 +1,8 @@
 .inline       { display: inline }
 .block        { display: block }
 .inline-block { display: inline-block }
+.border-box   { display: border-box }
+.vm           { vertical-align: middle }
 
 .overflow-hidden { overflow: hidden }
 .overflow-scroll { overflow: scroll }
@@ -27,16 +29,9 @@
   min-height: 100%;
 }
 
-.border-box {
-  display: border-box;
-}
-
 .container {
   max-width: var(--container-width);
   margin-left: auto;
   margin-right: auto;
 }
 
-.vm {
-  vertical-align: middle;
-}

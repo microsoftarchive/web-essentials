@@ -1,4 +1,12 @@
 default:
+	gulp render
+	gulp build
+
+render:
+	gulp render
+
+build:
+	gulp render
 	gulp build
 
 install:
@@ -6,6 +14,8 @@ install:
 	npm install gulp -g
 
 start:
+	gulp render
+	gulp build
 	gulp
 
 clean:

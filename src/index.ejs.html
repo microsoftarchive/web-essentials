@@ -396,10 +396,12 @@
 .inline       { display: inline }
 .block        { display: block }
 .inline-block { display: inline-block }
+.border-box   { display: border-box }
+.vm           { vertical-align: middle }
 
 .overflow-hidden { overflow: hidden }
-.overflow-auto   { overflow: auto }
 .overflow-scroll { overflow: scroll }
+.overflow-auto   { overflow: auto }
 
 .clearfix:before,
 .clearfix:after {
@@ -415,6 +417,19 @@
 
 .half-width { width: 50% }
 .full-width { width: 100% }
+.full-height { min-height: 100% }
+
+.body-full-height {
+  height: 100%;
+  min-height: 100%;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 ```
         </div>
 
@@ -436,6 +451,60 @@
   </div>
 </div>
 ```
+
+          <h3 class="h5 bold uppercase letterspacing">Double sided media object</h3>
+
+          <div class="clearfix mb2 outline-blue">
+            <div class="left p2 mr1">Image</div>
+            <div class="right p2 ml1">Image</div>
+            <div class="overflow-hidden">
+              <p><b>Body</b> Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+            </div>
+          </div>
+
+```html
+<div class="clearfix mb2 outline-blue">
+  <div class="left p2 mr1">Image</div>
+  <div class="right p2 ml1">Image</div>
+  <div class="overflow-hidden">
+    <p><b>Body</b> Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+  </div>
+</div>
+```
+
+          <h3 class="h5 bold uppercase letterspacing">Full height section</h3>
+
+          <p>
+            To make a full height section, the html and body tags must first be
+            full height. A valid example html document is:
+          </p>
+
+```html
+<!doctype html>
+<html class="body-full-height">
+  <head>
+    <title>Full height section example</title>
+    <link rel="stylesheet" href="/css/base.min.css">
+  </head>
+  <body class="body-full-height">
+    <div class="full-height white bg-blue">
+      <div class="center py4">
+        <h1>First</h1>
+      </div>
+    </div>
+    <div class="full-height white bg-green">
+      <div class="center py4">
+        <h1>Second</h1>
+      </div>
+    </div>
+  </body>
+</html>
+```
+          <p>
+            This example can be seen at
+            <a class="ml1 button button-outline blue" href="full-height-example.html">full-height-example.html</a>
+          </p>
+
         </div>
       </div>
     </div>

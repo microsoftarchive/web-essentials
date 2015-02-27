@@ -84,7 +84,7 @@ gulp.task('render', function() {
     .pipe(gulp.dest('./render'))
 });
 
-gulp.task('css', ['render'], function() {
+gulp.task('css', function() {
   ['base', 'pictograms'].forEach(function(name) {
     addsrc('./render/css/'+name+'.css')
       .pipe(basswork())
@@ -95,7 +95,7 @@ gulp.task('css', ['render'], function() {
   });
 });
 
-gulp.task('js', ['render'], function() {
+gulp.task('js', function() {
   ['app'].forEach(function(name) {
     var browserified = transform(function(filename) {
       var b = browserify(filename);
@@ -109,7 +109,7 @@ gulp.task('js', ['render'], function() {
   });
 });
 
-gulp.task('html', ['render'], function() {
+gulp.task('html', function() {
   addsrc('./render/*.html')
     .pipe(escapeHTMLSnippets)
     .pipe(gulp.dest('./build/'))
@@ -119,10 +119,10 @@ gulp.task('build', ['css', 'js', 'html']);
 
 gulp.task('serve', function() {
   addsrc('./build')
-    .pipe(webserver({ port: (Process.env.PORT || '8000') }))
+    .pipe(webserver({ port: (process.env.PORT || '8000'), open: true }))
 });
 
-gulp.task('default', ['build', 'serve'], function() {
+gulp.task('default', ['serve'], function() {
   gulp.watch(['./src/**/*'], ['render']);
   gulp.watch(['./render/**/*'], ['build']);
 });
