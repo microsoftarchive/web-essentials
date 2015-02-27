@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var addsrc = require('gulp-add-src');
 var rename = require('gulp-rename');
 var ignore = require('gulp-ignore');
 var basswork = require('gulp-basswork');
@@ -66,50 +65,63 @@ var loadData = function(file, cb) {
   });
 };
 
-gulp.task('ejs', function() {
+gulp.task('render', function() {
   addsrc('./src/**/*.ejs.*')
     .pipe(data(loadData))
     .pipe(template())
     .pipe(rename(function(path) {
-      path.dirname = path.dirname.replace(/^src\//, '');
-      path.basename = path.basename.replace(/\.ejs$/, '');
+      path.dirname = path.dirname.replace(/^src\//, '')
+      path.basename = path.basename.replace(/\.ejs$/, '')
     }))
-    .pipe(gulp.dest('./build'))
+    .pipe(gulp.dest('./render'))
+
+  addsrc('./src/**/*')
+    .pipe(ignore.exclude('**/*.ejs.*'))
+    .pipe(rename(function(path) {
+      path.dirname = path.dirname.replace(/^src\//, '')
+    }))
+    .pipe(gulp.dest('./render'))
 });
 
-gulp.task('css', ['ejs'], function() {
-  ["base", "pictograms"].forEach(function(name) {
-    addsrc('./src/css/'+name+'.css')
+gulp.task('css', ['render'], function() {
+  ['base', 'pictograms'].forEach(function(name) {
+    addsrc('./render/css/'+name+'.css')
       .pipe(basswork())
-      .pipe(gulp.dest('./css'))
+      .pipe(gulp.dest('./build/css'))
       .pipe(minifyCss())
       .pipe(rename({ extname: '.min.css' }))
-      .pipe(gulp.dest('./css'))
+      .pipe(gulp.dest('./build/css'))
   });
 });
 
-gulp.task('js', function() {
-  var browserified = transform(function(filename) {
-    var b = browserify(filename);
-    return b.bundle();
+gulp.task('js', ['render'], function() {
+  ['app'].forEach(function(name) {
+    var browserified = transform(function(filename) {
+      var b = browserify(filename);
+      return b.bundle();
+    });
+    addsrc('./render/js/'+name+'.js')
+      .pipe(browserified)
+      .pipe(uglify())
+      .pipe(rename({ extname: '.min.js' }))
+      .pipe(gulp.dest('./build/js'))
   });
-  addsrc('./src/js/app.js')
-    .pipe(browserified)
-    .pipe(uglify())
-    .pipe(rename({ extname: '.min.js' }))
-    .pipe(gulp.dest('./js'));
 });
 
-gulp.task('html', ['ejs'], function() {
-  addsrc('./src/*.html')
+gulp.task('html', ['render'], function() {
+  addsrc('./render/*.html')
     .pipe(escapeHTMLSnippets)
-    .pipe(ignore.exclude('**/*.ejs.*'))
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('./build/'))
 });
 
-gulp.task('render', ['ejs']);
-gulp.task('buld', ['css', 'js', 'html']);
-gulp.task('make', ['render', 'build', 'html']);
+gulp.task('build', ['css', 'js', 'html']);
 
-gulp.task('default', ['make']);
+gulp.task('serve', function() {
+  addsrc('./build')
+    .pipe(webserver({ port: (Process.env.PORT || '8000') }))
+});
 
+gulp.task('default', ['build', 'serve'], function() {
+  gulp.watch(['./src/**/*'], ['render']);
+  gulp.watch(['./render/**/*'], ['build']);
+});

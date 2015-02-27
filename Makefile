@@ -1,19 +1,17 @@
 default:
-	gulp ejs
-	gulp
+	gulp build
 
 install:
 	npm install
 	npm install gulp -g
-	gem install rake rake-tilde
 
 start:
-	rake ~start
+	gulp
 
 clean:
 	git clean -X -d -f
 	git clean -d -f
-	mkdir css
-	touch css/.gitkeep
-	mkdir js
-	touch js/.gitkeep
+	mkdir render
+	touch render/.gitkeep
+	mkdir build
+	touch build/.gitkeep
