@@ -345,6 +345,10 @@ h6,
   text-align: justify;
 }
 
+.pre-wrap {
+  white-space: pre-wrap;
+}
+
 .nowrap {
   white-space: nowrap;
 }

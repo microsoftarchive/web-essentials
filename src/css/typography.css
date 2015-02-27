@@ -106,6 +106,7 @@ h6, .h6 { font-size: var(--h6) }
 .right-align  { text-align: right }
 .justify      { text-align: justify }
 
+.pre-wrap { white-space: pre-wrap }
 .nowrap { white-space: nowrap }
 
 .lighter {
