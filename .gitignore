@@ -1,10 +1,4 @@
 node_modules/*
-css/*
-js/*
-src/css/colors.css
-src/css/grid.css
-src/css/pictograms.css
-src/css/table-object.css
-src/index.html
-/*.html
+build/*
+render/*
 .DS_Store

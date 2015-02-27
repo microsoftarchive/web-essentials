@@ -74,7 +74,7 @@ gulp.task('ejs', function() {
       path.dirname = path.dirname.replace(/^src\//, '');
       path.basename = path.basename.replace(/\.ejs$/, '');
     }))
-    .pipe(gulp.dest('./src'))
+    .pipe(gulp.dest('./build'))
 });
 
 gulp.task('css', ['ejs'], function() {
@@ -107,7 +107,9 @@ gulp.task('html', ['ejs'], function() {
     .pipe(gulp.dest('.'))
 });
 
-gulp.task('make', ['ejs', 'css', 'js', 'html']);
+gulp.task('render', ['ejs']);
+gulp.task('buld', ['css', 'js', 'html']);
+gulp.task('make', ['render', 'build', 'html']);
 
 gulp.task('default', ['make']);
 
