@@ -1,24 +1,6 @@
 /* TODO: upload fonts to the assets S3 */
 
 @font-face {
-  font-family: 'Wundercon';
-  font-weight: 400;
-  font-style: normal;
-  src: url("/fonts/wundercon-webfont.woff2") format('woff2'),
-       url("/fonts/wundercon-webfont.woff") format('woff'),
-       url("/fonts/wundercon-webfont.ttf") format('truetype');
-}
-
-@font-face {
-  font-family: 'Wundercon';
-  font-weight: 300;
-  font-style: normal;
-  src: url("/fonts/wundercon-light-webfont.woff2") format('woff2'),
-       url("/fonts/wundercon-light-webfont.woff") format('woff'),
-       url("/fonts/wundercon-light-webfont.ttf") format('truetype');
-}
-
-@font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
@@ -344,7 +326,7 @@ h6,
 
 .caps {
   text-transform: uppercase;
-  letter-spacing: .2em;
+  letter-spacing: .0625em;
 }
 
 .left-align {
@@ -393,10 +375,6 @@ h6,
 
 .line-height-1 {
   line-height: 1;
-}
-
-.wundercon {
-  font-family: 'Wundercon';
 }
 
 button,
@@ -1425,14 +1403,27 @@ td {
 }
 
 .table-light th,
+.table-light tbody tr:nth-child(2n) td {
+  background-color: rgba(243, 246, 249, .7);
+}
+
+.table-light th,
 .table-light td {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: #EDEDED;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #EDEDED;
 }
 
 .table-light tr:last-child td {
   border-bottom: 0;
+}
+
+.table-light tr td:last-child,
+.table-light tr th:last-child {
+  border-right: 0;
 }
 
 .relative {
@@ -1805,6 +1796,18 @@ textarea {
 
 .border-dark-gray {
   border-color: #444444;
+}
+
+.gray {
+  color: #5B5B5B;
+}
+
+.bg-gray {
+  background-color: #5B5B5B;
+}
+
+.border-gray {
+  border-color: #5B5B5B;
 }
 
 .wunderlist-gray {

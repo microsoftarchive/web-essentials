@@ -20,12 +20,25 @@ th { vertical-align: bottom }
 td { vertical-align: top }
 
 .table-light th,
+.table-light tbody tr:nth-child(2n) td {
+  background-color: rgba(243, 246, 249, .7);
+}
+
+.table-light th,
 .table-light td {
   border-bottom-style: solid;
   border-bottom-width: var(--border-width);
   border-bottom-color: var(--border-color);
+  border-right-style: solid;
+  border-right-width: var(--border-width);
+  border-right-color: var(--border-color);
 }
 
 .table-light tr:last-child td {
   border-bottom: 0;
+}
+
+.table-light tr td:last-child,
+.table-light tr th:last-child {
+  border-right: 0;
 }

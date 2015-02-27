@@ -99,7 +99,7 @@ h6, .h6 { font-size: var(--h6) }
 .bold    { font-weight: var(--bold-font-weight) }
 .regular { font-weight: normal }
 .italic  { font-style: italic }
-.caps    { text-transform: uppercase; letter-spacing: .2em; }
+.caps    { text-transform: uppercase; letter-spacing: .0625em; }
 
 .left-align   { text-align: left }
 .center       { text-align: center }
@@ -134,8 +134,4 @@ h6, .h6 { font-size: var(--h6) }
 
 .line-height-1 {
   line-height: 1;
-}
-
-.wundercon {
-  font-family: 'Wundercon';
 }

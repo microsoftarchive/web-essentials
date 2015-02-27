@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'Wundercon';
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/wundercon-webfont.woff2") format('woff2'),
+       url("/fonts/wundercon-webfont.woff") format('woff'),
+       url("/fonts/wundercon-webfont.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Wundercon';
+  font-weight: 300;
+  font-style: normal;
+  src: url("/fonts/wundercon-light-webfont.woff2") format('woff2'),
+       url("/fonts/wundercon-light-webfont.woff") format('woff'),
+       url("/fonts/wundercon-light-webfont.ttf") format('truetype');
+}
+
+.wundercon {
+  font-family: 'Wundercon';
+  min-width: 1em;
+  line-height: 1em;
+}
+
 .icon-inbox:before {
   content: ' A';
 }
@@ -268,4 +292,8 @@
 
 .icon-arrow-down:before {
   content: ' –';
+}
+
+.icon-caution:before {
+  content: ' #';
 }
