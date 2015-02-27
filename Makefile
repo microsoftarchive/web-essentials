@@ -12,6 +12,7 @@ build:
 install:
 	npm install
 	npm install gulp -g
+	cp pre-commit .git/hooks/
 
 start:
 	gulp render

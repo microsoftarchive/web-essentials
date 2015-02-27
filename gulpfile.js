@@ -117,9 +117,9 @@ gulp.task('html', function() {
 
 gulp.task('build', ['css', 'js', 'html'], function() {
   addsrc('./fonts/**/*')
-    .pipe(gulp.dest('./render/fonts'))
+    .pipe(gulp.dest('./build/fonts'))
   addsrc('./images/**/*')
-    .pipe(gulp.dest('./render/images'))
+    .pipe(gulp.dest('./build/images'))
 });
 
 gulp.task('serve', function() {
@@ -130,4 +130,7 @@ gulp.task('serve', function() {
 gulp.task('default', ['serve'], function() {
   gulp.watch(['./src/**/*'], ['render']);
   gulp.watch(['./render/**/*'], ['build']);
+});
+
+gulp.task('dist', function() {
 });
