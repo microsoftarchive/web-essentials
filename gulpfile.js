@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var addsrc = require('gulp-add-src');
 var rename = require('gulp-rename');
 var ignore = require('gulp-ignore');
 var basswork = require('gulp-basswork');
