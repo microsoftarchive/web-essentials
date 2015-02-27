@@ -133,4 +133,10 @@ gulp.task('default', ['serve'], function() {
 });
 
 gulp.task('dist', function() {
+  addsrc([
+    './build/css/base.css',
+    './build/css/base.min.css',
+    './build/css/pictograms.css',
+    './build/css/pictograms.min.css'
+  ]).pipe(gulp.dest('./dist'))
 });
