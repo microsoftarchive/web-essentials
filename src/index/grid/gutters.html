@@ -1,0 +1,36 @@
+<div class="lg-col-right lg-col-5 px2">
+  <h3 class="h5 bold caps mt0">Gutters</h3>
+  <p>
+    Use padding and negative margin utilities to create gutters based on
+    the white space scale. When using negative margin, be sure to
+    compensate for the extra width created with a padded parent element or
+    by using overflow hidden. Otherwise, horizontal scrolling may occur.
+  </p>
+</div>
+<div class="lg-col lg-col-7 px2">
+```html{"insert":true}
+<div class="clearfix outline-blue mb2">
+  <div class="col col-5 px2"><div>.col .col-5 .px2</div></div>
+  <div class="col col-7 px2"><div>.col .col-7 .px2</div></div>
+</div>
+```
+</div>
+
+<div class="lg-col-right lg-col-5 px2">
+  <h3 class="h5 bold caps mt0">Negative margins</h3>
+  <p>
+    An example using negative margin to expand the columns in an already
+    padded section, which appears to have a single gutter in the center.
+  </p>
+</div>
+<div class="lg-col lg-col-7 px2">
+```html{"insert":true}
+<div class="px4 py2 outline-blue bg-off-white mb2">
+  <div class="mb1">I am the normal size.</div>
+  <div class="clearfix mxn4">
+    <div class="col col-6 px4"><div>.col .col-6 .px4</div></div>
+    <div class="col col-6 px4"><div>.col .col-6 .px4</div></div>
+  </div>
+</div>
+```
+</div>
