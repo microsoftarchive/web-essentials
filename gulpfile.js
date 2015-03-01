@@ -85,7 +85,7 @@ gulp.task('render', function() {
 });
 
 gulp.task('css', function() {
-  ['base', 'pictograms'].forEach(function(name) {
+  ['essentials', 'pictograms'].forEach(function(name) {
     addsrc('./render/css/'+name+'.css')
       .pipe(basswork())
       .pipe(gulp.dest('./build/css'))
@@ -134,8 +134,8 @@ gulp.task('default', ['serve'], function() {
 
 gulp.task('dist', function() {
   addsrc([
-    './build/css/base.css',
-    './build/css/base.min.css',
+    './build/css/essentials.css',
+    './build/css/essentials.min.css',
     './build/css/pictograms.css',
     './build/css/pictograms.min.css'
   ]).pipe(gulp.dest('./dist'))
