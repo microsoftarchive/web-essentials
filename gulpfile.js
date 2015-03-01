@@ -4,6 +4,7 @@ var rename = require('gulp-rename');
 var ignore = require('gulp-ignore');
 var basswork = require('gulp-basswork');
 var minifyCss = require('gulp-minify-css');
+var fileinclude = require('gulp-file-include');
 var browserify = require('browserify');
 var transform = require('vinyl-transform');
 var uglify = require('gulp-uglify');
@@ -17,14 +18,26 @@ var escape = require('escape-html');
 var through = require('through2');
 
 var escapeHTMLSnippets = (function() {
-  var regex = /[\s\S]```([a-z]*)([\s\S]*?)```[\s\S]/gm;
+  var regex = /[\s\S]```([a-z]*)(\{[^}]+\})?([\s\S]*?)```[\s\S]/gm;
   var strip = function(what) {
     return String(what).replace(/^\s+|\s+$/g, '');
   }
-  var replacer = function(match, language, content) {
-    return '<pre class="blue" data-lang="' + language + '"><code>' +
-           strip(escape(strip(content))) +
-           '</code></pre>';
+  var replacer = function(match, language, options, content) {
+    if (options) {
+      options = JSON.parse(options);
+    } else {
+      options = {};
+    }
+
+    var html = '<pre class="blue" data-lang="' + language + '"><code>' +
+               strip(escape(strip(content))) +
+               '</code></pre>';
+
+    if (options.insert) {
+      html = content + html;
+    }
+
+    return html;
   };
   var pre = function(contents) {
     return contents.replace(regex, replacer);
@@ -53,31 +66,32 @@ var escapeHTMLSnippets = (function() {
   });
 })();
 
+var pictogramsData;
+
 var loadData = function(file, cb) {
-  var csv = fs.readFileSync('./src/pictograms.csv', 'utf8');
-  parse(csv, {}, function(err, csvData) {
-    if (err) { return cb(err); }
-
-    var data = {
-      pictograms: csvData
-    };
-
+  if (pictogramsData) {
     cb(undefined, data);
-  });
+  } else {
+    var csv = fs.readFileSync('./pictograms.csv', 'utf8');
+    parse(csv, {}, function(err, csvData) {
+      if (err) { return cb(err); }
+
+      var data = {
+        pictograms: csvData
+      };
+
+      pictogramsData = data;
+
+      cb(undefined, data);
+    });
+  }
 };
 
 gulp.task('render', function() {
-  addsrc('./src/**/*.ejs.*')
+  addsrc('./src/**/*')
+    .pipe(fileinclude())
     .pipe(data(loadData))
     .pipe(template())
-    .pipe(rename(function(path) {
-      path.dirname = path.dirname.replace(/^src\//, '')
-      path.basename = path.basename.replace(/\.ejs$/, '')
-    }))
-    .pipe(gulp.dest('./render'))
-
-  addsrc('./src/**/*')
-    .pipe(ignore.exclude('**/*.ejs.*'))
     .pipe(rename(function(path) {
       path.dirname = path.dirname.replace(/^src\//, '')
     }))
@@ -128,12 +142,16 @@ gulp.task('serve', function() {
 });
 
 gulp.task('default', ['serve'], function() {
+  gulp.watch(['./*.csv'], function() {
+    pictogramsData = null; // so it will reload the file
+  });
   gulp.watch(['./src/**/*'], ['render']);
   gulp.watch(['./render/**/*'], ['build']);
 });
 
 gulp.task('dist', function() {
   addsrc([
+    './build/fonts/*',
     './build/css/essentials.css',
     './build/css/essentials.min.css',
     './build/css/pictograms.css',

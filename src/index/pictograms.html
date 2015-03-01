@@ -1,0 +1,20 @@
+<div class="p4 white bg-blue" id="pictograms">
+  <h2 class="mt0 lighter">03. Pictograms</h2>
+  <p class="lg-col-6 mb4">
+    Just like typography, pictograms gives the UI context. They help
+    illustrate the purpose of UI elements. Pictograms are often easier
+    and faster to understand than text.
+  </p>
+
+  <ul class="list-reset lighter">
+    <% pictograms.forEach(function(row) { %>
+    <li class="pictogram">
+      <span class="pictogram-square bg-darken-1 rounded">
+        <span class="h6 pictogram-key"><%= row[1] %></span>
+        <span class="h1 pictogram-icon wundercon icon-<%= row[0] %>" title="<%= row[0] %>"></span>
+      </span>
+      <span class="h6 bold caps"><%= row[0].split('-')[0] %></span>
+    </li>
+    <% }) %>
+  </ul>
+</div>

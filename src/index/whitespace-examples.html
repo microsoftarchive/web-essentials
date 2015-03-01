@@ -1,0 +1,48 @@
+<p>
+  Margin and padding utilities are based on a global white space scale
+  defined with variables. These utilities use a shorthand naming
+  convention.
+</p>
+
+<h3 class="h5 bold caps">Margins</h3>
+
+<p>
+  Change or reset default margins using the global white space scale.
+  Negative x-axis margins are used to offset padding. Margin auto is
+  used to horizontally center block-level elements with a set width.
+</p>
+
+```html{"insert":true}
+<div class="outline-blue clearfix">
+  <h1 class="m0">Good morning! <span>.m0</span></h1>
+  <p class="mb2">Hallo <span>.mb2</span></p>
+  <p class="bold">How are you? <span>.bold</span></p>
+</div>
+```
+
+<h3 class="h5 bold caps">Padding</h3>
+
+<p>
+  Padding utilities are only available in symmetrical orientations.
+  This is to normalize the spacing used around elements.
+</p>
+
+```html{"insert":true}
+<div class="outline-blue clearfix">
+  <h1 class="p1">Good morning! <span>.p1</span></h1>
+  <p class="px4">Hallo <span>.px4</span></p>
+  <p class="px4"><span class="block">
+    <span class="mxn2">
+      How are you? <span>.px4 &gt; .mxn2</span>
+    </span>
+  </span></p>
+</div>
+```
+
+<p>
+  <span class="red">Margins and padding should never be declared
+  outside of these utilities.</span> This is meant to help create
+  consistent rhythm and avoid magic numbers. If, for some reason, the
+  default white space scale does not accomodate your design,
+  customize and extend it before implementation.
+</p>

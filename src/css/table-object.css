@@ -9,69 +9,17 @@
 
 .table-fixed { table-layout: fixed }
 
+<% ["xsm", "sm", "md", "lg", "xlg"].forEach(function(size) { %>
+@media (--breakpoint-<%= size %>) {
 
-@media (--breakpoint-xsm) {
-
-  .xsm-table {
+  .<%= size %>-table {
     display: table;
     width: 100%;
   }
-  .xsm-table-cell {
+  .<%= size %>-table-cell {
     display: table-cell;
     vertical-align: middle;
   }
 
 }
-
-@media (--breakpoint-sm) {
-
-  .sm-table {
-    display: table;
-    width: 100%;
-  }
-  .sm-table-cell {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-}
-
-@media (--breakpoint-md) {
-
-  .md-table {
-    display: table;
-    width: 100%;
-  }
-  .md-table-cell {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-}
-
-@media (--breakpoint-lg) {
-
-  .lg-table {
-    display: table;
-    width: 100%;
-  }
-  .lg-table-cell {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-}
-
-@media (--breakpoint-xlg) {
-
-  .xlg-table {
-    display: table;
-    width: 100%;
-  }
-  .xlg-table-cell {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-}
-
+<% }) %>
