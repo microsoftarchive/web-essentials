@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var addsrc = require('gulp-add-src');
 var rename = require('gulp-rename');
 var ignore = require('gulp-ignore');
 var basswork = require('gulp-basswork');
@@ -9,10 +8,10 @@ var browserify = require('browserify');
 var transform = require('vinyl-transform');
 var uglify = require('gulp-uglify');
 var webserver = require('gulp-webserver');
-var template = require('gulp-template');
 var data = require('gulp-data');
 var fs = require('fs');
 var parse = require('csv-parse');
+var _ = require('lodash');
 
 var escape = require('escape-html');
 var through = require('through2');
@@ -40,7 +39,12 @@ var escapeHTMLSnippets = (function() {
     return html;
   };
   var pre = function(contents) {
-    return contents.replace(regex, replacer);
+    var newContents = contents.replace(regex, replacer);
+    if (newContents) {
+      return newContents;
+    } else {
+      return contents;
+    }
   };
 
   return through.obj(function(file, enc, cb) {
@@ -66,30 +70,58 @@ var escapeHTMLSnippets = (function() {
   });
 })();
 
-var pictogramsData;
-
 var loadData = function(file, cb) {
-  if (pictogramsData) {
+  var csv = fs.readFileSync('./pictograms.csv', 'utf8');
+  parse(csv, {}, function(err, csvData) {
+    if (err) { return cb(err); }
+
+    var data = {
+      pictograms: csvData
+    };
+
+    pictogramsData = data;
+
     cb(undefined, data);
-  } else {
-    var csv = fs.readFileSync('./pictograms.csv', 'utf8');
-    parse(csv, {}, function(err, csvData) {
-      if (err) { return cb(err); }
-
-      var data = {
-        pictograms: csvData
-      };
-
-      pictogramsData = data;
-
-      cb(undefined, data);
-    });
-  }
+  });
 };
 
+var template = function() {
+  function execTemplate(string, data, emit) {
+    var tmpl = _.template(string);
+    try {
+      var result = tmpl(data);
+    } catch (err) {
+      emit('error', err, {fileName: file.path});
+    }
+    return result
+  }
+
+  return through.obj(function(file, enc, cb) {
+    if (file.isBuffer()) {
+      file.contents = new Buffer(execTemplate(file.contents.toString(), file.data, this.emit));
+    }
+
+    if (file.isStream()) {
+      var self = this;
+      file.contents = file.contents.pipe(through(function(contents, enc, next) {
+        if (Buffer.isBuffer(contents)) {
+          contents = contents.toString();
+        }
+        this.push(execTemplate(contents, file.data, self.emit));
+        next();
+      }));
+    }
+
+    cb(null, file);
+  });
+}
+
 gulp.task('render', function() {
-  addsrc('./src/**/*')
-    .pipe(fileinclude())
+  gulp.src(['./src/**/*'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basePath: '@file'
+    }))
     .pipe(data(loadData))
     .pipe(template())
     .pipe(rename(function(path) {
@@ -99,45 +131,43 @@ gulp.task('render', function() {
 });
 
 gulp.task('css', function() {
-  ['essentials', 'pictograms'].forEach(function(name) {
-    addsrc('./render/css/'+name+'.css')
-      .pipe(basswork())
-      .pipe(gulp.dest('./build/css'))
-      .pipe(minifyCss())
-      .pipe(rename({ extname: '.min.css' }))
-      .pipe(gulp.dest('./build/css'))
-  });
+  var names = ['essentials', 'pictograms'].map(function(name) { return './render/css/'+name+'.css' });
+  gulp.src(names)
+    .pipe(basswork())
+    .pipe(gulp.dest('./build/css'))
+    .pipe(minifyCss())
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest('./build/css'))
 });
 
 gulp.task('js', function() {
-  ['app'].forEach(function(name) {
-    var browserified = transform(function(filename) {
-      var b = browserify(filename);
-      return b.bundle();
-    });
-    addsrc('./render/js/'+name+'.js')
-      .pipe(browserified)
-      .pipe(uglify())
-      .pipe(rename({ extname: '.min.js' }))
-      .pipe(gulp.dest('./build/js'))
+  var names = ['app'].map(function(name) { return './render/js/'+name+'.js' });
+  var browserified = transform(function(filename) {
+    var b = browserify(filename);
+    return b.bundle();
   });
+  gulp.src(names)
+    .pipe(browserified)
+    .pipe(uglify())
+    .pipe(rename({ extname: '.min.js' }))
+    .pipe(gulp.dest('./build/js'))
 });
 
 gulp.task('html', function() {
-  addsrc('./render/*.html')
+  gulp.src(['./render/*.html'])
     .pipe(escapeHTMLSnippets)
     .pipe(gulp.dest('./build/'))
 });
 
 gulp.task('build', ['css', 'js', 'html'], function() {
-  addsrc('./fonts/**/*')
+  gulp.src(['./fonts/**/*'])
     .pipe(gulp.dest('./build/fonts'))
-  addsrc('./images/**/*')
+  gulp.src(['./images/**/*'])
     .pipe(gulp.dest('./build/images'))
 });
 
 gulp.task('serve', function() {
-  addsrc('./build')
+  gulp.src(['./build'])
     .pipe(webserver({ port: (process.env.PORT || '8000'), open: true }))
 });
 
@@ -150,7 +180,7 @@ gulp.task('default', ['serve'], function() {
 });
 
 gulp.task('dist', function() {
-  addsrc([
+  gulp.src([
     './build/fonts/*',
     './build/css/essentials.css',
     './build/css/essentials.min.css',
