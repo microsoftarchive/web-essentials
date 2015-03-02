@@ -21,7 +21,6 @@ input[type=url],
 input[type=week] {
   box-sizing: border-box;
   height: var(--form-field-height);
-  padding: var(--form-field-padding-y) var(--form-field-padding-x);
   vertical-align: middle;
   -webkit-appearance: none;
 }
@@ -29,7 +28,6 @@ input[type=week] {
 select {
   box-sizing: border-box;
   line-height: 1.75;
-  padding: var(--form-field-padding-y) var(--form-field-padding-x);
 }
 
 select:not([multiple]) {
@@ -40,7 +38,6 @@ select:not([multiple]) {
 textarea {
   box-sizing: border-box;
   line-height: 1.75;
-  padding: var(--form-field-padding-y) var(--form-field-padding-x);
 }
 
 .fieldset-reset {

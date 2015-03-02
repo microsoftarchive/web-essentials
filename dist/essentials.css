@@ -200,7 +200,6 @@ input[type=url],
 input[type=week] {
   box-sizing: border-box;
   height: 2.25rem;
-  padding: .5rem .5rem;
   vertical-align: middle;
   -webkit-appearance: none;
 }
@@ -208,7 +207,6 @@ input[type=week] {
 select {
   box-sizing: border-box;
   line-height: 1.75;
-  padding: .5rem .5rem;
 }
 
 select:not([multiple]) {
@@ -219,7 +217,6 @@ select:not([multiple]) {
 textarea {
   box-sizing: border-box;
   line-height: 1.75;
-  padding: .5rem .5rem;
 }
 
 .fieldset-reset {
