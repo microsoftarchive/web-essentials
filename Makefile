@@ -12,6 +12,8 @@ build:
 install:
 	npm install
 	npm install gulp -g
+	gem install bundler
+	bundle install
 	cp pre-commit .git/hooks/
 
 start:
