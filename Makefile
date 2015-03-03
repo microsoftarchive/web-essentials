@@ -9,8 +9,8 @@ dist:
 
 install:
 	npm install
-	npm install basework clean-css -g
-	gem install bundler
+	npm install basswork clean-css -g
+	gem install bundler --no-ri --no-rdoc
 	bundle install
 	cp pre-commit .git/hooks/
 
