@@ -27,14 +27,14 @@
   "darken-2",
   "darken-3",
   "darken-4"
-].forEach(function(c) {
+].each do |c|
 %>
 
 .<%= c %> { color: var(--<%= c %>) }
 .bg-<%= c %> { background-color: var(--<%= c %>) }
 .border-<%= c %> { border-color: var(--<%= c %>) }
 
-<% }) %>
+<% end %>
 
 .bg-transparent {
   background-color: transparent;

@@ -9,7 +9,7 @@
 
 .table-fixed { table-layout: fixed }
 
-<% ["xsm", "sm", "md", "lg", "xlg"].forEach(function(size) { %>
+<% ["xsm", "sm", "md", "lg", "xlg"].each do |size| %>
 @media (--breakpoint-<%= size %>) {
 
   .<%= size %>-table {
@@ -22,4 +22,4 @@
   }
 
 }
-<% }) %>
+<% end %>

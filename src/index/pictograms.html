@@ -7,7 +7,7 @@
   </p>
 
   <ul class="list-reset lighter">
-    <% pictograms.forEach(function(row) { %>
+    <% $data[:pictograms].each do |row| %>
     <li class="pictogram">
       <span class="pictogram-square bg-darken-1 rounded">
         <span class="h6 pictogram-key"><%= row[1] %></span>
@@ -15,6 +15,6 @@
       </span>
       <span class="h6 bold caps"><%= row[0].split('-')[0] %></span>
     </li>
-    <% }) %>
+    <% end %>
   </ul>
 </div>

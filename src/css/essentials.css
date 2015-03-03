@@ -1,19 +1,17 @@
-@import './fonts';
-
-@import './responsive-states';
-@import './normalize';
-@import './forms';
-@import './position';
-@import './typography';
-@import './buttons';
-@import './borders';
-@import './grid';
-@import './table-object';
-@import './layout';
-@import './white-space';
-@import './tables';
-@import './colors';
+@import './lib/fonts';
+@import './lib/responsive-states';
+@import './lib/normalize';
+@import './lib/forms';
+@import './lib/position';
+@import './lib/typography';
+@import './lib/buttons';
+@import './lib/borders';
+@import './lib/grid';
+@import './lib/table-object';
+@import './lib/layout';
+@import './lib/white-space';
+@import './lib/tables';
+@import './lib/colors';
+@import './lib/variables';
 
 .outline-blue * { box-shadow: 0 0 0 1px rgba(var(--blue), .75) }
-
-@import './variables';

@@ -22,8 +22,8 @@
   line-height: 1em;
 }
 
-<% pictograms.forEach(function(row) { %>
+<% $data[:pictograms].each do |row| %>
 .icon-<%= row[0] %>:before {
   content: '<%= row[1] %>';
 }
-<% }) %>
+<% end %>

@@ -1,7 +1,7 @@
 {
-  "name": "wunderlist-web-styleguide",
+  "name": "wunderlist-web-essentials",
   "version": "0.0.1",
-  "description": "Wunderlist's Web Styleguide",
+  "description": "Wunderlist's Web Essentials",
   "author": "Nathan Herald, Benjamin Mateev, Adam Renklint, Timothy Achumba, Joakim Keussen, Brent Jackson",
   "license": "MIT",
   "dependencies": {
@@ -9,38 +9,18 @@
     "disclose": "git://github.com/wunderlist/disclose#master"
   },
   "devDependencies": {
-    "browserify": "^8.0.3",
-    "csv": "^0.4.1",
-    "csv-parse": "0.0.8",
-    "escape-html": "^1.0.1",
-    "gulp": "^3.8.10",
-    "gulp-add-src": "^0.2.0",
-    "gulp-basswork": "0.0.9",
-    "gulp-data": "^1.2.0",
-    "gulp-file-include": "^0.8.0",
-    "gulp-ignore": "^1.2.1",
-    "gulp-minify-css": "^0.3.11",
-    "gulp-rename": "^1.2.0",
-    "gulp-template": "^3.0.0",
-    "gulp-uglify": "^1.0.1",
-    "gulp-webserver": "^0.8.7",
-    "lodash": "^3.3.1",
-    "through2": "^0.6.3",
-    "vinyl-transform": "^1.0.0"
-  },
-  "scripts": {
-    "start": "gulp"
+    "basswork": "^latest",
+    "browserify": "^latest",
+    "clean-css": "^latest",
+    "uglifyify": "^latest"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wunderlist/web-styleguide.git"
+    "url": "https://github.com/wunderlist/web-essentials.git"
   },
   "keywords": [
     "CSS",
     "OOCSS",
-    "Basscss",
-    "Gulp",
-    "Boilerplate",
-    "Browserify"
+    "Basscss"
   ]
 }

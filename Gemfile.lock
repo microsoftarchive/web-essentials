@@ -17,6 +17,11 @@ GEM
     mime-types (2.4.3)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    puma (2.11.1)
+      rack (>= 1.1, < 2.0)
+    rack (1.6.0)
+    rack-contrib (1.2.0)
+      rack (>= 0.9.1)
 
 PLATFORMS
   ruby
@@ -25,3 +30,6 @@ DEPENDENCIES
   aws-sdk (~> 2)
   dotenv
   mime-types
+  puma
+  rack
+  rack-contrib

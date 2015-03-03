@@ -49,21 +49,14 @@
   </head>
   <body class="body-full-height">
 
-    @@include('./index/front.html')
-
-    @@include('./index/typography.html')
-
-    @@include('./index/colors.html')
-
-    @@include('./index/pictograms.html')
-
-    @@include('./index/whitespace.html')
-
-    @@include('./index/layout.html')
-
-    @@include('./index/grid.html')
-
-    @@include('./index/components.html')
+    <%= render 'index/front.html' %>
+    <%= render 'index/typography.html' %>
+    <%= render 'index/colors.html' %>
+    <%= render 'index/pictograms.html' %>
+    <%= render 'index/whitespace.html' %>
+    <%= render 'index/layout.html' %>
+    <%= render 'index/grid.html' %>
+    <%= render 'index/components.html' %>
 
     <div class="clearfix" id="responsiveness">
       <h2 class="lighter px4">08. Responsiveness</h2>
@@ -77,7 +70,7 @@
         <h2 class="mt0 lighter">09. Variables</h2>
 
 ```css
-@@include('./css/variables.css')
+<%= render 'css/lib/variables.css' %>
 ```
       </div>
     </div>

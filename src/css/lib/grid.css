@@ -8,13 +8,13 @@
   box-sizing: border-box;
 }
 
-<% [1,2,3,4,5,6,7,8,9,10,11,12].forEach(function(num) { %>
+<% [1,2,3,4,5,6,7,8,9,10,11,12].each do |num| %>
 .col-<%= num %> {
   width: calc(<%= num %>/12 * 100%);
 }
-<% }) %>
+<% end %>
 
-<% ["xsm", "sm", "md", "lg", "xlg"].forEach(function(size) { %>
+<% ["xsm", "sm", "md", "lg", "xlg"].each do |size| %>
 @media (--breakpoint-<%= size %>) {
 
   .<%= size %>-col {
@@ -27,11 +27,11 @@
     box-sizing: border-box;
   }
 
-  <% [1,2,3,4,5,6,7,8,9,10,11,12].forEach(function(num) { %>
+  <% [1,2,3,4,5,6,7,8,9,10,11,12].each do |num| %>
   .<%= size %>-col-<%= num %> {
     width: calc(<%= num %>/12 * 100%);
   }
-  <% }) %>
+  <% end %>
 
 }
-<% }) %>
+<% end %>
