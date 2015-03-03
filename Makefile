@@ -4,9 +4,12 @@ default:
 build:
 	rake build
 
+dist:
+	rake dist
+
 install:
 	npm install
-	npm install gulp basework clean-css -g
+	npm install basework clean-css -g
 	gem install bundler
 	bundle install
 	cp pre-commit .git/hooks/

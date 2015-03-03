@@ -6,6 +6,7 @@ One needs to have these installed first:
 
 * node
 * npm
+* ruby
 
 ## Setup
 
@@ -20,20 +21,13 @@ $ make start
 $ make
 ```
 
-## gulp tasks
-
-* css -> compile all the css into bass.css
-* js -> compile all the js into app.js
-* serve -> run a server that serves index.html
-* default -> [css, js, serve] while watching for changes
-
 ## javascript?
 
 The js is just for the styleguide itself. All shared javascript will be
 published as private npm modules. Every project using the styleguide
 will use browserify to require only what the project needs.
 
-## base.css
+## essentials.css
 
 We are basing this initially on <http://basscss.com>. Basscss is a
 lightweight collection of base element styles, utilities, layout
@@ -56,5 +50,5 @@ are:
 
 ## Future stuff
 
-There will be an upgrade script that will scan and fine updated
+There might be an upgrade script that will scan and find updated
 components and instruct how to upgrade and what changed.
