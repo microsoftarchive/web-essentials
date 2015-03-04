@@ -8,7 +8,6 @@ install:
 	./install-bundler
 	npm install
 	npm install basswork clean-css -g
-	gem install bundler --no-ri --no-rdoc
 	cp pre-commit .git/hooks/
 
 start:
