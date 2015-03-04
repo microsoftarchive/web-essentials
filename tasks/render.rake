@@ -62,7 +62,7 @@ end
 
 
 data_files            = FileList['pictograms.csv'] # all the data files to load
-intended_render_files = $src_files.pathmap('%{^src/,render/}p') # we want each file in source to also end up in render under the same name
+intended_render_files = $src_files.exclude(%r{src/.*/.*\.html}).pathmap('%{^src/,render/}p') # we want each file in source to also end up in render under the same name
 
 CLEAN.include("render/**/*") # rake clean will remove all these files
 
