@@ -93,7 +93,10 @@ intended file to depend on multiples sources (in which case one would have
 =end
 
 # make a lambda that can convert a filepath from render to src
-render_to_src = ->(name) { name.pathmap('%{^render/,src/}p') }
+render_to_src = ->(name) {
+  src_name = name.pathmap('%{^render/,src/}p')
+  [src_name, FileList["#{name.pathmap('%X')}/*.*"]].flatten
+}
 
 # any file expected to be in ./render depends on the file with the same name in ./src
 # we create any missing file in ./render by reading and rendering the related file in ./src
