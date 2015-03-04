@@ -8,18 +8,54 @@ module JSONReader
   end
 end
 
-module Kernel
+class Context
+  attr_accessor :output
+
+  def self.render(filename)
+    new.render(filename)
+  end
+
+  def b
+    binding
+  end
+
+  def initialize
+    @output = ""
+  end
+
   def render(filename)
+    context = Context.new
     filename = File.expand_path filename, Thread.current[:render_dir]
     contents = File.read(filename)
     original_render_dir = Thread.current[:render_dir]
     Thread.current[:render_dir] = File.dirname(filename)
-    e = ERB.new(contents)
+    e = ERB.new(contents, nil, nil, "@output")
     e.filename = filename
     puts "render: #{filename}"
-    result = e.result(binding)
+    e.result(context.b)
     Thread.current[:render_dir] = original_render_dir
-    result
+    context.output
+  end
+
+  def code(**opts, &blk)
+    html = capture(&blk)
+    result = "<pre><code>#{ERB::Util.h(html).strip}</code></pre>"
+    result = "#{html}#{result}" if opts[:insert]
+    @output << result
+  end
+
+  def capture(*args, &blk)
+    pos = @output.length
+    blk.call(*args)
+    data = @output[pos..-1]
+    @output[pos..-1] = ''
+    data
+  end
+end
+
+module Kernel
+  def render(filename)
+    Context.render filename
   end
 end
 
@@ -66,6 +102,8 @@ rule %r{^render/} => [render_to_src] do |t|
   File.open(t.name, "w") { |f| f << render(t.source) }
   puts "write: #{t.name}"
 end
+
+# TODO: html file at the base should depend on the html files in a folder with the same name
 
 task :render => ["render:default"]
 
