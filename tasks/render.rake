@@ -28,7 +28,7 @@ end
 data_files            = FileList['pictograms.csv'] # all the data files to load
 intended_render_files = $src_files.pathmap('%{^src/,render/}p') # we want each file in source to also end up in render under the same name
 
-CLEAN.include("render/**/*")
+CLEAN.include("render/**/*") # rake clean will remove all these files
 
 data_readers = Hash.new { |k, h| File }
 data_readers["csv"] = CSV
@@ -67,7 +67,7 @@ rule %r{^render/} => [render_to_src] do |t|
   puts "write: #{t.name}"
 end
 
-task :render => ["render:data", "render:copy"]
+task :render => ["render:default"]
 
 namespace :render do
   # depends on all data files
@@ -79,5 +79,7 @@ namespace :render do
     end
   end
 
-  task :copy => intended_render_files # depends on all expected files to be in ./render, which trigger to above rule to auto-create tasks for them
+  task :default => intended_render_files # depends on all expected files to be in ./render, which trigger to above rule to auto-create tasks for them
+
+  intended_render_files.each { |n| file n => :data } # make sure none of the files can be rendered until after we've loaded the data
 end

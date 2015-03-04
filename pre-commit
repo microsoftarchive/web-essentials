@@ -1,5 +1,5 @@
 #!/bin/sh
 
-make dist
+rake dist
 
 git add dist/*

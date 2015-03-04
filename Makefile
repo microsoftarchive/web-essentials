@@ -4,9 +4,6 @@ default:
 build:
 	rake build
 
-dist:
-	rake dist
-
 install:
 	npm install
 	npm install basswork clean-css -g
@@ -15,7 +12,7 @@ install:
 	cp pre-commit .git/hooks/
 
 start:
-	rake serve ~build
+	NOWAIT=yes rake serve ~build
 
 clean:
 	rake clean

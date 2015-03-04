@@ -1,6 +1,6 @@
 require 'rack/contrib/try_static'
 
-$app = ->(env) {
+$app = Rack::Builder.new {
   use Rack::TryStatic,
     root: './build',
     urls: %w[/],
@@ -8,27 +8,47 @@ $app = ->(env) {
 
   run ->(env) {
     four_oh_four_page = File.new("./build/404.html")
-    [404, { 'Content-Type'  => 'text/html'}, four_oh_four_page.lines]
+    [404, { 'Content-Type'  => 'text/html'}, four_oh_four_page.each_line]
   }
 }
 
 task :serve do
+  port = ENV.fetch("PORT", 8000)
+  nowait = !!ENV["NOWAIT"]
+
   pid = fork do
-    Rack::Server.start({
-      app:         $app,
-      environment: :development,
-      server:      :puma
-    })
+    begin
+      Rack::Server.start({
+        app:         $app,
+        environment: :development,
+        server:      :webrick,
+        Port:        port
+      })
+    rescue
+      puts "an error happened in the fork"
+      raise
+    end
   end
 
-  begin
-    Process.wait pid
-  rescue Interrupt
-    # noop
+  # `open http://localhost:#{port}/`
+
+  unless nowait
+    begin
+      Process.wait pid
+    rescue Interrupt
+      # noop
+    end
   end
 
   at_exit do
-    Process.kill "TERM", pid
-    Process.wait pid
+    begin
+      sleep
+    rescue Interrupt
+      puts "killing the server"
+      Process.kill 9, pid
+      Process.wait pid
+      puts "hit ^C one more time"
+      puts
+    end
   end
 end
