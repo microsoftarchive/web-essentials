@@ -18,4 +18,4 @@ rule %r{^dist/} => [proc_for_dist] do |t|
   end
 end
 
-task :dist => dist_files
+task :dist => [:clean, *dist_files]
