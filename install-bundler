@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+system_version = 'ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]'
+
+if `ruby -v`.strip == system_version
+  puts "You will need to provide your system password to install the necessary ruby libraries"
+  `gem list bundler | grep bundler`
+  unless $?.success?
+    system "sudo gem install bundler --no-rdoc --no-ri"
+  end
+else
+  system "gem install bundler --no-rdoc --no-ri"
+  `which rbenv`
+  if $?.success?
+    system "rbenv rehash"
+  end
+end
+
+system "bundle install"
