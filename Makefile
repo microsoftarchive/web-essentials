@@ -7,7 +7,7 @@ build:
 install:
 	./install-bundler
 	npm install
-	npm install basswork clean-css -g
+	npm install browserify basswork clean-css -g
 	cp pre-commit .git/hooks/
 
 start:
