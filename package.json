@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "colors.css": "^2.2.0",
-    "disclose": "file:../../../../var/folders/rx/p20pmtx54tgghsrthsh3t8200000gn/T/npm-65955-fbbf9f9e/git-cache-432410b60cae/a46bd518bdfb45a81aee5ca92d1cb97bbb578eb3"
+    "disclose": "git://github.com/wunderlist/disclose.git#master"
   },
   "devDependencies": {
     "basswork": "^1.2.0",
