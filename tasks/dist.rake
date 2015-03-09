@@ -1,5 +1,5 @@
-dist_files   = FileList['src/css/*.css'].pathmap('%{^src/css/,dist/}p').ext('.min.css')
-dist_files.add FileList['fonts/*'].pathmap('%{^fonts/,dist/}p')
+$dist_files   = FileList['src/css/*.css'].pathmap('%{^src/css/,dist/}p').ext('.min.css')
+$dist_files.add FileList['fonts/*'].pathmap('%{^fonts/,dist/}p')
 
 # I need to find css or fonts from different places
 proc_for_dist = ->(name) do
@@ -18,4 +18,4 @@ rule %r{^dist/} => [proc_for_dist] do |t|
   end
 end
 
-task :dist => [:clean, *dist_files]
+task :dist => [:clean, *$dist_files]
