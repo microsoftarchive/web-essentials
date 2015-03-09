@@ -8,7 +8,11 @@ namespace :release do
   task :minor => [:minor_increase, :make]
   task :patch => [:patch_increase, :make]
 
-  task :make => [:dist] do
+  task :font_cdn do
+    $font_host = "https://d1l1r288vf46ed.cloudfront.net/#{current_version}"
+  end
+
+  task :make => [:font_cdn, :clean, :render] do
     client = Aws::S3::Client.new(region: 'eu-west-1')
 
     $dist_files.each do |file|
@@ -24,6 +28,7 @@ namespace :release do
 
         obj.put({
           body: tempfile.read,
+          acl: "public_read",
           content_type: mime,
           cache_control: 'max-age=315360000',
           content_encoding: 'gzip'

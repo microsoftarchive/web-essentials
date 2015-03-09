@@ -1,6 +1,8 @@
 require 'erb'
 require 'json'
 
+$font_host ||= "/web-essentials/dist/"
+
 module JSONReader
   module_function
   def read(filename)
