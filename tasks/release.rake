@@ -3,6 +3,11 @@ require 'zlib'
 
 MIME::Types.add(MIME::Types['application/font-woff'].first.tap {|m| m.add_extensions('woff2')})
 
+def url(file)
+  name = File.basename(file)
+  "https://d1l1r288vf46ed.cloudfront.net/v#{current_version}/#{name}"
+end
+
 namespace :release do
   task :major => [:major_increase, :make]
   task :minor => [:minor_increase, :make]
@@ -16,7 +21,7 @@ namespace :release do
     client = Aws::S3::Client.new(region: 'eu-west-1')
 
     $dist_files.each do |file|
-      puts "s3: #{file}"
+      puts "published: #{url(file)}"
       key = "v#{current_version}/#{File.basename(file)}"
       obj = Aws::S3::Object.new('web-styleguide-assets', key, client: client)
       mime = MIME::Types.of(file).first.content_type
@@ -25,10 +30,11 @@ namespace :release do
       begin
         gz.write File.read(file)
         gz.flush
+        tempfile.rewind
 
         obj.put({
           body: tempfile.read,
-          acl: "public_read",
+          acl: "public-read",
           content_type: mime,
           cache_control: 'max-age=315360000',
           content_encoding: 'gzip'
