@@ -54,14 +54,14 @@ textarea {
   background-color: white;
   border-style: solid;
   border-width: var(--border-width);
-  border-color: var(--border-color);
+  border-color: rgba(var(--border-color),.5);
   border-radius: var(--border-radius);
   box-shadow: 0 1px 2px rgba(var(--black),.1);
 }
 
 .field-light:focus {
   outline: none;
-  border-color: var(--wunderlist-gray);
+  border-color: var(--blue);
   box-shadow: 0 0 2px rgba(var(--blue),.5);
 }
 
