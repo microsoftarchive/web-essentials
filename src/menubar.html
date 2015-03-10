@@ -81,7 +81,7 @@
             </a>
           </div>
 
-          <div class="right py2">
+          <div class="right py2 relative">
             <span class="left mr1 md-show">
               <a href="#!">
                 <svg class="relative nudge-down" version="1.1" id="Layer_1" width="20" height="20" style="stroke: rgb(163, 163, 163);" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.9 18.9" enable-background="new 0 0 18.9 18.9" xml:space="preserve">
@@ -113,6 +113,75 @@
                 </svg>
               </a>
             </span>
+            <style>
+              .wunderlist-activities-popover {
+                width: 300px;
+                top: 55px;
+                right: -10px;
+                -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+                -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+                box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+              }
+              .stream, .stream-body {
+                max-height: 400px;
+              }
+            </style>
+            <div class="wunderlist-activities-popover bg-true-white absolute z4 rounded">
+              <div class="arrow" style="left: 150px; margin-left: 31px;top: -23px;border-color: transparent transparent #fff transparent;position: absolute;border-width: 12px;border-style: solid;width: 0;height: 0;z-index: 100;pointer-events: none;"></div>
+              <div class="stream overflow-hidden">    
+                <div class="stream-header border-bottom">     
+                  <p class="bold mt1 mb1 center">Activities</p>    
+                </div>    
+                <div class="stream-body" style="overflow-y: auto;">     
+                  <ul class="activites list-reset">   
+                    <ul class="list-reset">
+                      <li>
+                        <div class="user-avatar" rel="5647467"><img src="https://a.wunderlist.com/api/v1/avatar?user_id=5647467"></div>
+                        <div class="message">
+                          <span class="name">Nathan Herald</span> completed <a href="https://nightly.wunderlist.com/webapp/#/tasks/1007449371" class="item" target="_blank">Publish the versioned assets to a S3 bucket (so that's out of the way and works)</a>.
+                          <div class="timestamp" rel="2015-03-10T11:07:11.198Z">4 hours ago</div>
+                        </div>
+                      </li> 
+                      <li>
+                        <div class="user-avatar" rel="4194385"><img src="https://a.wunderlist.com/api/v1/avatar?user_id=4194385"></div>
+                        <div class="message">
+                          <span class="name">Raymond May, Jr.</span> created <a href="https://nightly.wunderlist.com/webapp/#/tasks/1034723289" class="item" target="_blank">Page for apple watch</a> in <a href="https://nightly.wunderlist.com/webapp/#/lists/144338000" class="list" target="_blank">Website Download SEO Pages</a>.
+                          <div class="timestamp" rel="2015-03-09T10:31:08.122Z">a day ago</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="user-avatar" rel="4194385"><img src="https://a.wunderlist.com/api/v1/avatar?user_id=4194385"></div>
+                        <div class="message">
+                          <span class="name">Raymond May, Jr.</span> assigned <a href="https://nightly.wunderlist.com/webapp/#/tasks/975892361" class="item" target="_blank">#in-progress #page New Tab Extension</a> in <a href="https://nightly.wunderlist.com/webapp/#/lists/144338000" class="list" target="_blank">Website Download SEO Pages</a> to you.
+                          <div class="timestamp" rel="2015-03-09T10:26:06.845Z">a day ago</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="user-avatar" rel="4194385"><img src="https://a.wunderlist.com/api/v1/avatar?user_id=4194385"></div>
+                        <div class="message">
+                          <span class="name">Raymond May, Jr.</span> assigned <a href="https://nightly.wunderlist.com/webapp/#/tasks/975892361" class="item" target="_blank">#in-progress #page New Tab Extension</a> in <a href="https://nightly.wunderlist.com/webapp/#/lists/144338000" class="list" target="_blank">Website Download SEO Pages</a> to you.
+                          <div class="timestamp" rel="2015-03-09T10:26:06.845Z">a day ago</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="user-avatar" rel="4194385"><img src="https://a.wunderlist.com/api/v1/avatar?user_id=4194385"></div>
+                        <div class="message">
+                          <span class="name">Raymond May, Jr.</span> assigned <a href="https://nightly.wunderlist.com/webapp/#/tasks/975892361" class="item" target="_blank">#in-progress #page New Tab Extension</a> in <a href="https://nightly.wunderlist.com/webapp/#/lists/144338000" class="list" target="_blank">Website Download SEO Pages</a> to you.
+                          <div class="timestamp" rel="2015-03-09T10:26:06.845Z">a day ago</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="user-avatar" rel="4194385"><img src="https://a.wunderlist.com/api/v1/avatar?user_id=4194385"></div>
+                        <div class="message">
+                          <span class="name">Raymond May, Jr.</span> assigned <a href="https://nightly.wunderlist.com/webapp/#/tasks/975892361" class="item" target="_blank">#in-progress #page New Tab Extension</a> in <a href="https://nightly.wunderlist.com/webapp/#/lists/144338000" class="list" target="_blank">Website Download SEO Pages</a> to you.
+                          <div class="timestamp" rel="2015-03-09T10:26:06.845Z">a day ago</div>
+                        </div>
+                      </li>
+                    </ul>   
+                  </ul>    
+                </div>   
+              </div>
+            </div>
             <div class="user-settings left" data-disclose>
               <div class="left relative">
                 <img class="left rounded" width="28" height="28" src="http://a.wunderlist.com/api/v1/avatar?user_id=5647467">
