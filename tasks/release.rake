@@ -20,10 +20,32 @@ namespace :release do
   end
 
   task :font_cdn do
-    $font_host = "https://d1l1r288vf46ed.cloudfront.net/#{current_version}"
+    $font_host = "https://d1l1r288vf46ed.cloudfront.net/v#{current_version}"
   end
 
-  task :make => [:font_cdn, :clean, :render] do
+  $release_files   = FileList['src/css/*.css'].pathmap('%{^src/css/,release/}p').ext('.min.css')
+  $release_files.add FileList['fonts/*'].pathmap('%{^fonts/,release/}p')
+
+  # I need to find css or fonts from different places
+  proc_for_dist = ->(name) do
+    if File.extname(name) == ".css"
+      name.pathmap('%{^release/,build/css/}p')
+    else
+      # must be a font
+      name.pathmap('%{^release/,build/fonts/}p')
+    end
+  end
+
+  rule %r{^release/} => [proc_for_dist] do |t|
+    File.dirname(t.name).tap do |dir|
+      mkdir_p dir
+      cp t.source, dir
+    end
+  end
+
+  task :release => [:clean, *$release_files]
+
+  task :make => [:font_cdn, :clean, :release] do
     client = Aws::S3::Client.new(region: 'eu-west-1')
 
     $dist_files.each do |file|
