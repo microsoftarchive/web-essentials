@@ -17,3 +17,15 @@ clean:
 	rake clean
 	git clean -X -d -f
 	git clean -d -f
+
+urls:
+	rake release:urls
+
+release-patch:
+	rake release:patch
+
+release-minor:
+	rake release:minor
+
+release-major:
+	rake release:major

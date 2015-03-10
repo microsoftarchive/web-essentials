@@ -13,6 +13,12 @@ namespace :release do
   task :minor => [:minor_increase, :make]
   task :patch => [:patch_increase, :make]
 
+  task :urls do
+    $dist_files.each do |file|
+      puts url(file)
+    end
+  end
+
   task :font_cdn do
     $font_host = "https://d1l1r288vf46ed.cloudfront.net/#{current_version}"
   end
