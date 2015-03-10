@@ -48,7 +48,7 @@ namespace :release do
   task :make => [:font_cdn, :clean, :release] do
     client = Aws::S3::Client.new(region: 'eu-west-1')
 
-    $dist_files.each do |file|
+    $release_files.each do |file|
       puts "published: #{url(file)}"
       key = "v#{current_version}/#{File.basename(file)}"
       obj = Aws::S3::Object.new('web-styleguide-assets', key, client: client)
