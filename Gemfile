@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'rake-tilde'
+gem 'rake-tilde', '~> 0.1.0'
 gem 'aws-sdk', '~> 2'
 gem 'mime-types'
 gem 'dotenv'
 gem 'rack'
 gem 'rack-contrib'
+gem 'rack-livereload'
 gem 'thin'
