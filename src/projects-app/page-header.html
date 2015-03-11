@@ -4,10 +4,13 @@
       margin-top:60px;
     }
   </style>
-  <div class="md-table-cell">
-    <div class="container">
-      <h2 class="mt3 mb3 left lighter"><%= title %></h2>
-      <button class="right">New Project</button>
+  <div>
+    <div class="container mt3 mb3 clearfix">
+      <h2 class="inline-block left m0 lighter"><%= title %></h2>
+      <button type="submit" class="right button-white-header">New Project</button>
     </div>
+  </div>
+  <div class="container">
+    <%= render './tabs.html' %>
   </div>
 </header>
