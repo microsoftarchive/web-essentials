@@ -11,6 +11,7 @@ install:
 	cp pre-commit .git/hooks/
 
 start:
+	rake clean
 	NOWAIT=yes rake serve ~build
 
 clean:
