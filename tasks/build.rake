@@ -64,7 +64,6 @@ end
 def build_url(path)
   root_dir = File.expand_path '../..', __FILE__
   root_regex = Regexp.new("^#{root_dir}")
-  puts root_regex.inspect
   relative_path = path.gsub(root_regex, '')
 
   case relative_path
