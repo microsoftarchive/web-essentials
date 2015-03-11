@@ -38,10 +38,10 @@
   --form-field-padding-x: .5rem;
   --form-field-border-color: var(--lighter-gray);
 
-  --button-font-size: 1rem;
+  --button-font-size: .75rem;
   --button-font-weight: var(--bold-font-weight);
-  --button-line-height: 1.375rem; /* 22px / 16 px (22 is what's left after the padding y of 9 and 9) */
-  --button-padding-y: .5rem;
+  --button-line-height: normal;
+  --button-padding-y: .9rem;
   --button-padding-x: 1rem;
   --button-small-padding-y: .25rem;
   --button-small-padding-x: .5rem;

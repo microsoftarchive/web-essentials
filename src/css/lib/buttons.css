@@ -7,12 +7,13 @@ button,
   display: inline-block;
   box-sizing: border-box;
   line-height: var(--button-line-height);
-  padding: var(--button-padding-y) var(--button-padding-x);
+  padding: var(--button-padding-y) var(--button-padding-x) calc(var(--button-padding-y) - 2px);
   margin: 0;
   height: auto;
   border: 1px solid transparent;
   vertical-align: middle;
   -webkit-appearance: none;
+  text-transform: uppercase;
 }
 
 ::-moz-focus-inner {
@@ -81,12 +82,19 @@ button,
   top: .45em;
 }
 
-
-
 .button-white {
   color: var(--wunderlist-gray);
   background-color: white;
   border-color: var(--lighter-gray);
+  border-radius: var(--border-radius);
+  transition-duration: .1s;
+  transition-timing-function: ease-out;
+  transition-property: box-shadow, background-color;
+}
+
+.button-white-header {
+  color: var(--blue);
+  background-color: white;
   border-radius: var(--border-radius);
   transition-duration: .1s;
   transition-timing-function: ease-out;
