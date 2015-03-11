@@ -1,3 +1,6 @@
+require 'net/http'
+require 'json'
+
 # utility functions to convert path names
 def src_to_build(stuff)
   stuff.pathmap('%{^src,build}p')
@@ -58,9 +61,37 @@ rule %r{^build/(fonts/|images/)} => [build_to_dot] do |t|
 end
 
 
+def build_url(path)
+  root_dir = File.expand_path '../..', __FILE__
+  root_regex = Regexp.new("^#{root_dir}")
+  relative_path = path.gsub(root_regex, '')
+
+  case relative_path
+  when %r{^/images/}
+    relative_path
+  when %r{^/src/}
+    relative_path.gsub(%r{^/src/}, '/')
+  end
+end
+
+
+$livereload_uri = URI("http://localhost:35729/changed")
 
 task :build => ["build:css", "build:js", "build:html", "build:fonts", "build:images"]
-listen to: :build, path: "src/"
+listen to: :build, paths: %w(src/ images/ fonts/) do |modified, added, removed|
+  livereload_files = [modified, added, removed].flatten.map { |u| build_url(u) }.compact
+  puts "Live reloading: #{livereload_files.join(", ")}"
+
+  req = Net::HTTP::Post.new $livereload_uri
+  req.body = JSON.generate(files: livereload_files)
+  req.content_type = 'application/json'
+
+  begin
+    Net::HTTP.start($livereload_uri.host, $livereload_uri.port) { |http| http.request req }
+  rescue
+    puts "Updating livereload failed... Not sure why."
+  end
+end
 
 namespace :build do
   task :css => intended_css_files

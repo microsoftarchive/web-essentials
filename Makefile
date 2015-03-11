@@ -7,11 +7,12 @@ build:
 install:
 	./install-bundler
 	npm install
-	npm install browserify basswork clean-css -g
+	npm install browserify basswork clean-css make-livereload -g
 	cp pre-commit .git/hooks/
 
 start:
-	NOWAIT=yes rake serve ~build
+	rake clean
+	rake serve ~build
 
 clean:
 	rake clean

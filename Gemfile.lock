@@ -20,7 +20,7 @@ GEM
     hitimes (1.2.2)
     jmespath (1.0.2)
       multi_json (~> 1.0)
-    listen (2.8.5)
+    listen (2.9.0)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -30,8 +30,10 @@ GEM
     rack (1.6.0)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
+    rack-livereload (0.3.15)
+      rack
     rake (10.4.2)
-    rake-tilde (0.0.4)
+    rake-tilde (0.1.0)
       listen (~> 2.7)
       rake (~> 10.0)
     rb-fsevent (0.9.4)
@@ -53,6 +55,7 @@ DEPENDENCIES
   mime-types
   rack
   rack-contrib
+  rack-livereload
   rake
-  rake-tilde
+  rake-tilde (~> 0.1.0)
   thin
