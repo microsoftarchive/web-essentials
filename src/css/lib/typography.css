@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, dl, ol, ul {
   font-size: var(--body-text);
+  line-height: var(--body-line-height);
   margin-top: 0;
   margin-bottom: var(--space-2);
 }
@@ -88,8 +89,11 @@ h3, .h3 { font-size: var(--h3) }
 h4, .h4 { font-size: var(--h4) }
 h5, .h5 { font-size: var(--h5) }
 h6, .h6 { font-size: var(--h6) }
+h7, .h7 { font-size: var(--h7) }
 
 .body-text { font-size: var(--body-text) }
+
+.body-text-small { font-size: var(--body-text-small) }
 
 .list-reset {
   list-style: none;

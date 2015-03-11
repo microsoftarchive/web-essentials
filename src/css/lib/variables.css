@@ -22,9 +22,12 @@
   --h2: 2.1875rem; /* 35px / 16px */
   --h3: 1.75rem; /* 28px / 16px */
   --h4: 1.125rem; /* 18px / 16px */
-  --h5: .75rem; /* 12px / 16px */
-  --h6: .6875rem; /* 11px / 16px */
+  --h5: .875rem; /* 14px / 16px */
+  --h6: .75rem; /* 12px / 16px */
+  --h7: .625rem; /* 10px / 16px */
   --body-text: 1rem;
+  --body-text-small: .9375rem;
+  --body-line-height: 1.3rem;
 
   --space-half: .25rem;
   --space-1: .5rem;
@@ -67,6 +70,7 @@
   --gray: #5B5B5B;
   --mid-gray: #737273;
   --light-gray: #A3A3A3;
+  --light-gray-blue: #F5F7F9;
   --lighter-gray: #DBDBDB;
   --lightest-gray: #EDEDED;
   --white: #FAFAFA;
@@ -81,7 +85,7 @@
   --darken-3: rgba(#000,.25);
   --darken-4: rgba(#000,.5);
 
-  --border-color: var(--lightest-gray);
+  --border-color: var(--light-gray-blue);
   --border-width: 1px;
   --border-radius: 3px;
 

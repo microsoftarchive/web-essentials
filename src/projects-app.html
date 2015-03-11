@@ -15,19 +15,87 @@
     <%= render 'projects-app/menu.html' %>
     <%= render 'projects-app/page-header.html', title: 'Active Projects' %>
     <div class="container">
-      <div class="list projects">
-        <div class="clearfix p2 border-bottom item project">
-          <div class="col col-8 project-details">
-            <h4 class="mt0 mb0 bold title">Folders for Wunderlist</h4>
-            <p class="mb0">Folders will allow users to declutter their sidebar and organize lists into projects and separate work lists from privat ones.</p>
+      <div class="list py3 projects">
+
+        <style>
+          .project:hover {
+            background:#F5F7F9;
+          }
+          .project .project-details .title {
+            margin-bottom: 2px;
+          }
+          .project .col-1 .time-stamp {
+            margin-top: 20px
+          }
+        </style>
+        <a href='#'>
+          <div class="clearfix p2 border-top border-bottom item project">
+            <div class="col col-8 project-details">
+              <h4 class="mt0 gray bold title">Folders for Wunderlist</h4>
+              <p class="mb0 body-text-small light-gray">Folders will allow users to declutter their sidebar and organize lists into projects and separate work lists from privat ones.</p>
+            </div>
+            <div class="col col-3 p2 right-align members">
+              <img class="vm circle border border-blue" width="32" height="32" src="/images/avatar/jarred.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/dom.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/pia.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/more@2x.png">
+            </div>
+            <div class="col col-1">
+              <p class="right-align h5 light-gray time-stamp m0">2 mins ago</p>
+            </div>
           </div>
-          <div class="col col-3 py2 members">
-            <img class="vm circle mr1" width="32" height="32" src="/images/avatar/jarred.jpg">
+        </a>
+        <a href='#'>
+          <div class="clearfix p2 border-bottom item project">
+            <div class="col col-8 project-details">
+              <h4 class="mt0 gray bold title">Public API and SDK</h4>
+              <p class="mb0 body-text-small light-gray">Open Wunderlist, so ppl and companies can integrate Wunderlist into their lives in a much more meaningful way, driving activity &amp; retention.</p>
+            </div>
+            <div class="col col-3 p2 right-align members">
+              <img class="vm circle border border-blue" width="32" height="32" src="/images/avatar/kc.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/dom.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/lizzy.jpg">
+            </div>
+            <div class="col col-1">
+              <p class="right-align h5 light-gray time-stamp m0">1 hour ago</p>
+            </div>
           </div>
-          <div class="col col-1 py2">
-            <p class="right-align h4">2 minutes ago</p>
+        </a>
+        <a href='#'>
+          <div class="clearfix p2 border-bottom item project">
+            <div class="col col-8 project-details">
+              <h4 class="mt0 gray bold title">Wunderlist for Apple Watch</h4>
+              <p class="mb0 body-text-small light-gray">Building a truly cross-platform application, we have no excuse to not be available on wearables from day one. We'll deliver Wunderlist to your wrist so you never need…</p>
+            </div>
+            <div class="col col-3 p2 right-align members">
+              <img class="vm circle border border-blue" width="32" height="32" src="/images/avatar/jon.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/brian.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/david.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/more@2x.png">
+            </div>
+            <div class="col col-1">
+              <p class="right-align h5 light-gray time-stamp m0">3 days ago</p>
+            </div>
           </div>
-        </div>
+        </a>
+        <a href='#'>
+          <div class="clearfix p2 border-bottom item project">
+            <div class="col col-8 project-details">
+              <h4 class="mt0 gray bold title">Folders for Wunderlist</h4>
+              <p class="mb0 body-text-small light-gray">Folders will allow users to declutter their sidebar and organize lists into projects and separate work lists from privat ones.</p>
+            </div>
+            <div class="col col-3 p2 right-align members">
+              <img class="vm circle border border-blue" width="32" height="32" src="/images/avatar/sophie.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/andrew.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/kate.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/more@2x.png">
+            </div>
+            <div class="col col-1">
+              <p class="right-align h5 light-gray time-stamp m0">1 week ago</p>
+            </div>
+          </div>
+        </a>
+
       </div>
     </div>
     <script src="/js/app.min.js"></script>
