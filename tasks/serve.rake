@@ -2,7 +2,7 @@ require 'rack/contrib/try_static'
 require 'rack/livereload'
 
 $app = Rack::Builder.new {
-  use Rack::LiveReload
+  use Rack::LiveReload, no_swf: true
 
   use Rack::TryStatic,
     root: './build',
