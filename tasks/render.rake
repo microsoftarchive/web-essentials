@@ -12,21 +12,40 @@ end
 
 class Context
   attr_accessor :output
+  attr_reader :locals
 
   def self.render(filename)
     new.render(filename)
+  end
+
+  def initialize(locals = {})
+    @locals = locals
+    @output = ""
+  end
+
+  def locals
+    @locals ||= {}
+  end
+
+  def method_missing(name, *args, &blk)
+    if locals.key?(name)
+      value = locals[name]
+      if value.respond_to?(:call)
+        value.call
+      else
+        value
+      end
+    else
+      super
+    end
   end
 
   def b
     binding
   end
 
-  def initialize
-    @output = ""
-  end
-
-  def render(filename)
-    context = Context.new
+  def render(filename, opts = {})
+    context = self.class.new opts
     filename = File.expand_path filename, Thread.current[:render_dir]
     contents = File.read(filename)
     original_render_dir = Thread.current[:render_dir]
