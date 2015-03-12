@@ -21,6 +21,15 @@
 @font-face {
   font-family: 'Lato';
   font-style: normal;
+  font-weight: 600;
+  src: url("<%= $font_host %>/lato-semibold-webfont.woff2") format('woff2'),
+       url("<%= $font_host %>/lato-semibold-webfont.woff") format('woff'),
+       url("<%= $font_host %>/lato-semibold-webfont.ttf") format('ttf');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
   font-weight: 700;
   src: url("<%= $font_host %>/lato-bold-webfont.woff2") format('woff2'),
        url("<%= $font_host %>/lato-bold-webfont.woff") format('woff'),
