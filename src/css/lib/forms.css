@@ -50,6 +50,52 @@ textarea {
   padding: 0;
 }
 
+.field-simple {
+  font-size: var(--body-text-small);
+  -webkit-appearance: none;
+  color: var(--gray);
+  font-weight: var(--semibold-font-weight);
+  background-color: white;
+  border: none;
+  margin:-3px 0 0;
+  width:auto;
+  padding: 0 var(--space-2) 0 var(--space-1);
+  height: inherit !important;
+  background-position: right 10px;
+  background-size: 12px 7px;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOCAMAAAACJixMAAAALVBMVEUAAAB0dHR2dnZ5cnl0dHR2cnZ0dHR2c3Z1dXV3c3dzc3N0c3R0cnRzcnN0c3Tn1Df/AAAAD3RSTlMACw0mQkNERUZHr+X19vc1dTdVAAAAV0lEQVR42nXJWw7AIAhEUfCFirL/5ZqaaWxLOj+Ec+l33MWj9ECs1r7eTANRVKtvr6aRCMU5ihwXOEohrMDvMgt8wk/J183bXYG7ktJ2X8aAuwJ3Y348CwVQAtk/TVYPAAAAAElFTkSuQmCC);
+
+}
+
+.field-simple:focus {
+  outline: none;
+}
+
+.field-simple:disabled {
+  color: var(--mid-gray);
+}
+
+.field-simple:read-only:not(select) {
+  color: var(--darken-2);
+}
+
+.field-simple:invalid {
+  color: var(--red);
+}
+
+.field-simple.is-success {
+  color: var(--green);
+}
+
+.field-simple.is-warning {
+  color: var(--yellow);
+}
+
+.field-simple.is-error {
+  color: var(--red);
+}
+
 .field-light {
   background-color: white;
   border-style: solid;
@@ -98,7 +144,7 @@ textarea {
 .radio-light {
   border-radius: 50%;
 }
-  
+
 .radio-light:focus,
 .checkbox-light:focus {
   outline: none;

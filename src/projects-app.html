@@ -15,7 +15,16 @@
     <%= render 'projects-app/menu.html' %>
     <%= render 'projects-app/page-header.html', title: 'Active Projects' %>
     <div class="container">
-      <div class="list py3 projects">
+      <div class="options py3 px2 clearfix">
+        <div class="left body-text-small">
+          <label class="inline-block">Sorted by:</label><select class="inline-block field-simple" title="heuristic type: UNKNOWN_TYPE server type: NO_SERVER_DATA field signature: 4203909268 form signature: 17092570356280019368 experiment id: &quot;&quot;">
+        <option>Last Updated</option>
+        <option>Newest</option>
+        <option>Release Date</option>
+      </select>
+        </div>
+      </div>
+      <div class="list projects">
 
         <style>
           .project:hover {
@@ -23,6 +32,9 @@
           }
           .project .project-details .title {
             margin-bottom: 2px;
+          }
+          .project .members img {
+            border-width: 2px;
           }
           .project .col-1 .time-stamp {
             margin-top: 20px
