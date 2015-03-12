@@ -15,13 +15,48 @@
     <%= render 'projects-app/menu.html' %>
     <%= render 'projects-app/page-header.html', title: 'Active Projects' %>
     <div class="container">
-      <div class="options py3 px2 clearfix">
-        <div class="left body-text-small">
-          <label class="inline-block">Sorted by:</label><select class="inline-block field-simple" title="heuristic type: UNKNOWN_TYPE server type: NO_SERVER_DATA field signature: 4203909268 form signature: 17092570356280019368 experiment id: &quot;&quot;">
-        <option>Last Updated</option>
-        <option>Newest</option>
-        <option>Release Date</option>
-      </select>
+      <div class="options md-table px2 clearfix">
+        <style>
+          .options {
+            height:80px;
+            box-sizing:border-box;
+          }
+        </style>
+        <div class="md-table-cell">
+          <div class="left sorting body-text-small">
+            <style>
+              .sorting {
+                height: 28px;
+                padding-top: 5px;
+                box-sizing: border-box;
+              }
+            </style>
+            <label class="inline-block">Sorted by:</label>
+            <select class="inline-block field-simple" title="heuristic type: UNKNOWN_TYPE server type: NO_SERVER_DATA field signature: 4203909268 form signature: 17092570356280019368 experiment id: &quot;&quot;">
+              <option>Last Updated</option>
+              <option>Newest</option>
+              <option>Release Date</option>
+            </select>
+          </div>
+          <div class="right center caps bold h7 border border-lightest-gray bg-white pill switch">
+            <style>
+              .switch {
+                height:28px;
+                overflow:hidden;
+              }
+              .switch span {
+                padding: 7px 12px;
+                min-width: 60px;
+                cursor: pointer;
+              }
+            </style>
+            <span class="left start active blue bg-true-white border-right border-lightest-gray">
+              Everyone
+            </span>
+            <span class="left end">
+              Just Me
+            </span>
+          </div>
         </div>
       </div>
       <div class="list projects">
@@ -87,6 +122,74 @@
             </div>
             <div class="col col-1">
               <p class="right-align h5 light-gray time-stamp m0">3 days ago</p>
+            </div>
+          </div>
+        </a>
+        <a href='#'>
+          <div class="clearfix p2 border-bottom item project">
+            <div class="col col-8 project-details">
+              <h4 class="mt0 gray bold title">Folders for Wunderlist</h4>
+              <p class="mb0 body-text-small light-gray">Folders will allow users to declutter their sidebar and organize lists into projects and separate work lists from privat ones.</p>
+            </div>
+            <div class="col col-3 p2 right-align members">
+              <img class="vm circle border border-blue" width="32" height="32" src="/images/avatar/sophie.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/andrew.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/kate.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/more@2x.png">
+            </div>
+            <div class="col col-1">
+              <p class="right-align h5 light-gray time-stamp m0">1 week ago</p>
+            </div>
+          </div>
+        </a>
+        <a href='#'>
+          <div class="clearfix p2 border-bottom item project">
+            <div class="col col-8 project-details">
+              <h4 class="mt0 gray bold title">Folders for Wunderlist</h4>
+              <p class="mb0 body-text-small light-gray">Folders will allow users to declutter their sidebar and organize lists into projects and separate work lists from privat ones.</p>
+            </div>
+            <div class="col col-3 p2 right-align members">
+              <img class="vm circle border border-blue" width="32" height="32" src="/images/avatar/sophie.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/andrew.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/kate.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/more@2x.png">
+            </div>
+            <div class="col col-1">
+              <p class="right-align h5 light-gray time-stamp m0">1 week ago</p>
+            </div>
+          </div>
+        </a>
+        <a href='#'>
+          <div class="clearfix p2 border-bottom item project">
+            <div class="col col-8 project-details">
+              <h4 class="mt0 gray bold title">Folders for Wunderlist</h4>
+              <p class="mb0 body-text-small light-gray">Folders will allow users to declutter their sidebar and organize lists into projects and separate work lists from privat ones.</p>
+            </div>
+            <div class="col col-3 p2 right-align members">
+              <img class="vm circle border border-blue" width="32" height="32" src="/images/avatar/sophie.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/andrew.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/kate.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/more@2x.png">
+            </div>
+            <div class="col col-1">
+              <p class="right-align h5 light-gray time-stamp m0">1 week ago</p>
+            </div>
+          </div>
+        </a>
+        <a href='#'>
+          <div class="clearfix p2 border-bottom item project">
+            <div class="col col-8 project-details">
+              <h4 class="mt0 gray bold title">Folders for Wunderlist</h4>
+              <p class="mb0 body-text-small light-gray">Folders will allow users to declutter their sidebar and organize lists into projects and separate work lists from privat ones.</p>
+            </div>
+            <div class="col col-3 p2 right-align members">
+              <img class="vm circle border border-blue" width="32" height="32" src="/images/avatar/sophie.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/andrew.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/kate.jpg">
+              <img class="vm circle" width="32" height="32" src="/images/avatar/more@2x.png">
+            </div>
+            <div class="col col-1">
+              <p class="right-align h5 light-gray time-stamp m0">1 week ago</p>
             </div>
           </div>
         </a>
