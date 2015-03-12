@@ -1,0 +1,37 @@
+<nav class="full-width block white tabs">
+  <style>
+    .tab {
+      opacity:.6;
+      position: relative;
+    }
+    .tab.active {
+      opacity:1;
+    }
+
+    .tab:after {
+      content:'';
+      position:absolute;
+      background-color:white;
+      width:100%;
+      height:2px;
+      left:0;
+      bottom:-8px;
+      -webkit-transform: translateY(10px);
+      -moz-transform: translateY(10px);
+      transform: translateY(10px);
+      -webkit-transition:all 150ms ease;
+      -moz-transition:all 150ms ease;
+      transition:all 150ms ease;
+      opacity: 0;
+    }
+
+    .tab.active:after, .tab:hover:after {
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+  <a href="#" class="tab bold h6 caps white mr1 active">All Plugins</a>
+  <a href="#" class="tab bold h6 caps white">My Plugins</a>
+</nav>
