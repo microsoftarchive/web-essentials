@@ -1,5 +1,6 @@
 button,
 .button {
+  position: relative;
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
   text-decoration: none;
@@ -14,6 +15,7 @@ button,
   vertical-align: middle;
   -webkit-appearance: none;
   text-transform: uppercase;
+
 }
 
 ::-moz-focus-inner {

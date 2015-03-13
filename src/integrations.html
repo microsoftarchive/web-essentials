@@ -2,7 +2,7 @@
 <html class="body-full-height">
   <head>
     <meta charset="utf-8">
-    <title>Active Projects</title>
+    <title>Wunderlist Services</title>
     <meta title="description" content="">
     <meta title="author" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -13,14 +13,35 @@
   </head>
   <body>
     <%= render 'integrations/menu.html' %>
-    <%= render 'integrations/page-header.html', title: 'Wunderlist Plugins', copy: 'Plugins let you automatically pull information and activity from outside tools into Wunderlist in a way that is timely, relevant, and searchable.' %>
+    <%= render 'integrations/page-header.html', title: 'Wunderlist Services', copy: 'Plugins let you automatically pull information and activity from outside tools into Wunderlist in a way that is timely, relevant, and searchable.' %>
     <div class="container">
-      <div class="list mt3 projects">
-
+      <div class="options md-table clearfix">
         <style>
-          .item {
+          .options {
+            height:80px;
+            box-sizing:border-box;
             font-size: 0;
           }
+          .options .search-field:before {
+            content: 'z';
+            font-family: 'Wundercon';
+            font-weight: 300;
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            font-size: 20px;
+            color: #aaa;
+          }
+        </style>
+        <div class="md-table-cell full-width">
+          <div class="overflow-hidden right py1 search-field relative md-show">
+            <input type="text" class="mb0 right border border-lighter-gray no-shadow fit field-light pill px3" placeholder="Filter by name">
+          </div>
+        </div>
+      </div>
+      <div class="list projects">
+
+        <style>
           .item .col .title {
             margin-bottom: 2px;
           }
@@ -37,67 +58,67 @@
             <p class="mb0 body-text-small light-gray">Automatically detect crashes in all of your applications and add them all occuring errors to a Wunderlist.</p>
           </div>
           <div class="col col-2 right align-right">
-            <a class="button bg-green block center white">View</a>
+            <a class="button block center white">Add</a>
           </div>
         </div>
         <div class="clearfix py2 border-bottom item integration">
           <div class="col col-1">
-            <img class="rounded" width="60" height="60" src="https://pbs.twimg.com/profile_images/571076061169868800/2dDdk-Uh_400x400.png">
+            <img class="rounded border" width="60" height="60" src="https://pbs.twimg.com/profile_images/571076061169868800/2dDdk-Uh_400x400.png">
           </div>
           <div class="col col-7 project-details">
             <h4 class="mt0 light-gray title"><span class="bold gray">Twitter</span> by Twitter, Inc</h4>
             <p class="mb0 body-text-small light-gray">Adds all favoured tweets with a link to a Wunderlist</p>
           </div>
           <div class="col col-2 right align-right">
-            <a class="button blue block center white">Connect</a>
+            <a class="button blue block center white">Add</a>
           </div>
         </div>
         <div class="clearfix py2 border-bottom item integration">
           <div class="col col-1">
-            <img class="rounded" width="60" height="60" src="http://iosicongallery.com/iosicongallery/img/512/gmail-2014.png">
+            <img class="rounded border" width="60" height="60" src="http://iosicongallery.com/iosicongallery/img/512/gmail-2014.png">
           </div>
           <div class="col col-7 project-details">
             <h4 class="mt0 light-gray title"><span class="bold gray">Gmail</span> by Google, Inc</h4>
             <p class="mb0 body-text-small light-gray">Add all starred GMail messages to a Wunderlist.</p>
           </div>
           <div class="col col-2 right align-right">
-            <a class="button blue block center white">Connect</a>
+            <a class="button blue block center white">Add</a>
           </div>
         </div>
         <div class="clearfix py2 border-bottom item integration">
           <div class="col col-1">
-            <img class="rounded" width="60" height="60" src="http://icons.iconarchive.com/icons/carlosjj/microsoft-office-2013/256/OneNote-icon.png">
+            <img class="rounded border" width="60" height="60" src="http://icons.iconarchive.com/icons/carlosjj/microsoft-office-2013/256/OneNote-icon.png">
           </div>
           <div class="col col-7 project-details">
             <h4 class="mt0 light-gray title"><span class="bold gray">OneNote</span> by Microsoft</h4>
             <p class="mb0 body-text-small light-gray">Sync all Wunderlists to a dedicated section in OneNote.</p>
           </div>
           <div class="col col-2 right align-right">
-            <a class="button blue block center white">Connect</a>
+            <a class="button blue block center white">Add</a>
           </div>
         </div>
         <div class="clearfix py2 border-bottom item integration">
           <div class="col col-1">
-            <img class="rounded" width="60" height="60" src="http://icons.iconarchive.com/icons/danleech/simple/1024/github-icon.png">
+            <img class="rounded border" width="60" height="60" src="http://icons.iconarchive.com/icons/danleech/simple/1024/github-icon.png">
           </div>
           <div class="col col-7 project-details">
             <h4 class="mt0 light-gray title"><span class="bold gray">Github Issues</span> by Github</h4>
             <p class="mb0 body-text-small light-gray">Adds all new issues to a Wunderlist</p>
           </div>
           <div class="col col-2 right align-right">
-            <a class="button blue block center white">Connect</a>
+            <a class="button blue block center white">Add</a>
           </div>
         </div>
         <div class="clearfix py2 border-bottom item integration">
           <div class="col col-1">
-            <img class="rounded" width="60" height="60" src="http://icons.iconarchive.com/icons/danleech/simple/1024/evernote-icon.png">
+            <img class="rounded border" width="60" height="60" src="http://icons.iconarchive.com/icons/danleech/simple/1024/evernote-icon.png">
           </div>
           <div class="col col-7 project-details">
             <h4 class="mt0 light-gray title"><span class="bold gray">Evernote</span> by Evernote</h4>
             <p class="mb0 body-text-small light-gray">Sync Wunderlists to Evernote</p>
           </div>
           <div class="col col-2 right align-right">
-            <a class="button blue block center white">Connect</a>
+            <a class="button blue block center white">Add</a>
           </div>
         </div>
       </div>

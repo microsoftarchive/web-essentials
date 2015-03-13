@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="body-full-height">
+  <head>
+    <meta charset="utf-8">
+    <title>Wunderlist Services</title>
+    <meta title="description" content="">
+    <meta title="author" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/css/essentials.min.css">
+    <link rel="stylesheet" href="/css/pictograms.min.css">
+    <style>
+    </style>
+  </head>
+  <body>
+    <%= render 'integrations/menu.html' %>
+    <%= render 'integrations/page-header.html', title: 'Wunderlist Services', copy: 'Plugins let you automatically pull information and activity from outside tools into Wunderlist in a way that is timely, relevant, and searchable.' %>
+    <div class="container">
+      <div class="options md-table clearfix">
+        <style>
+          .options {
+            height:80px;
+            box-sizing:border-box;
+            font-size: 0;
+          }
+          .options .search-field:before {
+            content: 'z';
+            font-family: 'Wundercon';
+            font-weight: 300;
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            font-size: 20px;
+            color: #aaa;
+          }
+        </style>
+        <div class="md-table-cell full-width">
+          <div class="overflow-hidden right py1 search-field relative md-show">
+            <input type="text" class="mb0 right border border-lighter-gray no-shadow fit field-light pill px3" placeholder="Filter by name">
+          </div>
+        </div>
+      </div>
+      <div class="list projects">
+
+        <style>
+          .item .col .title {
+            margin-bottom: 2px;
+          }
+          .item .col .button {
+            margin-top: 10px;
+          }
+        </style>
+        <div class="clearfix py2 border-top border-bottom item integration">
+          <div class="col col-1">
+            <img class="rounded border" width="60" height="60" src="https://raw.githubusercontent.com/danesparza/net-bugsnag/master/bugsnag.png">
+          </div>
+          <div class="col col-7 project-details">
+            <h4 class="mt0 light-gray title"><span class="bold gray">Bugsnag</span> by Bugsnag</h4>
+            <p class="mb0 body-text-small light-gray">Automatically detect crashes in all of your applications and add them all occuring errors to a Wunderlist.</p>
+          </div>
+          <div class="col col-2 right align-right">
+            <a class="button block bg-lightest-gray gray center">1 Configured</a>
+          </div>
+        </div>
+        <div class="border-bottom bg-light-gray-blue">
+          <div class="clearfix py2 item integration">
+            <div class="col col-1">
+              <img class="rounded border" width="60" height="60" src="https://pbs.twimg.com/profile_images/571076061169868800/2dDdk-Uh_400x400.png">
+            </div>
+            <div class="col col-9 project-details">
+              <h4 class="mt0 light-gray title"><span class="bold gray">Twitter</span> by Twitter, Inc</h4>
+              <p class="mb0 body-text-small light-gray">Adds all favoured tweets with a link to a Wunderlist</p>
+            </div>
+            <div class="col col-2 align-right">
+              <a class="button block bg-lightest-gray gray center">2 Configured</a>
+            </div>
+            <div class="col col-12 py2">
+              <p>From @jarred save favourite tweets to Favourite Tweets list as Twitter.</p>
+            </div>
+          </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src="/js/app.min.js"></script>
+  </body>
+</html>

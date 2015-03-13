@@ -1,6 +1,7 @@
 .col {
   float: left;
   box-sizing: border-box;
+  font-size: 0;
 }
 
 .col-right {

@@ -13,6 +13,9 @@
   content: " ";
   display: table
 }
+
+.no-shadow { box-shadow: none }
+
 .clearfix:after { clear: both }
 
 .left  { float: left }
