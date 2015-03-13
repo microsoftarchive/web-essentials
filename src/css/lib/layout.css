@@ -1,7 +1,7 @@
 .inline       { display: inline }
 .block        { display: block }
 .inline-block { display: inline-block }
-.border-box   { display: border-box }
+.border-box   { box-sizing: border-box }
 .vm           { vertical-align: middle }
 
 .overflow-hidden { overflow: hidden }
@@ -13,8 +13,6 @@
   content: " ";
   display: table
 }
-
-.no-shadow { box-shadow: none }
 
 .clearfix:after { clear: both }
 

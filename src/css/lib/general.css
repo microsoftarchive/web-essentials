@@ -1,0 +1,3 @@
+.no-shadow { box-shadow: none }
+
+.list-item-hover:hover { background: var(--light-gray-blue); }

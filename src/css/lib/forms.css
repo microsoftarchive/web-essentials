@@ -30,6 +30,12 @@ select {
   line-height: 1.75;
 }
 
+.select {
+  height: 28px;
+  padding-top: 5px;
+  box-sizing: border-box;
+}
+
 select:not([multiple]) {
   height: var(--form-field-height);
   vertical-align: middle;
@@ -185,4 +191,15 @@ textarea {
 
 .field-dark.is-error {
   border-color: var(--red);
+}
+
+.switch {
+  height:28px;
+  overflow:hidden;
+}
+
+.switch span {
+  padding: 7px 12px;
+  min-width: 60px;
+  cursor: pointer;
 }

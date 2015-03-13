@@ -7,6 +7,8 @@
 @import './lib/position';
 @import './lib/typography';
 @import './lib/buttons';
+@import './lib/menubar';
+@import './lib/tabs';
 @import './lib/borders';
 @import './lib/grid';
 @import './lib/table-object';
@@ -15,6 +17,7 @@
 @import './lib/tables';
 @import './lib/colors';
 @import './lib/animations';
+@import './lib/general';
 @import './lib/variables';
 
 .outline-blue * { box-shadow: 0 0 0 1px rgba(var(--blue), .75) }
