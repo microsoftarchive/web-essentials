@@ -1,3 +1,5 @@
+.font-size-0 { font-size: 0; }
+
 @import './lib/fonts';
 @import './lib/responsive-states';
 @import './lib/normalize';
@@ -12,7 +14,7 @@
 @import './lib/white-space';
 @import './lib/tables';
 @import './lib/colors';
-@import './lib/variables';
 @import './lib/animations';
+@import './lib/variables';
 
 .outline-blue * { box-shadow: 0 0 0 1px rgba(var(--blue), .75) }
