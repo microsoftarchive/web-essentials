@@ -37,9 +37,9 @@
   --space-4: 4rem;
 
   --form-field-font-size: 1rem;
-  --form-field-height: 2.25rem;
-  --form-field-padding-y: .5rem;
-  --form-field-padding-x: .5rem;
+  --form-field-height: 2.6rem;
+  --form-field-padding-y: 1rem;
+  --form-field-padding-x: 1rem;
   --form-field-border-color: var(--lighter-gray);
 
   --button-font-size: .75rem;

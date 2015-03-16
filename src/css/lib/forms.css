@@ -103,12 +103,23 @@ textarea {
 }
 
 .field-light {
-  background-color: white;
+  background-color: var(--true-white);
   border-style: solid;
   border-width: var(--border-width);
-  border-color: rgba(var(--border-color),.5);
+  border-color: rgba(var(--border-color),.8);
   border-radius: var(--border-radius);
-  box-shadow: 0 1px 2px rgba(var(--black),.1);
+  color: var(--gray);
+  height:42px;
+}
+
+select.field-light {
+  padding: 5px;
+  -webkit-appearance: none;
+  text-indent: 5px;
+  background-position: right 20px center;
+  background-size: 12px 7px;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOCAMAAAACJixMAAAALVBMVEUAAAB0dHR2dnZ5cnl0dHR2cnZ0dHR2c3Z1dXV3c3dzc3N0c3R0cnRzcnN0c3Tn1Df/AAAAD3RSTlMACw0mQkNERUZHr+X19vc1dTdVAAAAV0lEQVR42nXJWw7AIAhEUfCFirL/5ZqaaWxLOj+Ec+l33MWj9ECs1r7eTANRVKtvr6aRCMU5ihwXOEohrMDvMgt8wk/J183bXYG7ktJ2X8aAuwJ3Y348CwVQAtk/TVYPAAAAAElFTkSuQmCC);
 }
 
 .field-light:focus {

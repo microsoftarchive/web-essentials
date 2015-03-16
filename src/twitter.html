@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="body-full-height">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter - Wunderlist Integrations</title>
+    <meta title="description" content="">
+    <meta title="author" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/css/essentials.min.css">
+    <link rel="stylesheet" href="/css/pictograms.min.css">
+    <style>
+    </style>
+  </head>
+  <body>
+    <%= render 'integrations/menu.html' %>
+    <header class="full-width py2 bg-blue true-white md-table page-header">
+      <div class="container px2 border-box">
+        <div class="mt3 mb3 clearfix">
+          <div class="col col-1">
+            <img class="rounded" width="70" height="70" src="./images/integrations/twitter.jpg">
+          </div>
+          <div class="col col-7 border-box px2">
+            <h2 class="m0 mb1 lighter">Favourite Tweets <span class="muted">by Twitter Inc.</span></h2>
+            <p class="m0">Twitter is a social network and microblogging service where users post 140-character messages called "tweets" to their followers.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container p2 border-box">
+      <div class="py3 border-bottom clearfix">
+        <h4 class="mt1 bold">General</h4>
+        <div class="col col-4">
+          <p class="light-gray">Here's a quick overiew of what this integration will allow you to do.</p>
+        </div>
+        <div class="col col-7 right">
+
+          <p>This integration will allows you to save any tweet you favourite to a Wunnderlist.</p>
+        </div>
+      </div>
+      <div class="py3 border-bottom clearfix">
+        <h4 class="mt1 bold">Authentication</h4>
+        <div class="col col-4">
+          <p class="light-gray">Give Wunderlist access to your Twitter account. Access can be revoked at any time.</p>
+        </div>
+        <div class="col col-7 right">
+          <a class="button">Connected to Twitter as @jarred</a>
+          <p class="light-gray mt1">All favourited tweets with links will be saved in Wunderlist</p>
+        </div>
+      </div>
+      <div class="py3 border-bottom clearfix">
+        <h4 class="mt1 bold">Choose List</h4>
+        <div class="col col-4">
+          <p class="light-gray">Choose the list you'd like Twitter to be connceted to.</p>
+        </div>
+        <div class="col col-7 right">
+          <select class="block full-width field-light" title="heuristic type: UNKNOWN_TYPE
+        server type: NO_SERVER_DATA
+        field signature: 4203909268
+        form signature: 17092570356280019368
+        experiment id: &quot;&quot;">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+            <option>Option 5</option>
+          </select>
+          <p class="light-gray mt1">This is the list your favourite tweets will be saved in.</p>
+        </div>
+      </div>
+    </div>
+    <script src="/js/app.min.js"></script>
+  </body>
+</html>
