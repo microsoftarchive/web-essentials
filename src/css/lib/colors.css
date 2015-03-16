@@ -32,6 +32,7 @@
 %>
 
 .<%= c %> { color: var(--<%= c %>) }
+.hover-<%= c %>:hover { color: var(--<%= c %>) }
 .bg-<%= c %> { background-color: var(--<%= c %>) }
 .border-<%= c %> { border-color: var(--<%= c %>) }
 
