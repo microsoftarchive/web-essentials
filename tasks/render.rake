@@ -56,6 +56,14 @@ class Context
     e.result(context.b)
     Thread.current[:render_dir] = original_render_dir
     context.output
+  rescue Errno::ENOENT
+    $stderr.puts "!!! Could not find file #{filename}"
+    %Q{<p class="red">Error: missing file '#{filename}'</p>}
+  rescue StandardError => exception
+    $stderr.puts "!!! Exception when requiring file #{filename}"
+    $stderr.puts exception.message
+    $stderr.puts exception.backtrace.join("\n")
+    %Q{<p class="red">Error loading file: #{filename}</p>}
   end
 
   def code(**opts, &blk)

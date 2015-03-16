@@ -8,6 +8,7 @@ install:
 	./install-bundler
 	npm install
 	npm install browserify basswork clean-css make-livereload -g
+	mkdir -p .git/hooks
 	cp pre-commit .git/hooks/
 
 start:
