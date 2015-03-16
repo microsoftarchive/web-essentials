@@ -18,8 +18,16 @@
 
 .wundercon {
   font-family: 'Wundercon';
+  font-weight: 300;
   min-width: 1em;
   line-height: 1em;
+}
+
+.wundercon.normal {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
 }
 
 <% $data[:pictograms].each do |row| %>
