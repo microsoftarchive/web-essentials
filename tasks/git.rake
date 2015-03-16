@@ -4,6 +4,7 @@ def git_tag_current_version
 end
 
 def git_push_tags
+  system "git push"
   system "git push --tags"
 end
 
