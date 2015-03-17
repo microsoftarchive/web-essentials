@@ -36,6 +36,7 @@
 .bg-<%= c %> { background-color: var(--<%= c %>) }
 .bg-faded-<%= c %> { background-color: rgba(var(--<%= c %>),0.3) }
 .border-<%= c %> { border-color: var(--<%= c %>) }
+.tab.<%= c %>:after { background-color: var(--<%= c %>) }
 
 <% end %>
 
