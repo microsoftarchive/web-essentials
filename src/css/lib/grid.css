@@ -3,6 +3,12 @@
   box-sizing: border-box;
 }
 
+.col-inline {
+  display:inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
 
 .col-right {
   float: right;

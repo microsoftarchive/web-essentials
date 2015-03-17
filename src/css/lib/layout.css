@@ -3,6 +3,7 @@
 .inline-block { display: inline-block }
 .border-box   { box-sizing: border-box }
 .vm           { vertical-align: middle }
+.vt           { vertical-align: top }
 
 .overflow-hidden { overflow: hidden }
 .overflow-scroll { overflow: scroll }
@@ -18,6 +19,7 @@
 
 .left  { float: left }
 .right { float: right }
+.no-float { float: none; }
 
 .fit { max-width: 100% }
 
