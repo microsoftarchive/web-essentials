@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="body-full-height">
+  <head>
+    <meta charset="utf-8">
+    <title>Ideas | Wunderlist</title>
+    <meta title="description" content="">
+    <meta title="author" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/css/essentials.min.css">
+    <link rel="stylesheet" href="/css/pictograms.min.css">
+    <style>
+    </style>
+  </head>
+  <body>
+    <%= render 'ideas/menu.html' %>
+    <header class="full-width py2 bg-blue true-white md-table page-header">
+      <div class="container px2 py3 border-box">
+        <div class="md-table">
+          <div class="md-table-cell full-width inline-block clearfix">
+            <a class="inline-block button button-upvote bg-true-white blue" href="#!">
+              <span class="block mx-auto wundercon normal lighter" title="Vote!">w</span>
+              <span class="h5 bold">15</span>
+            </a>
+            <h2 class="m0 ml2 inline-block vm lighter">Location based reminders</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="full-width bg-white">
+      <div class="container py1 px2 border-box md-table light-gray">
+        <img class="vm circle mr1" width="32" height="32" src="/images/avatar/jarred.jpg"> <p class="m0 inline-block md-table-cell">Created 3 days ago by Jarred Herald</p>
+      </div>
+    </div>
+    <div class="container mt3 mb3 clearfix">
+      <div class="col col-7 border-box px2">
+        <h5 class="caps bold light-gray">Description</h5>
+        <p class="h4">It would be great to bring the natural language thats in the quick add on iOS to all platforms.</p>
+      </div>
+      <div class="col-right col-4 border-box px2">
+        <h5 class="caps bold light-gray mb2">Upvoters</h5>
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/jarred.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/dom.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/pia.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/andrew.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/david.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/dom.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/jenny.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/lizzy.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/kc.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/kate.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/sally.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/jon.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/jonathan.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/brian.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/natalie.jpg">
+        <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/sophie.jpg">
+      </div>
+      <div class="col col-7">
+        <h5 class="caps bold light-gray ml2">Comments</h5>
+        <div class="comment border-box p2 clearfix">
+          <div class="col col-1">
+            <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/jon.jpg">
+          </div>
+          <div class="col-right col-11">
+            <h5 class="body-text-small bold m0">Jon Arnold</h5>
+            <p class="body-text-small mb1">We will probably be doing some work with geofences for an integration very soon, it would make sense to include geo reminders at the same time</p>
+            <p class="body-text-small light-gray m0">2 days ago</p>
+          </div>
+        </div>
+        <div class="comment border-box bg-faded-light-gray-blue p2 clearfix">
+          <div class="col col-1">
+            <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/sally.jpg">
+          </div>
+          <div class="col-right col-11">
+            <h5 class="body-text-small bold m0">Sally Right</h5>
+            <p class="body-text-small mb1">Every client has demoed proof of concepts for this feature over the years. We should just build it.</p>
+            <p class="body-text-small light-gray m0">2 days ago</p>
+          </div>
+        </div>
+        <div class="comment rounded border-box p2 clearfix">
+          <div class="col col-1">
+            <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/jarred.jpg">
+          </div>
+          <div class="col-right col-11">
+            <h5 class="body-text-small bold m0">Jarred Herald</h5>
+            <p class="body-text-small mb1">Has about 3k votes on uservoice and we get a handful of incoming request each week, putting it in the lower top 10 of feature requests. But I think we all know just how sticky it can be (using loc. reminders on Google Now a lot at the moment), especially with Quick Add rolling out!</p>
+            <p class="body-text-small light-gray m0">2 days ago</p>
+          </div>
+        </div>
+        <div class="new-comment rounded border-box p2 clearfix">
+          <div class="col col-1">
+            <img class="vm circle mr1 mb1" width="32" height="32" src="/images/avatar/jarred.jpg">
+          </div>
+          <div class="col-right col-11">
+            <h5 class="body-text-small bold m0 mb1">Jarred Herald</h5>
+            <textarea class="full-width field-light px1" placeholder="What would you like to say"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/app.min.js"></script>
+  </body>
+</html>

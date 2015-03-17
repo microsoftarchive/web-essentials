@@ -44,6 +44,7 @@ select:not([multiple]) {
 textarea {
   box-sizing: border-box;
   line-height: 1.75;
+  min-height: 100px;
 }
 
 .fieldset-reset {
