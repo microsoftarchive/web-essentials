@@ -13,115 +13,145 @@
   </head>
   <body>
     <%= render 'integrations/menu.html' %>
-    <header class="full-width py2 bg-blue white border-bottom md-table page-header">
-      <div class="container px2 border-box">
-        <div class="mt2 mb3 clearfix">
-          <h2 class="m0 mb1 lighter">Wunderlist Integrations</h2>
-          <p class="block m0 col white muted col-8">Integrations let you automatically pull information and activity from outside tools into Wunderlist in a way that is timely, relevant, and searchable.</p>
+    <header class="full-width bg-red pictos true-white md-table page-header overflow-hidden">
+      <div class="container py4 px2 border-box clearfix relative">
+        <div class="col-inline col-1 vt">
+          <img class="left md-table-cell inline-block round-square vt mr3" src="http://cf9e233f57bd4ae986b3-d4e74cbd2619c9a623339399e96f346b.r7.cf1.rackcdn.com/wp-content/uploads/sites/4/Sunrise-app-icon.jpg" width="70px" height="70px"/>
         </div>
-        <nav class="full-width block tabs gray">
-          <a href="integrations.html" class="tab bold h6 caps white mr2 active">All Integrations</a>
-          <a href="configured-integrations.html" class="tab bold h6 caps white mr2">Configured Integrations</a>
-          <a href="#" class="tab bold h6 caps white">Authentications</a>
-        </nav>
+        <div class="col-inline col-6 px2 border-box">
+          <h1 class="mt0 mb1 lighter line-height-1">Sunrise</h1>
+          <p class="white h4">Sunrise is a free calendar app. Integrate all your Wunderlist to-dos into your daily calendar.</p>
+          <div class="col col-4 mt1 left center">
+            <a class="button center block bg-true-white red">Add</a>
+            <p class="h6 muted m0">Add via Sunrise App</a>
+          </div>
+        </div>
+        <div class="absolute bottom-0 right-0">
+          <img class="left md-table-cell inline-block rounded vt" src="./images/integrations/featured/sunrise.png" width="350px"/>
+        </div>
       </div>
     </header>
-    <div class="container mt3">
-      <ul class="list-reset list projects">
+    <header class="display-none full-width bg-red pictos true-white md-table page-header overflow-hidden">
+      <div class="container py4 px2 border-box clearfix relative">
+        <div class="col-inline col-1 vt">
+          <img class="left md-table-cell inline-block round-square vt mr3" src="./images/integrations/twitter.jpg" width="70px" height="70px"/>
+        </div>
+        <div class="col-inline col-5 px2 border-box">
+          <h2 class="mt0 mb1 lighter line-height-1">Favourite Tweets</h2>
+          <p class="white">Twitter is the best way to connect with people. Save all your favourite tweets in Wunderlist.</p>
+          <div class="col col-4 mt1 left center">
+            <a class="button center block bg-true-white red">Add</a>
+          </div>
+        </div>
+        <div class="col-inline col-5 right ">
+          <img class="md-table-cell inline-block rounded vt" src="./images/integrations/featured/twitter.png" width="100%"/>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="clearfix px2 py3 font-size-0">
+        <div class="col-inline col-8">
+          <h3 class="m0 lighter">All Integrations</h3>
+        </div>
+        <div class="col-inline col-4">
+          <input class="block full-width pill field-light border-box px2 m0" placeholder="Search for an integration"/>
+        </div>
+      </div>
+      <ul class="list-reset">
         <li class="px2 border-box">
-          <div class="clearfix border-top py2 border-bottom border-light-gray-blue item project">
-            <div class="col col-1">
+          <div class="clearfix border-top py2 border-bottom border-light-gray-blue font-size-0">
+            <div class="col-inline col-1 line-height-0">
               <img class="rounded" width="60" height="60" src="./images/integrations/bugsnag.png">
             </div>
-            <div class="col col-7 project-details">
-              <h4 class="mt0 light-gray title"><span class="bold gray">Bugsnag</span> by <a class="light-gray hover-blue" href="#">Bugsnag</a></h4>
-              <p class="mb0 body-text-small light-gray">Automatically detect crashes in all of your applications and add them all occuring errors to a Wunderlist.</p>
+            <div class="col-inline col-9">
+              <h4 class="m0 light-gray title"><span class="bold gray">Bugsnag</span> by <a class="light-gray hover-blue" href="#">Bugsnag</a></h4>
+              <p class="mb0 mr4 body-text-small light-gray">Automatically detect errors to a Wunderlist.</p>
             </div>
-            <div class="col col-2 right py2 align-right">
+            <div class="col-inline col-2">
               <a class="button block center white">Add</a>
             </div>
           </div>
         </li>
         <li class="px2 border-box">
-          <div class="clearfix py2 border-bottom border-light-gray-blue item project">
-            <div class="col col-1">
+          <div class="clearfix py2 border-bottom border-light-gray-blue font-size-0">
+            <div class="col-inline col-1 line-height-0">
               <img class="rounded" width="60" height="60" src="./images/integrations/twitter.jpg">
             </div>
-            <div class="col col-7 project-details">
-              <h4 class="mt0 light-gray title"><span class="bold gray">Favourite Tweets</span> by <a class="light-gray hover-blue" href="#">Twitter, Inc.</a></h4>
-              <p class="mb0 body-text-small light-gray">Twitter is the best way to connect with people, express yourself and discover what's happening. Add all favoured tweets with a link to a Wunderlist</p>
+            <div class="col-inline col-9">
+              <h4 class="m0 light-gray title"><span class="bold gray">Favourite Tweets</span> by <a class="light-gray hover-blue" href="#">Twitter, Inc.</a></h4>
+              <p class="mb0 mr4 body-text-small light-gray">Twitter is the best way to connect with people, express yourself and discover what's happening. Add all favoured tweets with a link to a Wunderlist</p>
             </div>
-            <div class="col col-2 right py2 align-right">
+            <div class="col-inline col-2">
               <a class="button block center white">Add</a>
             </div>
           </div>
         </li>
         <li class="px2 border-box">
-          <div class="clearfix py2 border-bottom border-light-gray-blue item project">
-            <div class="col col-1">
+          <div class="clearfix py2 border-bottom border-light-gray-blue font-size-0">
+            <div class="col-inline col-1 line-height-0">
               <img class="rounded" width="60" height="60" src="./images/integrations/gmail.jpg">
             </div>
-            <div class="col col-7 project-details">
-              <h4 class="mt0 light-gray title"><span class="bold gray">Gmail</span> by <a class="light-gray hover-blue" href="#">Google</a></h4>
-              <p class="mb0 body-text-small light-gray">Gmail is a free, advertising-supported email service provided by Google. Add all starred Gmail messages to a Wunderlist.</p>
+            <div class="col-inline col-9">
+              <h4 class="m0 light-gray title"><span class="bold gray">Gmail</span> by <a class="light-gray hover-blue" href="#">Google</a></h4>
+              <p class="mb0 mr4 body-text-small light-gray">Gmail is a free, advertising-supported email service provided by Google. Add all starred Gmail messages to a Wunderlist.</p>
             </div>
-            <div class="col col-2 right py2 align-right">
+            <div class="col-inline col-2">
               <a class="button block center white">Add</a>
             </div>
           </div>
         </li>
         <li class="px2 border-box">
-          <div class="clearfix py2 border-bottom border-light-gray-blue item project">
-            <div class="col col-1">
+          <div class="clearfix py2 border-bottom border-light-gray-blue font-size-0">
+            <div class="col-inline col-1 line-height-0 vt">
               <img class="rounded" width="60" height="60" src="./images/integrations/onenote.png">
             </div>
-            <div class="col col-7 project-details">
-              <h4 class="mt0 light-gray title"><span class="bold gray">OneNote</span> by <a class="light-gray hover-blue" href="#">Microsoft</a></h4>
-              <p class="mb0 body-text-small light-gray">All your notes—in one place and with you, anywhere. Sync all Wunderlists to a dedicated section in OneNote.</p>
+            <div class="col-inline col-9">
+              <h4 class="m0 light-gray title"><span class="bold gray">OneNote</span> by <a class="light-gray hover-blue" href="#">Microsoft</a></h4>
+              <p class="mb0 mr4 body-text-small light-gray">All your notes—in one place and with you, anywhere. Sync all Wunderlists to a dedicated section in OneNote.</p>
             </div>
-            <div class="col col-2 right py2 align-right">
+            <div class="col-inline col-2">
               <a class="button block center white">Add</a>
             </div>
           </div>
         </li>
         <li class="px2 border-box">
-          <div class="clearfix py2 border-bottom border-light-gray-blue item project">
-            <div class="col col-1">
+          <div class="clearfix py2 border-bottom border-light-gray-blue font-size-0">
+            <div class="col-inline col-1 line-height-0">
               <img class="rounded" width="60" height="60" src="./images/integrations/github.png">
             </div>
-            <div class="col col-7 project-details">
-              <h4 class="mt0 light-gray title"><span class="bold gray">Github Issues</span> by <a class="light-gray hover-blue" href="#">GitHub</a></h4>
-              <p class="mb0 body-text-small light-gray">All your notes—in one place and with you, anywhere. Sync all Wunderlists to a dedicated section in OneNote.</p>
+            <div class="col-inline col-9">
+              <h4 class="m0 light-gray title"><span class="bold gray">Github Issues</span> by <a class="light-gray hover-blue" href="#">GitHub</a></h4>
+              <p class="mb0 mr4 body-text-small light-gray">All your notes—in one place and with you, anywhere. Sync all Wunderlists to a dedicated section in OneNote.</p>
             </div>
-            <div class="col col-2 right py2 align-right">
+            <div class="col-inline col-2">
               <a class="button block center white">Add</a>
             </div>
           </div>
         </li>
         <li class="px2 border-box">
-          <div class="clearfix py2 border-bottom border-light-gray-blue item project">
-            <div class="col col-1">
+          <div class="clearfix py2 border-bottom border-light-gray-blue font-size-0">
+            <div class="col-inline col-1 line-height-0 vt">
               <img class="rounded" width="60" height="60" src="./images/integrations/trello.png">
             </div>
-            <div class="col col-7 project-details">
-              <h4 class="mt0 light-gray title"><span class="bold gray">Trello</span> by <a class="light-gray hover-blue" href="#">Trello, Inc.</a></h4>
-              <p class="mb0 body-text-small light-gray">Trello is the free, flexible, and visual way to organize anything with anyone. Show your Wunderlist in trello.</p>
+            <div class="col-inline col-9">
+              <h4 class="m0 light-gray title"><span class="bold gray">Trello</span> by <a class="light-gray hover-blue" href="#">Trello, Inc.</a></h4>
+              <p class="mb0 mr4 body-text-small light-gray">Trello is the free, flexible, and visual way to organize anything with anyone. Show your Wunderlist in trello.</p>
             </div>
-            <div class="col col-2 right py2 align-right">
+            <div class="col-inline col-2">
               <a class="button block center white">Add</a>
             </div>
           </div>
         </li>
         <li class="px2 border-box">
-          <div class="clearfix py2 border-bottom border-light-gray-blue item project">
-            <div class="col col-1">
+          <div class="clearfix py2 border-bottom border-light-gray-blue font-size-0">
+            <div class="col-inline col-1 line-height-0 vt">
               <img class="rounded" width="60" height="60" src="./images/integrations/evernote.png">
             </div>
-            <div class="col col-7 project-details">
-              <h4 class="mt0 light-gray title"><span class="bold gray">Evernote</span> by <a class="light-gray hover-blue" href="#">Evernote Corporation</a></h4>
-              <p class="mb0 body-text-small light-gray">Evernote is the place to collect inspirational ideas, write meaningful words. Sync your Wunderlists to Evernote.</p>
+            <div class="col-inline col-9">
+              <h4 class="m0 light-gray title"><span class="bold gray">Evernote</span> by <a class="light-gray hover-blue" href="#">Evernote Corporation</a></h4>
+              <p class="mb0 mr4 body-text-small light-gray">Evernote is the place to collect inspirational ideas, write meaningful words. Sync your Wunderlists to Evernote.</p>
             </div>
-            <div class="col col-2 right py2 align-right">
+            <div class="col-inline col-2">
               <a class="button block center white">Add</a>
             </div>
           </div>

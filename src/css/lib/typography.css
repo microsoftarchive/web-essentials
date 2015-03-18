@@ -133,7 +133,7 @@ h7, .h7 { font-size: var(--h7) }
 }
 
 .letter-spacing {
-  letter-spacing: 1px;
+  letter-spacing: 0.05rem;
 }
 
 .line-height-0 {

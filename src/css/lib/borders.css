@@ -29,6 +29,7 @@
 }
 
 .rounded { border-radius: var(--border-radius) }
+.round-square { border-radius: calc(var(--border-radius) + 10px) }
 .circle  { border-radius: 50% }
 .pill { border-radius: 1000px }
 
