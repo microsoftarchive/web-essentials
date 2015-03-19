@@ -91,7 +91,7 @@ button,
   color: var(--blue);
 }
 
-.button-upvote.pulser:before {
+.button-upvote.loading:before {
   animation: rotate 1s ease infinite;
   transform: rotate(0deg);
   content: 'y';
