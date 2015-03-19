@@ -1,3 +1,12 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 button,
 .button {
   position: relative;
@@ -73,6 +82,30 @@ button,
   width: 45px;
   height: 45px;
   text-align: center;
+}
+
+.button-upvote.loading {
+  position: relative;
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.button-upvote.pulser:before {
+  animation: rotate 1s ease infinite;
+  transform: rotate(0deg);
+  content: 'y';
+  left: 12px;
+  top: 12px;
+  font-family: 'Wundercon';
+  font-weight: 300;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  line-height: 1em;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
 }
 
 .button-upvote .wundercon {
