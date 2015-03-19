@@ -28,10 +28,11 @@
   font-weight: 300;
   min-width: 1em;
   line-height: 1em;
+  font-size: 20px;
 }
 
-.wundercon.normal {
-  font-size: 20px;
+.wundercon.small {
+  font-size: 1rem;
 }
 
 <% $data[:pictograms].each do |row| %>
