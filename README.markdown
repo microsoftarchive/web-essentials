@@ -1,4 +1,8 @@
-# Web styleguide
+# What is this?
+
+This is currated collection of styles and components to allow you to quickly create high quality webpages and apps.
+
+# Running the Styleguide
 
 ## Prerequisits
 
@@ -21,7 +25,7 @@ $ make start
 $ make
 ```
 
-## javascript?
+## Javascript?
 
 The js is just for the styleguide itself. All shared javascript will be
 published as private npm modules. Every project using the styleguide
@@ -47,6 +51,10 @@ are:
   git tag directly
 * All component updates are documented in the CHANGELOG by version
 * Assets are linked directly from a CDN with url including it's version
+
+## How do I use the compiled assets?
+
+Simply run `make urls` and grab whatever you need, already served from the CDN
 
 ## Future stuff
 
