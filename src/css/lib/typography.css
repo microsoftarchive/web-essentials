@@ -103,6 +103,7 @@ h7, .h7 { font-size: var(--h7) }
   padding-left: 0;
 }
 
+.heavy    { font-weight: var(--heavy-font-weight) }
 .bold    { font-weight: var(--bold-font-weight) }
 .regular { font-weight: normal }
 .italic  { font-style: italic }
