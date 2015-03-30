@@ -3,8 +3,7 @@
 <html class="body-full-height">
   <head>
     <meta charset="utf-8">
-    <title>
-     </title>
+    <title>Multiple E-mails</title>
     <meta title="description" content="">
     <meta title="author" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -12,16 +11,18 @@
     <link rel="stylesheet" href="/css/pictograms.min.css">
     <style>
 
-    .o0 { 
-      opacity: 0;
-  }
+      .o0 { 
+        opacity: 0;
+      }
 
-     .remove:hover span{
-      opacity: 1.0;
-  }
-      .h1.pictogram-icon.wundercon.red.mr2.right.icon-trash{
-       padding-top: 10px;
-  }
+      .remove:hover span, .remove:hover .primary {
+        opacity: 1;
+      }
+
+
+      .h1.pictogram-icon.wundercon.red.mr2.right.icon-trash {
+        padding-top: 10px;
+      }
 
     </style>
   </head>
@@ -49,36 +50,47 @@
       Your secondary email(s) will allow you to sign in to Wunderlist, and forward email to your Wunderlist account via the <a href="https://support.wunderlist.com/customer/portal/articles/59709">Mail to Wunderlist</a> feature.
         </p>
       </div>
-    <div class="col col-8 p2 px2">
-      <h5 class="m0 mt2">Active emails</h5>
-      <div class="col py1 border-bottom col-12">
-        <p class="col bold m0 py1 vm pt1 mr1 inline">kate@wunderlist.com</p>
-        <span class="rounded phalf h6 caps bold green border border-green mt1 inline-block">Primary</span>
+    <div class="col col-8 p2">
+      <div class="col col-9">
+        <h4>Active EMail adresses</h4>
       </div>
-      <div class="remove col py1 border-bottom col-12">
-        <p class="col bold m0 py1 vm col-6 pt1 inline">kate.spencer@gmail.com</p>
-        <button class="button inline-block button-outline right blue">Make Primary</button>
-        <select class="block right col col-2 m0 mr1 field-light">
-        <option>Option 1</option>
-        <option>Option 2</option>
-        <option>Option 3</option>
-        <option>Option 4</option>
-        <option>Option 5</option>
-      </select>
-        <span class="h1 o0 pictogram-icon wundercon red mr2 right icon-trash" title="trash"></span>
+      <div class="col col-3 right">
+        <button class="button inline-block button right">Add new E-Mail</button>
       </div>
-      <div class="remove col py1 border-bottom col-12 mb2">
-        <p class="col bold m0 py1 vm col-6  pt1 inline">kate.spencer@gmail.com</p>
-        <button class="button inline-block button-outline right blue">Make Primary</button>
-        <select class="block right col col-2 m0 mr1 field-light">
-        <option>Inbox</option>
-        <option>Today</option>
-        <option>Groceries</option>
-        <option>Admin to-dos</option>
-        <option>Sageman's Extension</option>
-      </select>
-        <span class="h1 o0 pictogram-icon wundercon red mr2 right icon-trash" title="trash"></span>
+      <div class="col py2 border-bottom col-12 mt3 border-top">
+        <p class="m0 py1 vm pt1 mr1 inline-block">kate@wunderlist.com</p>
+        <span class="bold inline-block px1 border border-green green rounded h6 caps letter-spacing mt1">Primary</span>
+        <select disabled class="block right col col-3 m0 field-light">
+          <option>Inbox</option>
+        </select>
       </div>
+      <div class="remove col py2 border-bottom col-12">
+        <p class="m0 py1 vm col-6 col pt1 inline-block">kate.spencer@gmail.com</p>
+        <select class="block right col col-3 m0 field-light">
+          <option>Today</option>
+          <option>Groceries</option>
+          <option>Admin to-dos</option>
+          <option>Sageman's Extension</option>
+        </select>
+        <div class="col col-3">
+          <button class="small-button inline-block button right mt1 primary o0 mr2">Make Primary</button>
+          <span class="h1 o0 pictogram-icon wundercon red mr2 right icon-trash" title="trash"></span>
+        </div>
+      </div>
+      <div class="remove col py2 border-bottom col-12 mb2">
+        <p class="m0 py1 vm col-6 col pt1 inline-block">kate.spencer@gmail.com</p>
+        <select class="block right col col-3 m0 field-light">
+          <option>Admin to-dos</option>
+          <option>Today</option>
+          <option>Groceries</option>
+          <option>Sageman's Extension</option>
+        </select>
+        <div class="col col-3">
+          <button class="small-button inline-block button right mt1 primary o0 mr2">Make Primary</button>
+          <span class="h1 o0 pictogram-icon wundercon red mr2 right icon-trash" title="trash"></span>
+        </div>
+      </div>
+      <!--
       <div class="col py1 col-12 mb3">
         <form>
         <h5 class="mt2">Add additional email</h5>
@@ -86,6 +98,7 @@
           <button class="button inline-block px3">Add</button>
         </form>
       </div>
+      -->
     </div>
     <script src="/js/app.min.js"></script>
   </body>
