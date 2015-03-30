@@ -131,7 +131,7 @@ select.field-light {
 
 .field-light:disabled {
   color: var(--mid-gray);
-  background-color: var(--darken-2);
+  opacity: 0.6;
 }
 
 .field-light:read-only:not(select) {
