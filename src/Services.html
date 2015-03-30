@@ -1,0 +1,92 @@
+<!-- Work in Progress-->
+<!DOCTYPE html>
+<html class="body-full-height">
+  <head>
+    <meta charset="utf-8">
+    <title>
+     </title>
+    <meta title="description" content="">
+    <meta title="author" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/css/essentials.min.css">
+    <link rel="stylesheet" href="/css/pictograms.min.css">
+    <style>
+
+    .o0 { 
+      opacity: 0;
+  }
+
+     .remove:hover span{
+      opacity: 1.0;
+  }
+      .h1.pictogram-icon.wundercon.red.mr2.right.icon-trash{
+       padding-top: 10px;
+  }
+
+    </style>
+  </head>
+  <body>
+    <%= render 'projects-app/menu.html' %>
+    <header class="full-width py2 bg-blue true-white md-table page-header">
+      <div class="container px2 border-box">
+        <div class="mt3 mb3 clearfix">
+          <h2 class="inline-block left m0 lighter">Account</h2>
+        </div>
+        <nav class="full-width block tabs">
+          <a href="#" class="tab bold h6 caps white mr1 active">Emails</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div class="col col-4 p2 px2">
+        <h4>Email Information</h4>
+        <p></p>
+<!--REMOVE THE STYLES APPLIED TO P ONCE A 14PX CLASS HAS BEEN MADE -->
+        <p class="col col-10" style="font-size: 0.875em;line-height: 1.35rem;">
+      Here you can edit your Primary email address and add additional, Secondary emails.
+        </p>
+        <p class="col col-10" style="font-size: 0.875em;line-height: 1.35rem;">
+      Your secondary email(s) will allow you to sign in to Wunderlist, and forward email to your Wunderlist account via the <a href="https://support.wunderlist.com/customer/portal/articles/59709">Mail to Wunderlist</a> feature.
+        </p>
+      </div>
+    <div class="col col-8 p2 px2">
+      <h5 class="m0 mt2">Active emails</h5>
+      <div class="col py1 border-bottom col-12">
+        <p class="col bold m0 py1 vm pt1 mr1 inline">kate@wunderlist.com</p>
+        <span class="rounded phalf h6 caps bold green border border-green mt1 inline-block">Primary</span>
+      </div>
+      <div class="remove col py1 border-bottom col-12">
+        <p class="col bold m0 py1 vm col-6 pt1 inline">kate.spencer@gmail.com</p>
+        <button class="button inline-block button-outline right blue">Make Primary</button>
+        <select class="block right col col-2 m0 mr1 field-light">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+      </select>
+        <span class="h1 o0 pictogram-icon wundercon red mr2 right icon-trash" title="trash"></span>
+      </div>
+      <div class="remove col py1 border-bottom col-12 mb2">
+        <p class="col bold m0 py1 vm col-6  pt1 inline">kate.spencer@gmail.com</p>
+        <button class="button inline-block button-outline right blue">Make Primary</button>
+        <select class="block right col col-2 m0 mr1 field-light">
+        <option>Inbox</option>
+        <option>Today</option>
+        <option>Groceries</option>
+        <option>Admin to-dos</option>
+        <option>Sageman's Extension</option>
+      </select>
+        <span class="h1 o0 pictogram-icon wundercon red mr2 right icon-trash" title="trash"></span>
+      </div>
+      <div class="col py1 col-12 mb3">
+        <form>
+        <h5 class="mt2">Add additional email</h5>
+          <input type="text" class="block col col-9 field-light mr1 px1" placeholder="Email">
+          <button class="button inline-block px3">Add</button>
+        </form>
+      </div>
+    </div>
+    <script src="/js/app.min.js"></script>
+  </body>
+</html>
