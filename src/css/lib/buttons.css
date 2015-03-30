@@ -24,7 +24,23 @@ button,
   vertical-align: middle;
   -webkit-appearance: none;
   text-transform: uppercase;
+}
 
+.small-button {
+  position: relative;
+  font-size: 0.6rem;
+  font-weight: var(--button-font-weight);
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: var(--button-line-height);
+  padding: 6px 9px;
+  margin: 0;
+  height: auto;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  text-transform: uppercase;
 }
 
 ::-moz-focus-inner {
@@ -47,7 +63,7 @@ button,
   padding-right: var(--space-1);
 }
 
-.button {
+.button, .small-button {
   color: white;
   background-color: var(--blue);
   border-radius: var(--border-radius);
