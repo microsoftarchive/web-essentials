@@ -1,4 +1,4 @@
-<div class="menubar">
+<div class="menubar overflow-hidden">
   <div class="bg-true-white border-bottom clearfix px2">
     <div class="left py2">
       <a class="clearfix" href="/">
@@ -14,12 +14,12 @@
       </a>
     </div>
     <div class="right py2 relative"id="loading">
-      <div class="rounded border" style="height:26px;width:26px;"></div>
+      <div class="rounded border mr2" style="height:26px;width:26px;"></div>
     </div>
     <div class="right py1 hide" id="loggedout">
-      <a href="https://nightly.wunderlist.com/login?redirect_url=/webapp" class="button button-outline blue inline-block md-show-inline">Sign in</a>
-      <a href="https://nightly.wunderlist.com/signup?redirect_url=/webapp" class="button inline-block md-show-inline">Create a free account</a>
-      <a href="https://nightly.wunderlist.com/download" class="button inline-block md-hide">Download</a>
+      <a href="https://nightly.wunderlist.com/login?redirect_url=/webapp" class="button button-outline blue inline-block md-show-inline hide">Sign in</a>
+      <a href="https://nightly.wunderlist.com/signup?redirect_url=/webapp" class="button inline-block md-show-inline hide">Create a free account</a>
+      <a href="https://nightly.wunderlist.com/download" class="button inline-block md-hide hide">Download</a>
     </div>
     <div class="right py2 relative hide" id="authenticated">
       <span class="bell left mr1 md-show hide">
@@ -53,10 +53,10 @@
           </svg>
         </a>
       </span>
-      <div class="user-settings left" data-disclose>
+      <div class="user-settings left">
         <div class="left relative">
           <img class="left rounded hide avatar" width="28" height="28" src="http://a.wunderlist.com/api/v1/avatar?user_id=5647467">
-          <div class="ml1 chevron left hide">
+          <div class="ml1 chevron left relative">
             <svg class="block relative" width="7px" height="3px" viewBox="0 0 7 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
               <g id="Developer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
                 <g id="List-page-3" sketch:type="MSArtboardGroup" transform="translate(-169.000000, -144.000000)" fill="#7F7F7F">
@@ -73,7 +73,6 @@
   </div>
 </div>
 
-<button id="reset" class="button button-outline blue mt2">Reset</button>
 <button id="load-avatar" class="button button-outline blue mt2">Avatar</button>
 <button id="load-button" class="button button-outline blue mt2">Button</button>
 
@@ -81,29 +80,53 @@
 <script type="text/javascript">
 $( document ).ready(function() {
 
-  function authSuccessful(callback) {
-    function authStart(){
-      $("#loading").addClass('hide');
-      $("#authenticated").removeClass('hide');
-    }
+  function authSuccessful() {
+    $("#loading").addClass('hide');
+    $("#authenticated").removeClass('hide');
+
+    var authDeferred = new $.Deferred();
+    $.when(authDeferred).done(function () {
+      animateAvatar();
+      window.setTimeout(function () {
+        animateAvatarSiblings();
+      }, 1000);
+    });
+
+    authDeferred.resolve();
+
     function animateAvatar() {
       $(".avatar").addClass('animated').removeClass('hide').addClass("fadeIn");
+      
     }
     function animateAvatarSiblings() {
-      $(".chevron, .bell, .bubble").addClass('animated').removeClass('hide').addClass("fadeIn");
+      $(".bell, .bubble").addClass('animated').removeClass('hide').addClass("fadeInRight");
     }
-    callback();
-    $.when(authStart()).delay(1000).done(animateAvatar).done(animateAvatarSiblings);
   }
 
-  $("#reset").click(function() {
-    $("#loading").removeClass('hide');
-    $("#authenticated").removeClass('animated fadeIn').addClass('hide');
-  });
+  function authFailed() {
+    $("#loading").addClass('hide');
+    $("#loggedout").removeClass('hide');
+
+    var failDeferred = new $.Deferred();
+    $.when(failDeferred).done(function () {
+      window.setTimeout(function () {
+        animateButtons();
+      }, 100);
+    });
+
+    failDeferred.resolve();
+
+    function animateButtons() {
+      $("#loggedout .button").addClass('animated').removeClass('hide').addClass("fadeIn");
+    }
+  }
 
   $("#load-avatar").click(function() {
-    authSuccessful(callback);
-    console.log(authSuccessful(callback));
+    authSuccessful();
+  });
+
+  $("#load-button").click(function() {
+    authFailed();
   });
   
 });
