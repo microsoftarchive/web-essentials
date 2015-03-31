@@ -31,3 +31,13 @@ release-minor:
 
 release-major:
 	rake release:major
+
+release-docs-to-github: build
+	cd build && \
+	git init . && \
+	git add . && \
+	git commit -m "Update gh-pages"; \
+	git push "git@github.com:wunderlist/web-essentials.git" master:gh-pages --force && \
+	rm -rf .git
+
+.PHONY: build

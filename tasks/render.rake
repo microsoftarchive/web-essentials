@@ -1,7 +1,7 @@
 require 'erb'
 require 'json'
 
-$font_host ||= "/fonts"
+$font_host ||= "../fonts/"
 
 module JSONReader
   module_function
