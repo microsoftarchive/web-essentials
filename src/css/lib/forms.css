@@ -60,7 +60,7 @@ textarea {
 .field-reset {
   border: none;
   outline: 0;
-  color: var(--mid-gray);
+  color: var(--dark-gray);
 }
 
 .field-simple {
