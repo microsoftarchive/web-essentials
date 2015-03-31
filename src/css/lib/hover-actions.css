@@ -1,7 +1,23 @@
-.hover-parent:hover .show-on-parent-hover {
-  display: block;
+<%
+style_map = {
+  "show" => "display: block",
+  "hide" => "display: none",
+  "visible" => "opacity:1",
+  "invisible" => "opacity:0",
+  "expand" => "width: 100%",
+  "collapse" => "width: 0%"
 }
 
-.show-on-parent-hover {
-  display: none;
+[
+  "show",
+  "hide",
+  "visible",
+  "invisible",
+  "expand",
+  "collapse"
+].each do |s|
+%>
+.hover-parent:hover .<%=s%>-on-parent-hover {
+  <%= style_map[s] %>;
 }
+<% end %>
