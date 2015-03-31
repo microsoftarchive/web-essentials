@@ -1,0 +1,7 @@
+.hover-parent:hover .show-on-parent-hover {
+  display: block;
+}
+
+.show-on-parent-hover {
+  display: none;
+}
