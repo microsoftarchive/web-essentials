@@ -31,3 +31,4 @@ release-minor:
 
 release-major:
 	rake release:major
+.PHONY: build
