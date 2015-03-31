@@ -57,6 +57,11 @@ textarea {
   padding: 0;
 }
 
+.field-reset {
+  border: none;
+  outline: 0;
+}
+
 .field-simple {
   font-size: var(--body-text-small);
   -webkit-appearance: none;
