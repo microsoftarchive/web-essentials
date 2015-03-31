@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="/css/pictograms.min.css">
     <style>
 
+      .label{
+        padding-top: 0.05rem;
+        padding-left: .25rem;
+        padding-right: .25rem;
+        padding-bottom: 0.08rem;
+        font-size: .65rem;
+      }
+
       .o0 { 
         opacity: 0;
       }
@@ -52,14 +60,14 @@
       </div>
     <div class="col col-8 p2">
       <div class="col col-9">
-        <h4>Active EMail adresses</h4>
+        <h4>Active Email adresses</h4>
       </div>
       <div class="col col-3 right">
         <button class="button inline-block button right">Add new E-Mail</button>
       </div>
       <div class="col py2 border-bottom col-12 mt3 border-top">
         <p class="m0 py1 vm pt1 mr1 inline-block">kate@wunderlist.com</p>
-        <span class="bold inline-block px1 border border-green green rounded h6 caps letter-spacing mt1">Primary</span>
+        <span class="bold inline-block label border border-green green rounded h6 caps letter-spacing">Primary</span>
         <select disabled class="block right col col-3 m0 field-light">
           <option>Inbox</option>
         </select>
@@ -74,7 +82,7 @@
         </select>
         <div class="col col-3">
           <button class="small-button inline-block button right mt1 primary o0 mr2">Make Primary</button>
-          <span class="h1 o0 pictogram-icon wundercon red mr2 right icon-trash" title="trash"></span>
+          <span class="h1 o0 pictogram-icon wundercon red mr2 right pointer icon-trash" title="trash"></span>
         </div>
       </div>
       <div class="remove col py2 border-bottom col-12 mb2">
@@ -87,7 +95,7 @@
         </select>
         <div class="col col-3">
           <button class="small-button inline-block button right mt1 primary o0 mr2">Make Primary</button>
-          <span class="h1 o0 pictogram-icon wundercon red mr2 right icon-trash" title="trash"></span>
+          <span class="h1 o0 pictogram-icon wundercon red mr2 right pointer icon-trash" title="trash"></span>
         </div>
       </div>
       <!--
