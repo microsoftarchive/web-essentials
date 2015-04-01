@@ -14,3 +14,11 @@
 }
 
 .backface { -webkit-backface-visibility: hidden; }
+
+<%
+["0","01","02","03","04","05","06","07","08","09","1"].each do |n|
+%>
+.opacity-<%= n %> { <% v = n.length > 1 ? n.insert(1, ".") : n %>
+  opacity: <%= v %>
+}
+<% end %>
