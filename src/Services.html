@@ -1,6 +1,6 @@
 <!-- Work in Progress-->
 <!DOCTYPE html>
-<html class="body-full-height">
+<html class="body-full-height bg-white">
   <head>
     <meta charset="utf-8">
     <title>Multiple E-mails</title>
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/essentials.min.css">
     <link rel="stylesheet" href="/css/pictograms.min.css">
     <style>
-
+    
       .label{
         padding-top: 0.05rem;
         padding-left: .25rem;
@@ -25,6 +25,13 @@
 
       .remove:hover span, .remove:hover .primary {
         opacity: 1;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+      }
+
+      .fourteen{
+        font-size: 0.875em;
+        line-height: 1.35rem;
       }
 
 
@@ -32,11 +39,12 @@
         padding-top: 10px;
       }
 
+
     </style>
   </head>
   <body>
     <%= render 'projects-app/menu.html' %>
-    <header class="full-width py2 bg-blue true-white md-table page-header">
+    <header class="full-width py2 bg-true-white wuderlist-gray border-bottom md-table page-header">
       <div class="container px2 border-box">
         <div class="mt3 mb3 clearfix">
           <h2 class="inline-block left m0 lighter">Account</h2>
@@ -50,12 +58,11 @@
       <div class="col col-4 p2 px2">
         <h4>Email Information</h4>
         <p></p>
-<!--REMOVE THE STYLES APPLIED TO P ONCE A 14PX CLASS HAS BEEN MADE -->
-        <p class="col col-10" style="font-size: 0.875em;line-height: 1.35rem;">
-      Here you can edit your Primary email address and add additional, Secondary emails.
+        <p class="col col-10 fourteen">
+      Your <span class="green">Primary</span> email address will be used for account-related notifications, such as password reset emails and reminder notifications.
         </p>
-        <p class="col col-10" style="font-size: 0.875em;line-height: 1.35rem;">
-      Your secondary email(s) will allow you to sign in to Wunderlist, and forward email to your Wunderlist account via the <a href="https://support.wunderlist.com/customer/portal/articles/59709">Mail to Wunderlist</a> feature.
+        <p class="col col-10 fourteen">
+      Your secondary email(s) will allow you to sign in to Wunderlist, accept list invitations, and forward emails to your Wunderlist account via the <a href="https://support.wunderlist.com/customer/portal/articles/59709">Mail to Wunderlist</a> feature.
         </p>
       </div>
     <div class="col col-8 p2">
@@ -69,7 +76,7 @@
       <div class="col col-12 py2 new-email border-bottom">
         <div class="col col-9">
           <form>
-            <input type="text" class="block col col-9 field-reset mr1 m0" autofocus placeholder="Add new email address">
+            <input type="text" class="block col col-9 field-reset bg-white mr1 m0" autofocus placeholder="Add new email address">
           </form>
         </div>
         <div class="col col-3">
@@ -95,7 +102,7 @@
           <option>Sageman's Extension</option>
         </select>
         <div class="col col-3">
-          <button class="small-button inline-block button right mt1 primary o0 mr2">Make Primary</button>
+          <button class="small-button inline-block button right mt1 p1 caps primary o0 mr2">Make Primary</button>
           <span class="h1 o0 pictogram-icon wundercon red mr2 right pointer icon-trash" title="trash"></span>
         </div>
       </div>
@@ -108,7 +115,7 @@
           <option>Sageman's Extension</option>
         </select>
         <div class="col col-3">
-          <button class="small-button inline-block button right mt1 primary o0 mr2">Make Primary</button>
+          <button class="small-button inline-block button right mt1 primary p1 caps o0 mr2">Make Primary</button>
           <span class="h1 o0 pictogram-icon wundercon red mr2 right pointer icon-trash" title="trash"></span>
         </div>
       </div>

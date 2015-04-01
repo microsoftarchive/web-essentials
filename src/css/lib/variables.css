@@ -1,8 +1,8 @@
-@custom-media --breakpoint-xsm (min-width: 30em);
-@custom-media --breakpoint-sm (min-width: 40em);
-@custom-media --breakpoint-md (min-width: 48em);
-@custom-media --breakpoint-lg (min-width: 64em);
-@custom-media --breakpoint-xlg (min-width: 81em);
+@custom-media --breakpoint-xsm (min-width: 30em); /*mobile portrait*/
+@custom-media --breakpoint-sm (min-width: 40em); /*mobile landscape*/
+@custom-media --breakpoint-md (min-width: 48em); /*tablet portrait*/
+@custom-media --breakpoint-lg (min-width: 64em); /*tablet landscape*/
+@custom-media --breakpoint-xlg (min-width: 81em); /*desktop*/
 
 :root {
   --font-family: Lato, Helvetica Neue, sans-serif;
