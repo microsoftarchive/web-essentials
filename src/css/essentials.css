@@ -8,6 +8,7 @@
 @import './lib/typography';
 @import './lib/buttons';
 @import './lib/menubar';
+@import './lib/hover-actions';
 @import './lib/tabs';
 @import './lib/borders';
 @import './lib/grid';
