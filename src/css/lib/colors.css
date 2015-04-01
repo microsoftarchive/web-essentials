@@ -33,7 +33,7 @@
 
 .<%= c %> { color: var(--<%= c %>) }
 .hover-<%= c %>:hover { color: var(--<%= c %>) }
-.hover-background-<%= c %>:hover { background-color: var(--<%= c %>) }
+.hover-bg-<%= c %>:hover { background-color: var(--<%= c %>) }
 .bg-<%= c %> { background-color: var(--<%= c %>) }
 .bg-faded-<%= c %> { background-color: rgba(var(--<%= c %>),0.3) }
 .border-<%= c %> { border-color: var(--<%= c %>) }
