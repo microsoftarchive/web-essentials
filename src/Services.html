@@ -44,28 +44,30 @@
   </head>
   <body>
     <%= render 'projects-app/menu.html' %>
-    <header class="full-width py2 bg-true-white wuderlist-gray border-bottom md-table page-header">
+    <header class="full-width py1 bg-true-white wuderlist-gray border md-table page-header">
       <div class="container px2 border-box">
         <div class="mt3 mb3 clearfix">
-          <h2 class="inline-block left m0 lighter">Account</h2>
+          <h2 class="inline-block left m0 lighter">Services</h2>
         </div>
-        <nav class="full-width block tabs">
-          <a href="#" class="tab bold h6 caps white mr1 active">Emails</a>
+        <nav class="full-width h6 block tabs">
+          <a href="#" class="tab heavy caps active wunderlist-gray inline-block vb">Emails</a>
+          <a href="#" class="tab heavy caps wunderlist-gray inline-block vb">test</a>
+
         </nav>
       </div>
     </header>
     <div class="container">
-      <div class="col col-4 p2 px2">
-        <h4>Email Information</h4>
+      <div class="col md-col col-4 p2 px2">
+        <h4>Email Addresses</h4>
         <p></p>
-        <p class="col col-10 fourteen">
+        <p class="col md-col col-10 fourteen">
       Your <span class="green">Primary</span> email address will be used for account-related notifications, such as password reset emails and reminder notifications.
         </p>
-        <p class="col col-10 fourteen">
-      Your secondary email(s) will allow you to sign in to Wunderlist, accept list invitations, and forward emails to your Wunderlist account via the <a href="https://support.wunderlist.com/customer/portal/articles/59709">Mail to Wunderlist</a> feature.
+        <p class="col md-col col-10 fourteen">
+      You can also add additional email addresses which will allow you to sign in to your Wunderlist account, accept list invitations, and forward emails to your Wunderlist account using the <a href="https://support.wunderlist.com/customer/portal/articles/59709">Mail to Wunderlist</a> feature.
         </p>
       </div>
-    <div class="col col-8 p2">
+    <div class="col md-col col-8 p2">
       <!--
       <div class="col col-12">
         <div class="border border-yellow yellow bg-transparent-yellow rounded relative">
@@ -73,48 +75,48 @@
         </div>
       </div>
       -->
-      <div class="col col-12 py2 new-email border-bottom">
-        <div class="col col-9">
+      <div class="col md-col col-12 py2 new-email border-bottom">
+        <div class="col md-col col-9">
           <form>
-            <input type="text" class="block col col-9 field-reset bg-white mr1 m0" autofocus placeholder="Add new email address">
+            <input type="text" class="block col md-col col-9 field-reset bg-white mr1 m0" autofocus placeholder="Add new email address">
           </form>
         </div>
-        <div class="col col-3">
+        <div class="col md-col col-3">
           <button class="button-outline blue right col-12">Add Email</button>
         </div>
       </div>
-      <div class="col py2 border-bottom col-12">
+      <div class="col md-col py2 border-bottom col-12">
         <p class="m0 py1 vm pt1 mr1 inline-block">kate@wunderlist.com</p>
         <span class="bold inline-block label border border-green green rounded h6 caps letter-spacing">Primary</span>
-        <select class="block right col col-3 m0 field-light">
+        <select class="block right col md-col col-3 m0 field-light">
           <option>Inbox</option>
           <option>Groceries</option>
           <option>Admin to-dos</option>
           <option>Sageman's Extension</option>
         </select>
       </div>
-      <div class="remove col py2 border-bottom col-12">
-        <p class="m0 py1 vm col-6 col pt1 inline-block">kate.spencer@gmail.com</p>
-        <select class="block right col col-3 m0 field-light">
+      <div class="remove col md-col py2 border-bottom col-12">
+        <p class="m0 py1 vm col-6 md-col col pt1 inline-block">kate.spencer@gmail.com</p>
+        <select class="block right col md-col col-3 m0 field-light">
           <option>Inbox</option>
           <option>Groceries</option>
           <option>Admin to-dos</option>
           <option>Sageman's Extension</option>
         </select>
-        <div class="col col-3">
+        <div class="col md-col col-3">
           <button class="small-button inline-block button right mt1 p1 caps primary o0 mr2">Make Primary</button>
           <span class="h1 o0 pictogram-icon wundercon red mr2 right pointer icon-trash" title="trash"></span>
         </div>
       </div>
-      <div class="remove col py2 border-bottom col-12">
-        <p class="m0 py1 vm col-6 col pt1 inline-block">kate.spencer@gmail.com</p>
-        <select class="block right col col-3 m0 field-light">
+      <div class="remove col md-col py2 border-bottom col-12">
+        <p class="m0 py1 vm col-6 col md-col pt1 inline-block">kate.spencer@gmail.com</p>
+        <select class="block right col md-col col-3 m0 field-light">
           <option>Inbox</option>
           <option>Groceries</option>
           <option>Admin to-dos</option>
           <option>Sageman's Extension</option>
         </select>
-        <div class="col col-3">
+        <div class="col md-col col-3">
           <button class="small-button inline-block button right mt1 primary p1 caps o0 mr2">Make Primary</button>
           <span class="h1 o0 pictogram-icon wundercon red mr2 right pointer icon-trash" title="trash"></span>
         </div>
