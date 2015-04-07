@@ -1,4 +1,3 @@
-<!-- Work in Progress-->
 <!DOCTYPE html>
 <html class="body-full-height bg-white">
   <head>
@@ -76,13 +75,11 @@
       </div>
       -->
       <div class="col md-col col-12 py2 new-email border-bottom">
-        <div class="col md-col col-9">
+        <div class="col md-col col-12 relative">
           <form>
-            <input type="text" class="block col md-col col-9 field-reset bg-white mr1 m0" autofocus placeholder="Add new email address">
+            <input type="text" class="block md-col col-12 m0 p1 field-light" placeholder="Add new email address">
+            <input type="button" class="button absolute top-0 right-0" value="Add Email">
           </form>
-        </div>
-        <div class="col md-col col-3">
-          <button class="button-outline blue right col-12">Add Email</button>
         </div>
       </div>
       <div class="col md-col py2 border-bottom col-12">
@@ -122,15 +119,6 @@
         </div>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript">
-      $( document ).ready(function() {
-        $("#add-new").click(function() {
-          $(".new-email").addClass('animated').removeClass('hide').addClass('fadeInUp');
-          $(".new-email input").focus();
-        });
-      });
-    </script>
     <script src="/js/app.min.js"></script>
   </body>
 </html>
