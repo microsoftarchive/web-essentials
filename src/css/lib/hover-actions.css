@@ -1,0 +1,25 @@
+<%
+style_map = {
+  "show" => "display: block",
+  "hide" => "display: none",
+  "visible" => "opacity:1",
+  "invisible" => "opacity:0",
+  "half-visible" => "opacity:0.5",
+  "expand" => "width: 100%",
+  "collapse" => "width: 0%"
+}
+
+[
+  "show",
+  "hide",
+  "visible",
+  "invisible",
+  "expand",
+  "collapse",
+  "half-visible"
+].each do |s|
+%>
+.hover-parent:hover .<%=s%>-on-parent-hover {
+  <%= style_map[s] %>;
+}
+<% end %>
