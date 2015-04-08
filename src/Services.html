@@ -60,27 +60,25 @@
         <h4>Email Addresses</h4>
         <p></p>
         <p class="col md-col col-10 fourteen">
-      Your <span class="green">Primary</span> email address will be used for account-related notifications, such as password reset emails and reminder notifications.
+          Your <span class="green">Primary</span> email address will be used for account-related notifications.
         </p>
         <p class="col md-col col-10 fourteen">
-      You can also add additional email addresses which will allow you to sign in to your Wunderlist account, accept list invitations, and forward emails to your Wunderlist account using the <a href="https://support.wunderlist.com/customer/portal/articles/59709">Mail to Wunderlist</a> feature.
+          The other email addresses will allow you to sign in to your Wunderlist account, and forward emails to your Wunderlist account using the <a href="https://support.wunderlist.com/customer/portal/articles/59709">Mail to Wunderlist</a> feature.
         </p>
       </div>
-    <div class="col md-col col-8 p2">
-      <!--
-      <div class="col col-12">
-        <div class="border border-yellow yellow bg-transparent-yellow rounded relative">
-          <p class="m0 p1">You must add a valid email address with @ and all...</p>
-        </div>
-      </div>
-      -->
-      <div class="col md-col col-12 py2 new-email border-bottom">
+    <div class="col md-col col-8 p2"> 
+      <div class="col md-col col-12 py2">
         <div class="col md-col col-12 relative">
-          <form>
-            <input type="text" class="block md-col col-12 m0 p1 field-light" placeholder="Add new email address">
+          <form id="add-email" class="hide">
+            <input type="text" class="block md-col col-12 m0 p1 field-light" id="email-input" placeholder="Add new email address">
             <input type="button" class="button rounded-right absolute top-0 right-0" value="Add Email">
           </form>
-        </div>
+        </div> 
+        <a class="button button-outline blue" id="new-email" href="#">Add new Email</a>
+      </div>
+      <div class="col md-col col-12 border-bottom py1 mt1">
+        <p class="m0 col col-9 caps h6 bold dark-gray">Email</p>
+        <p class="col col-3 m0 caps h6 bold dark-gray">Mail2WL List</p>
       </div>
       <div class="col md-col py2 border-bottom col-12">
         <p class="m0 py1 vm pt1 mr1 inline-block">kate@wunderlist.com</p>
@@ -120,5 +118,15 @@
       </div>
     </div>
     <script src="/js/app.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#new-email").click(function(){
+          $("#add-email").addClass("fadeInUp animated").removeClass("hide");
+          $("#email-input").focus();
+          $(this).addClass("hide");
+        });
+      });
+    </script>
   </body>
 </html>
