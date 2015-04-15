@@ -38,6 +38,13 @@
         padding-top: 10px;
       }
 
+      .left-slide {
+        transform: translateX(476px);
+      }
+      .form-box {
+        height: 42px;
+      }
+
 
     </style>
   </head>
@@ -68,13 +75,13 @@
       </div>
     <div class="col md-col col-8 p2"> 
       <div class="col md-col col-12 py2">
-        <div class="col md-col col-12 relative">
-          <form id="add-email" class="hide">
-            <input type="text" class="block md-col col-12 m0 p1 field-light" id="email-input" placeholder="Add new email address">
-            <input type="button" class="button rounded-right absolute top-0 right-0" value="Add Email">
+        <div class="col md-col col-12 relative form-box">
+          <form id="add-email" class="absolute top-0 left-0 col-12">
+            <input type="text" class="block md-col col-12 m0 p1 field-light animated display-none" id="email-input" placeholder="Add new email address">
+            <input type="button" class="button rounded-right absolute top-0 right-0 animated display-none" id="submit-button" value="Add new Email">
           </form>
+          <a class="button button-outline blue animated absolute top-0 left-0" id="new-email" href="#">Add new Email</a>
         </div> 
-        <a class="button button-outline blue" id="new-email" href="#">Add new Email</a>
       </div>
       <div class="col md-col col-12 border-bottom py1 mt1">
         <p class="m0 col col-9 caps h6 bold dark-gray">Email</p>
@@ -121,10 +128,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
       $(document).ready(function() {
-        $("#new-email").click(function(){
-          $("#add-email").addClass("fadeInUp animated").removeClass("hide");
-          $("#email-input").focus();
-          $(this).addClass("hide");
+        $("#new-email").click(function() {
+          var self = this;
+          $(self).addClass("left-slide opacity-0");
+          window.setTimeout(function () {
+            $("#email-input").addClass("fadeIn").removeClass("display-none").focus();          
+            $("#submit-button").addClass("fadeIn").removeClass("display-none");
+            $(self).addClass("hide");
+          }, 460);
         });
       });
     </script>

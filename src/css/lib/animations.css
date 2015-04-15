@@ -1,8 +1,40 @@
 .animated {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.animated.fast {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.animated.normal {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.animated.slow {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-transition-duration: 2s;
+  transition-duration: 2s;
+}
+
+.animated.delay {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .animated.infinite {

@@ -4,43 +4,43 @@
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
-  src: url("<%= $font_host %>/lato-light-webfont.woff2") format('woff2'),
-       url("<%= $font_host %>/lato-light-webfont.woff") format('woff'),
-       url("<%= $font_host %>/lato-light-webfont.ttf") format('ttf');
+  src: url("<%= $font_host %>lato-light-webfont.woff2") format('woff2'),
+       url("<%= $font_host %>lato-light-webfont.woff") format('woff'),
+       url("<%= $font_host %>lato-light-webfont.ttf") format('ttf');
 }
 
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: url("<%= $font_host %>/lato-regular-webfont.woff2") format('woff2'),
-       url("<%= $font_host %>/lato-regular-webfont.woff") format('woff'),
-       url("<%= $font_host %>/lato-regular-webfont.ttf") format('ttf');
+  src: url("<%= $font_host %>lato-regular-webfont.woff2") format('woff2'),
+       url("<%= $font_host %>lato-regular-webfont.woff") format('woff'),
+       url("<%= $font_host %>lato-regular-webfont.ttf") format('ttf');
 }
 
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 600;
-  src: url("<%= $font_host %>/lato-semibold-webfont.woff2") format('woff2'),
-       url("<%= $font_host %>/lato-semibold-webfont.woff") format('woff'),
-       url("<%= $font_host %>/lato-semibold-webfont.ttf") format('ttf');
+  src: url("<%= $font_host %>lato-semibold-webfont.woff2") format('woff2'),
+       url("<%= $font_host %>lato-semibold-webfont.woff") format('woff'),
+       url("<%= $font_host %>lato-semibold-webfont.ttf") format('ttf');
 }
 
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: url("<%= $font_host %>/lato-bold-webfont.woff2") format('woff2'),
-       url("<%= $font_host %>/lato-bold-webfont.woff") format('woff'),
-       url("<%= $font_host %>/lato-bold-webfont.ttf") format('ttf');
+  src: url("<%= $font_host %>lato-bold-webfont.woff2") format('woff2'),
+       url("<%= $font_host %>lato-bold-webfont.woff") format('woff'),
+       url("<%= $font_host %>lato-bold-webfont.ttf") format('ttf');
 }
 
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 900;
-  src: url("<%= $font_host %>/lato-heavy-webfont.woff2") format('woff2'),
-       url("<%= $font_host %>/lato-heavy-webfont.woff") format('woff'),
-       url("<%= $font_host %>/lato-heavy-webfont.ttf") format('ttf');
+  src: url("<%= $font_host %>lato-heavy-webfont.woff2") format('woff2'),
+       url("<%= $font_host %>lato-heavy-webfont.woff") format('woff'),
+       url("<%= $font_host %>lato-heavy-webfont.ttf") format('ttf');
 }
