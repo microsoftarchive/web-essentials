@@ -95,5 +95,5 @@
 
   --table-header-font-weight: var(--bold-font-weight);
   --table-cell-padding-x: var(--space-2);
-  --table-cell-padding-y: var(--space-half);
+  --table-cell-padding-y: var(--space-1);
 }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="body-full-height">
+  <head>
+    <meta charset="utf-8">
+    <title>Avatars - Wunderlist Developer</title>
+    <meta title="description" content="">
+    <meta title="author" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/css/essentials.min.css">
+    <link rel="stylesheet" href="/css/pictograms.min.css">
+    <style>
+    </style>
+  </head>
+  <body>
+    <%= render 'developer/menu.html' %>
+    <div class="container py4 px2 clearfix dark-gray border-box">
+      <div class="col col-3">
+        <aside>
+          <ul class="list-reset sticky gray">
+            <li><a href="docs.html" class="light-gray hover-blue">Developer Home</a></li>
+            <li class="bold mt2">Concepts</li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Authorization</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Formats</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Revisions</a></li>
+            <li class="bold mt2">Endpoints</li>
+            <li class="px1"><a href="avatar.html" class="blue hover-blue">Avatar</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">File</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">File Previews</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">List</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Membership</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Note</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Positions</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Reminder</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Subtask</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Task</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Task Comment</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Upload</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">User</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Webhooks</a></li>
+          </ul>
+        </aside>
+      </div>
+      <div class="col col-9">
+        <h2 class="mt0 lighter">Avatar</h2>
+        <p class="h4">User avatars of different sizes can be fetched or loaded inline in HTML.</p>
+
+        <h3>Show the avatar of a user</h3>
+        <pre class="blue"><code>GET a.wunderlist.com/api/v1/avatar</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>user_id</td>
+              <td>integer</td>
+              <td><strong>required</strong></td>
+            </tr>
+            <tr>
+              <td>size</td>
+              <td>integer</td>
+              <td><strong>optional</strong>, values: 25, 28, 30, 32, 50, 54, 56, 60, 64, 108, 128, 135, 256, 270, 512 and original</td>
+            </tr>
+            <tr>
+              <td>fallback</td>
+              <td>boolean</td>
+              <td><strong>optional</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4 class="bold">Response</h4>
+        <pre class="blue"><code>302 Found</code></pre>
+
+        <p>This request will redirect you to an url for the avatar of the given user based on the <code class="blue">user_id</code>, if there is no avatar it will redirect a default avatar image.</p>
+        <div class="clearfix white rounded bg-white border border-lighter-gray overflow-hidden drop-shadow mb3">
+          <p class="m0 px1 blue left">
+            <span class="wundercon big mt1 icon-info"></span>
+          </p>
+          <div class="overflow-hidden gray py1">
+            <h4 class="m0 bold blue">Did you know?</h4>
+            <p class="m0">You don't need to send an <code class="blue">X-Access-Token</code> for this request.</p>
+          </div>
+        </div>
+        <p>If you add the optional parameter <code class="blue">size</code> to the request it will redirect to an avatar with the given <code class="blue">size</code>.</p>
+        <p>By adding the optional parameter <code class="blue">fallback</code> with the value false to the request, you will not be redirected to our fallback avatars. If there is no custom avatar uploaded for the given <code class="blue">user_id</code> it will respond with a <code class="blue">204 No Content</code> and an empty body.</p>
+
+        <h3>Security</h3>
+        <p>It should go without saying, but all requests must be made using a secure connection. We support a minimum of TLS 1.0.</p>
+      </div>
+    </div>
+    <%= render 'developer/footer.html' %>
+    <script src="/js/app.min.js"></script>
+  </body>
+</html>

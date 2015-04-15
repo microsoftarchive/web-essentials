@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="body-full-height">
+  <head>
+    <meta charset="utf-8">
+    <title>Docs - Wunderlist Developer</title>
+    <meta title="description" content="">
+    <meta title="author" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/css/essentials.min.css">
+    <link rel="stylesheet" href="/css/pictograms.min.css">
+    <style>
+    </style>
+  </head>
+  <body>
+    <div class="menubar full-width z4 border-box border-bottom p2 font-size-0">
+      <div class="icon inline-block vm"></div>
+      <div class="ml1 mr3 logo inline-block vm"></div>
+      <nav class="inline-block h6 bold vm nowrap uppercase letter-spacing">
+        <a href="docs.html" class="blue mr3">Docs</a>
+        <a href="apps.html" class="gray mr3">Manage Apps</a>
+        <a href="#" class="gray mr3">Support</a>
+      </nav>
+      <div class="user inline-block right vm" data-disclose="">
+        <a class="activity light-gray ml1 vm inline-block wundercon normal icon-bell" href=""></a>
+        <a class="activity light-gray ml1 vm inline-block wundercon normal icon-bubble" href=""></a>
+        <div class="relative settings inline-block ml2 vm pointer">
+          <img class="avatar rounded inline-block vm" width="28" height="28" src="/images/avatar/jarred.jpg">
+          <span class="chevron inline-block vm small ml1"></span>
+          <div data-details="" class="drop-down-window z4 absolute right-0 nowrap" style="display: none;">
+            <ul class="h5 list-reset mb0 pr2 bg-true-white rounded black mt1 border drop-shadow left-align body-text">
+              <li class="px2 pyhalf mt1"><a href="#!" class="block bold">Go to My Wunderlist</a></li>
+              <li class="px2 pyhalf"><a href="#!" class="block gray">Homepage</a></li>
+              <li class="px2 pyhalf"><a href="#!" class="block gray">Download Wunderlist</a></li>
+              <li class="px2 pyhalf"><a href="#!" class="block gray">Discover</a></li>
+              <li class="px2 pyhalf"><a href="#!" class="block gray">Developer</a></li>
+              <li class="px2 pyhalf"><a href="#!" class="block gray">Support</a></li>
+              <hr class="m0 mt1 mb1">
+              <li class="px2"><p class="m0 h5 gray wunderlist-lighter">nathan@6wunderkinder.com</p></li>
+              <li class="px2 pyhalf"><a href="#!" class="block gray">Account Settings</a></li>
+              <li class="px2 pyhalf"><a href="#!" class="block gray">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py4 px2 clearfix dark-gray border-box">
+      <div class="col col-3 sticky">
+        <aside>
+          <ul class="list-reset sticky gray">
+            <li><a href="docs.html" class="blue hover-blue">Developer Home</a></li>
+            <li class="bold mt2">Concepts</li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Authorization</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Formats</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Revisions</a></li>
+            <li class="bold mt2">Endpoints</li>
+            <li class="px1"><a href="avatar.html" class="light-gray hover-blue">Avatar</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">File</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">File Previews</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">List</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Membership</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Note</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Positions</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Reminder</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Subtask</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Task</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Task Comment</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Upload</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">User</a></li>
+            <li class="px1"><a href="#" class="light-gray hover-blue">Webhooks</a></li>
+          </ul>
+        </aside>
+      </div>
+      <div class="col col-9">
+        <h2 class="mt0 lighter">Documentation</h2>
+        <p class="h4">The Wunderlist API provides REST-based storage and synchronization of a user’s lists across multiple platforms and devices. The primary things you’ll need to use it are an understanding of our data model, how we <a href="#">version individual entities</a> in a user’s data, the <a href="#">formats we use for transmission</a>, and a set of <a href="#">OAuth credentials</a>.</p>
+
+        <h3>Support</h3>
+        <p>Please submit questions about the Wunderlist API to <a href="#">Stack Overflow</a> with the tag <a href="#">'wunderlist'</a>. We will be monitoring Stack Overflow for questions about the Wunderlist API closely. You may also reach us at <a href="#">api@wunderlist.com</a> if you need help.</p>
+
+        <h3>Example</h3>
+        <p>In our examples, we attempt to give you straightforward way to experiement with the API. In the snippets we provide, you’ll see several potential placeholders. For example:</p>
+        <pre class="blue"><code>curl -H "X-Authorization-Token: AUTHORIZATION_TOKEN"</code></pre>
+        <p>We want to eventually make these live, but that’s in the future.</p>
+
+        <h3>Compatibility</h3>
+        <p>This API will evolve rapidly and future versions will add new endpoints and parameters. To provide a sane experienece, the API is versioned. Within a version, the behavior and return values of the API will not change from currently documented behavior and return values. As well, the API and its data payloads are designed so that new parameters and return values can be added at any time.</p>
+        <p>To provide the best experience, a well-behaved Wunderlist API client must not send undocumented parameters as part of their request. These parameters could collide with a future version of the API. As well, a Wunderlist API client must accept and ignore any additional keys that it doesn’t handle in a response.</p>
+
+        <h3>Security</h3>
+        <p>It should go without saying, but all requests must be made using a secure connection. We support a minimum of TLS 1.0.</p>
+      </div>
+    </div>
+    <%= render 'developer/footer.html' %>
+    <script src="/js/app.min.js"></script>
+  </body>
+</html>

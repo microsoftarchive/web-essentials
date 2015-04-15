@@ -24,6 +24,7 @@ button,
   vertical-align: middle;
   -webkit-appearance: none;
   text-transform: uppercase;
+<<<<<<< HEAD
 }
 
 .small-button {
@@ -41,6 +42,9 @@ button,
   vertical-align: middle;
   -webkit-appearance: none;
   text-transform: uppercase;
+=======
+  letter-spacing: 0.07em;
+>>>>>>> master
 }
 
 ::-moz-focus-inner {

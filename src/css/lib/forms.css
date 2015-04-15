@@ -137,6 +137,10 @@ select.field-light {
 
 .field-light:disabled {
   color: var(--mid-gray);
+<<<<<<< HEAD
+=======
+  background-color: var(--light-gray-blue);
+>>>>>>> master
   opacity: 0.6;
 }
 
